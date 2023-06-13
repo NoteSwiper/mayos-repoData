@@ -1,0 +1,9 @@
+[ INFO ]
+    Name = "mayAI"
+    pkgId = "com.mayos.lib.mayAI"
+    prodId = ["master","development","release","beta","alpha","SupportOut"]
+[ URL ]
+    pkgShortenUrl = "${shortenPackageURLRoot}/mayAI/"
+    pkgFullUrl = "${URLRoot}/getPackage/mayAI-${current.prodId}/"
+    prvUrl = "${ProvidingURLRoot}/a729fd2e/"
+    prvName = "welState"

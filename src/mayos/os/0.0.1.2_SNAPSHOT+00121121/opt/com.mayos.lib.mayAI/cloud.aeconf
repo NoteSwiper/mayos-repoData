@@ -1,7 +1,0 @@
-Name = mayAI
-pkgId = com.mayos.lib.mayAI
-prodId = ["master","development","release","beta","alpha","SupportOut"]
-pkgShortenUrl = mayos://may.pkg/mayAI/
-pkgFullUrl = mayos://mayos.com/getPackage/mayAI-${current-"prodId"}/
-prvUrl = mayos://mayos.com/providers/a729fd2e/
-prvName = welState

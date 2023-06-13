@@ -1,12 +1,12 @@
 <?xml version="1.0" standalone="yes" ?>
-<config>
-  <rule name="pkgName" value="maygames.mayAi" />
-  <rule name="pkgVersion" value="1.2" />
+<config type="rulesets" verificationIdRange="1354.3332,25**.34**">
+  <ruleset name="pkgName" value="maygames.mayAi" />
+  <ruleset name="pkgVersion" value="1.2" />
   <ruletab name="stats">
-    <rule name="stateSavingEnabled" value="true" />
-    <rule name="isStatusChanges" value="true" />
+    <ruleset name="stateSavingEnabled" value="true" />
+    <ruleset name="isStatusChanges" value="true" />
   </ruletab>
-  <rule name="token" value="871b2t4gfyi1bfg4714g17f4bt6741btguirtfgrui1rgbuy5bufb3fuf15b3" />
-  <rule name="userId" value="usr66a7bc7d" />
-  <rule name="providerUrl" value="mayos://maygames.net/provider" />
+  <ruleset name="token" value="871b2t4gfyi1bfg4714g17f4bt6741btguirtfgrui1rgbuy5bufb3fuf15b3" />
+  <ruleset name="userId" value="usr66a7bc7d" />
+  <ruleset name="providerUrl" value="mayos://maygames.net/provider" />
 </config>

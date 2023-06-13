@@ -1,8 +1,8 @@
 {
 	"folders": [
 		{
-            "name": "MayOS-repo",
-			"path": ".."
+            "name": "MayOS_BETA",
+			"path": "."
 		}
 	],
     "settings": {

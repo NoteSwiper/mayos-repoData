@@ -1,0 +1,43 @@
+{
+    "xml.codeLens.enabled": true,
+    "tslint.jsEnable": true,
+    "material-icon-theme.folders.associations": {
+        "outputs": "Export",
+        "status": "Task",
+        "boot": "Other",
+        "com": "Components",
+        "dev": "Api",
+        "drv": "Server",
+        "null": "Error",
+        "zero": "Export",
+        "aedll": "Components",
+        "opt": "Packages",
+        "sgml": "Src",
+        "xml": "Src",
+        "mayid": "Client",
+        "mdst": "Dist",
+        "memos": "Dump",
+        "pl": "Src",
+        "run": "Config",
+        "sbin": "Private",
+        "serve": "Shared",
+        "grap": "Resource",
+        "media": "Resource",
+        "mnt": "Meta",
+        "proc": "Dump",
+        "root": "Client",
+        "srv": "Service",
+        "sys": "Core",
+        "drivers": "Content",
+        "var": "Config",
+        "account": "Client",
+        "man": "Log",
+        "crash": "Dump",
+        "games": "Dump",
+        "lock": "Dump",
+        "prod": "Dump"
+    },
+    "material-icon-theme.files.associations": {
+        "aep": "Log"
+    }
+}

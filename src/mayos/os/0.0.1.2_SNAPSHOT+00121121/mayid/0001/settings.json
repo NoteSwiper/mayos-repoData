@@ -6,7 +6,7 @@
         "sampleRate": "48000Hz",
         "speakerType": "Stereo"
       }
-    }
+    },
     "user": {
       "audio": "DEFAULT"
     }

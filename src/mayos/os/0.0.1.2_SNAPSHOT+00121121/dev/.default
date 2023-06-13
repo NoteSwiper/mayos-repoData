@@ -1,0 +1,11 @@
+dev_name: dev[getHandler:getNumber(default.files)]
+dev_path: /dev/[$dev_name]/
+dev_id: [$dev_name.output:ConvertStringLayout("cases.lambda_case")]
+
+dev_main([if param: set(param,this.sps:getOutWay())]) {
+  any val;
+  override<if () return> this.onDeviceActivated {
+    val = ${getDeviceInputId(here)};
+  }
+  return val;
+}
