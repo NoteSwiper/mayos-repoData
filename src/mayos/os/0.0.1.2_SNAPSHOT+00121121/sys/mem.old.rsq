@@ -1,0 +1,5 @@
+memory:
+  requirement:
+    min: 512;
+    min_error: "no enough memory";
+    filter: "!512>memory;";

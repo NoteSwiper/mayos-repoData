@@ -1,0 +1,8 @@
+script {
+  if press(Ctrl + C) {
+    add clipboard.aestor text(os.clipboarder)
+  }
+}
+
+
+C-0001 = (msg.empty)

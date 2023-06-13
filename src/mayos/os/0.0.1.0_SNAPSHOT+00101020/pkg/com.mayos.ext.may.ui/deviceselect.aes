@@ -1,0 +1,41 @@
+aedll
+{
+aedll
+ configuetion
+  screen
+   top
+    text<"デバイス選択", customable=vbデバイスを選択するvb>
+   top
+   list
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    list<"リスト", "<number>", ":", load pc.device>
+    repeat<lrep, change=<number>>
+   list
+  screen
+ configuetion
+aedll
+}
+class deviceselect {
+  function pc.device {
+    run set cure == load device
+    listtext run set l.text == "リスト", "<number>", ":", this.scriptins
+    
+  }
+}

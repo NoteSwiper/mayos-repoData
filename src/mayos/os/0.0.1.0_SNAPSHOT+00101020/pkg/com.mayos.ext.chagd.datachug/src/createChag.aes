@@ -1,0 +1,22 @@
+import customImportNodes(importer);
+
+Chag class createChag(fileType: fileExtension, string: name, string: value, path: parent) {
+  string Name  = createChag().name;
+  string Value = createChag().value;
+  path Parent  = createChag().parent;
+  path Origin  = config.var.chagSrv + ?id=1037163&name=maychag/chg/
+
+  checkAURLDeliver(Origin);
+  
+  function ChagIf(condition) {
+    if(condition.result == true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  ChagIf(checkAURLDeliver().isActive == true) {
+    createCF(enum.cf. + createChag().fileExtension, Origin + parent);
+  }
+}

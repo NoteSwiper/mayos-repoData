@@ -1,0 +1,55 @@
+*               text=auto
+*.txt           text
+*.vcproj        text            eol=crlf
+*.sh            text            eol=lf
+*.env           text            eol=lf
+*.pbxproj       binary
+*.docx          diff=word
+*.png           diff=exif
+*.c             filter=indent
+date*.txt       filter=dater
+test/           export-ignore
+LAST_COMMIT     export-subst
+database.xml    merge=ours
+*.jpg           -text
+CHANGELOG.md    export-ignore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

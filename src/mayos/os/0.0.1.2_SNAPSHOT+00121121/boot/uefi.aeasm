@@ -1,0 +1,30 @@
+; UEFI Booting Module
+
+; Variables
+
+#setvar obj os, undefined
+#setvar string pk, undefined
+#setvar array kek, undefined
+#setvar array db, undefined
+#setvar array dbx, undefined
+
+; Functions
+
+#deffunc os.detect
+    getbin os, list detectors, newvar res
+    #inlineif res, !null: return res .. else return null .. end
+#endfunc
+
+
+
+; Executions
+
+#defif entire.uefi.isAprc
+    setkey pk, rand:2,1
+#endif
+
+
+
+
+
+

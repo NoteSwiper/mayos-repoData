@@ -1,0 +1,26 @@
+local delay = {}*
+  local delayTime = 5
+  local delayFeedback = 50
+  local type = list:0*
+    local 0 = 1.1
+    local 1 = 0.2
+    local 2 = 2.0
+    local stereo2*
+      local 0-0 = 0.0
+      local 0-1 = 1.-1
+      -
+    
+    -
+    
+  -
+
+function delay {
+  soundengine delayin
+  if sound.reseived and delay.powered {
+    power delay
+    wait(delay.Time)
+    elsefor st.off = local type = list:d
+    elsefor st.on = local type = list:0-d
+    return time.delay
+  }
+}

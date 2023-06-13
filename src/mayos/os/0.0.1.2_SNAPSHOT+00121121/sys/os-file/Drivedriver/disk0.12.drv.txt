@@ -1,0 +1,2 @@
+create diskpart/partition(disk0.12)
+Storage(546GB)

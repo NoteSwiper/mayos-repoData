@@ -1,0 +1,11 @@
+dev_name: null
+dev_path: /dev/null/
+dev_id: null
+
+dev_main() {
+  any val;
+  override this.onDeviceActivated {
+    val = ${getDeviceInputId()}.null;
+  }
+  return val;
+}

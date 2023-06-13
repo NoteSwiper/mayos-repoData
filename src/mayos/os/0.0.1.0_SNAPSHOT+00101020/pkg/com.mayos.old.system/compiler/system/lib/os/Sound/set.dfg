@@ -1,0 +1,13 @@
+sound_engine = getFolder("SoundEngine")
+local sound tester = instance.new("soundenginetester.seng")
+local module = {}
+local reverb = getFolder("Reverb")
+local delay = getFolder("Dalay")
+local flanger = getFolder("Flanger")
+local phaser = getFolder("Phaser")
+local wahwah = getFolder("Wah-Wah")
+local eq = getFolder("EQ")
+local octover = getFolder("Octover")
+local moduleFolder = getFolder("module")
+local addon = getFolder("addon")
+local mode = advanced

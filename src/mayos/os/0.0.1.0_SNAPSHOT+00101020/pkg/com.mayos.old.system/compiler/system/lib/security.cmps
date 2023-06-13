@@ -1,0 +1,7 @@
+local module = {}
+
+function {
+ if virus find {
+  handle warning "w-500"
+ }
+}

@@ -1,0 +1,31 @@
+class pcBh {
+  class ai {
+    map stats = {
+      int totalObjects;
+      int totalBrains;
+      int totalGenerations;
+      float totalScores;
+      int totalTokens;
+      on(brain.obj != undefined) {
+        brain = new map {
+          int brainId = rand(-?brain.brainId);
+          float score;
+          float fitness;
+          float gen;
+        }
+      }
+    }
+    function genBrain(seed) {
+      return new Brain;
+    }
+    function genAi(info: aiInfo, brain: brain) {
+      if(!info | info == def) {
+        generate(aiInfo():make({
+          mutation: 0.376;
+          debug: false;
+        }));
+      }
+      return brain(info), info;
+    }
+  }
+}

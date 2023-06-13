@@ -1,0 +1,26 @@
+/*dll Dynamics
+aedll
+ configution
+  google
+   h2 Google
+    screen
+     top
+      searchbar onEnter=searchscript
+       onclick
+        searchedtabs
+         load searched tab
+        searchedtabs
+       onclick
+      searchbar
+     top
+     middle
+      news
+       load google news
+      news
+     middle
+    screen
+   h2
+  google
+ configution
+aedll
+

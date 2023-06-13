@@ -1,0 +1,5 @@
+target {
+  if(csl = entered) {
+    send csl.ch_05-port_8080 "target.text" 
+  }
+}

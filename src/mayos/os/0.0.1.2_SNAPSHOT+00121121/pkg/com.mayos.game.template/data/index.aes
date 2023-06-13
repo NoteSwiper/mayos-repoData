@@ -1,0 +1,37 @@
+classfolder gamesource {
+  info gamesource {
+    title = "MayGame Template",
+    templator = "MayOS Inc", "MayGame",
+    author = "MayGame Corp",
+    description = {
+      "Thanks you to using this template. this template for creating games using mayOS."
+    },
+    requirement = {
+      engine = MayOS50, MayGameEngine
+      memory = 1024_m
+      storage = this.storage.require
+    },
+  }
+
+  var gamesource {
+    stageScreenX = 640
+    stageScreenY = 420
+    stageX = 0
+    stageY = 0
+    stageScaleX = 640
+    stageScaleY = 100
+    color = 0, 0, 0
+    backColor = gradint(color(30, 147, 143), color(122, 228, 226))
+  }
+  
+  game_stageClass template {
+    box(stageX, stageY, stageScaleX, stageScaleY, color);
+    background(backColor);
+    random clouds {
+      perlin(color(255, 255, 255, 0), color(255, 255, 255, 100), 4.56, 30);
+    }
+  }
+  game_gravityClass {
+    down(0, 10, 0);
+  }
+}

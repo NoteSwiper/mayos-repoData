@@ -1,0 +1,22 @@
+local module = requires("bootmodule.aes");
+local mode = 0;
+local safe = 0;
+
+local function boot {
+	case 0;
+		boot locate 0;
+		change state booted = 1;
+		load system;
+		end();
+
+	case 1;
+		boot locate 1;
+		load cmd;
+		end();
+
+	case 2;
+		boot locate 2;
+		load recovery;
+		end();
+
+}

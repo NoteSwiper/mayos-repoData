@@ -1,0 +1,15 @@
+exportElementClass(cube.instance, scriptInfo{
+  name = "Cube Instance";
+  elementID = "cubeSrcInstance";
+  package = "aePackage://mayOS/ExtLib!packageSrc=cube.instance&status=new/";
+});
+
+import cloud.ae.File.* as(aeFile);
+
+file class .cube {
+  int hash = aeFile.cubeExt.hash;
+  int fileInfo = aeFile.createFileInfo(
+    extension = aeFile.createFileExtension(.cube);
+    ExtName = "Cube Encoded File";
+  );
+}

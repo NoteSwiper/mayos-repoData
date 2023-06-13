@@ -1,0 +1,2 @@
+onEvent "Accessed":
+    redirectAccessor(into: /(\.>(*.'~'|'+'==('s'+'r'+'c')>>(\.+'e'+'n'+'v')))/);

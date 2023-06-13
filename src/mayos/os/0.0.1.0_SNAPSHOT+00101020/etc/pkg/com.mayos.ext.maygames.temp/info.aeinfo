@@ -1,0 +1,32 @@
+import mayos.maygames.* as "mayGames"; // Package for making game
+import mayos.mayweb.* as "mayWeb"; // requirement for mayGames
+import mayos.may.* as "mayOpt"; // requirement for mayGames, mayWeb
+
+gameinfo Info {
+  protected final info Info		= this; // Automatlly detecting game information from variable for mayGames
+  private final string gameName		= "Template Game";
+  private final string gamemId		= "tmpGame";
+  private final string namespaceId	= "net.maygames.tmpGame";
+  private final array int gameVersion	= [1,0,0,0];
+  private final game Main		= this.fb.*;
+
+  mayGames.register:defaultImporter("3D Game Importer","net.maygames.import.3dgimp",{
+      cloud.mayos.maygames.* as	"mayGames",	// mayos://may.pkg/mayGames/
+      cloud.mayos.mayweb.* as 	"mayWeb",	// mayos://may.pkg/mayWeb/
+      cloud.mayos.may.* as	"mayOpt",	// mayos://may.pkg/mayOpt/
+      cloud.ofc.game.* as	"game", 	// mayos://may.pkg/game/
+      cloud.ofc.game3d.* as	"game3d", 	// mayos://may.pkg/game3d/
+      cloud.ofc.model.* as	"gmodel", 	// mayos://may.pkg/gmodel/
+      cloud.ofc.entity.* as	"gentity", 	// mayos://may.pkg/gentity/
+      cloud.ofc.mayAI.* as 	"mayAI", 	// mayos://may.pkg/mayAI/
+      cloud.ofc.mayCPU.* as 	"mayCPU", 	// mayos://may.pkg/mayCPU/
+      cloud.ofc.mayEffect.* as 	"mayEffect", 	// mayos://may.pkg/mayEffect/
+      cloud.ofc.may3D.* as 	"may3D", 	// mayos://may.pkg/may3D/
+      cloud.ofc.render.* as	"mayRender", 	// mayos://may.pkg/mayRender/
+      cloud.util.app.* as	"mayApp", 	// mayos://may.pkg/mayApp/
+      cloud.util.app3d.* as 	"mayApp3D", 	// mayos://may.pkg/mayApp3D/
+      cloud.network.svr.* as 	"maySvr" 	// mayos://may.pkg/maySvr/
+  });
+
+  mayGames.addGameInfo(mayGames.getPackageFromId("netgames.tutorial.temp"), this.var[this.var:all()]);
+}

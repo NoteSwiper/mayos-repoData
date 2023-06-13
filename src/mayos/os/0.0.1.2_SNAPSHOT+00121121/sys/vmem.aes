@@ -1,0 +1,14 @@
+import sys.memory.virtual;
+
+class vmem {
+  this.mem = this.os.mem;
+  this.mem.total = this.os.total.mem;
+  
+  local mem = this.mem;
+  local module = {script.Name};
+  
+  function processUp() {
+    mem.virtualon = on;
+    mem.virtualmem add = {requirement.memprocess};
+  }
+}

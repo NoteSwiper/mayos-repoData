@@ -1,0 +1,13 @@
+compile
+res=
+Local\sys\Compile\setup\
+compiler
+ bootsystem
+  lib
+   Setup
+    Boot;
+    Local;
+    Grobal;
+    Loader;
+    current;
+    text;

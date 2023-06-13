@@ -1,0 +1,20 @@
+/*dll Dynamics
+scriptmode;
+execute
+ int ID = 18363abb
+  if user loaded
+   change int ID = Ramdom[int]
+ int Name = executable;
+ 
+ public function "org.dll.execute32"
+  if broad"open" resceived
+   execute "open.name"
+   if broad"open.bit" = 64
+    error handle "You Must Have 64Bit To Run This Pragram"
+
+
+ public function "org.dll.execute64"
+  if broad"open" resceived
+   execute "open.name"
+   if broad"open.bit" = 32
+    execute "open.name" as 32

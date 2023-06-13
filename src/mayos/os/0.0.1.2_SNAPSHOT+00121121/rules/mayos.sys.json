@@ -1,0 +1,4 @@
+{
+    "xml.attribute.enable_external_script": "true",
+    "xml.attribute.value.enable_path_regex" : "true"
+}

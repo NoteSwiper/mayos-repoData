@@ -1,0 +1,31 @@
+{
+  "logs": {
+    "20230309": {
+      "version": "3.3.2",
+      "short": "fixes for any scripts",
+      "details": {
+        "updates": {
+          "bug_fixes": [
+            {"file": "bugfix.aes","reason": "fixed script making repeat-crashes"},
+            {"api": "api.bugfix","reason": "fixed api causes error"}
+          ],
+          "deletions": [
+            {"file": "deletion.aes","reason": "deleted the script by deprecated"},
+            {"api": "api.deletion","reason": ""}
+          ],
+          "additions": [
+            {"file": "addition.aes","reason": ""},
+            {"api": "api.addition","reason": ""}
+          ]
+        },
+        "files": [
+          "insert the name where updated"
+        ]
+      },
+      "description": [
+        "insert update content here",
+        "multiline supported"
+      ]
+    }
+  }
+}

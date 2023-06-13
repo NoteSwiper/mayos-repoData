@@ -1,0 +1,19 @@
+[Usrs]
+ [1]
+  [info]
+  usrname = User
+  Password = password
+  ID = 17AB73DB7E3FB7:usr
+  Short = usr
+   [Details]
+   First = John
+   Last = Doe
+   Email = usr@example.com
+   Country = Japan
+   City = Tokyo
+   Phone = 070:1234:5678
+   [Public]
+   UserId = usr0001
+   WebsiteUrl = https://example.com
+  [Privacy]
+  Privacy = true

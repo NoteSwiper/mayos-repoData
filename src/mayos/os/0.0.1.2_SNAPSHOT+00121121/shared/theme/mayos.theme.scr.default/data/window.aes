@@ -1,0 +1,171 @@
+local windowres = require(windowsres.png);
+local window = {};
+
+local function(setWindow) {
+  jsonTypeLocation {
+    jo1 {
+      icon {
+        require(thiis.ins_iconFunc);
+      }
+      lmr {
+        0 {
+          first{0, 0};
+          secst{9, 9};
+        }
+        
+        1 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        2 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        3 {
+          locationdown();
+          first{0, 0};
+          secst{1, 10};
+        }
+        
+        4 {
+          polg{
+            12345,
+            123,
+            123456,
+            123456
+          }
+        }
+      }
+    }
+
+    jo2 {
+      setColor(gray);
+      settype(simpled);
+      icon {
+        require(thiis.ins_iconFunc);
+      }
+      lmr {
+        0 {
+          first{0, 0};
+          secst{9, 9};
+        }
+        
+        1 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        2 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        3 {
+          locationdown();
+          first{0, 0};
+          secst{1, 10};
+        }
+        
+        4 {
+          polg{
+            12345,
+            123,
+            123456,
+            123456
+          }
+        }
+      }
+    }
+
+    jo3 {
+      setColor(gray);
+      icon {
+        require(thiis.ins_iconFunc);
+      }
+      lmr {
+        0 {
+          first{0, 0};
+          secst{9, 9};
+        }
+        
+        1 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        2 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        3 {
+          locationdown();
+          first{0, 0};
+          secst{1, 10};
+        }
+        
+        4 {
+          polg{
+            12345,
+            123,
+            123456,
+            123456
+          }
+        }
+      }
+    }
+
+    jo4 {
+      setColor(gray);
+      setBrightness(1.3);
+      icon {
+        require(thiis.ins_iconFunc);
+      }
+      lmr {
+        0 {
+          first{0, 0};
+          secst{9, 9};
+        }
+        
+        1 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        2 {
+          locationdown();
+          first{0, 0};
+          secst{10, 10};
+        }
+        
+        3 {
+          locationdown();
+          first{0, 0};
+          secst{1, 10};
+        }
+        
+        4 {
+          polg{
+            12345,
+            123,
+            123456,
+            123456
+          }
+        }
+      }
+    }
+  }
+}
+
+class ins_iconFunc {
+  icon = getlog(screenres.png)
+}

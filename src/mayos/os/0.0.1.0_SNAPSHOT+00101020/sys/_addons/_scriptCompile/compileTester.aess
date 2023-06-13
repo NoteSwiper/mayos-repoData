@@ -1,0 +1,14 @@
+event onCompilingBefore {
+  if (script.import) {
+    for (i = 1, script.import) {
+      script.memoryDir:downloadDataFromURL("mayos://mayos.com/packages/" + script.import[i] + "/request?get");
+      if (script.memoryDir:downloadDataFromURL:get(lastest, isImportCompleted)) {
+        install(target);
+      } catch (c = error) {
+        switch:
+          case "error.lowspace":
+            print(sysmsg:getValueByIndex(206) + sysmsg:getValueByIndex(216) + sysmsg:getValueByIndex(217));
+      }
+    }
+  }
+}

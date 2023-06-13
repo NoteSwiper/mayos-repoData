@@ -1,0 +1,11 @@
+local module = {};
+local soundengine = OpenSL;
+local graphicsengine = OpenGL;
+local parent = script.parent;
+
+function {
+ set X = on;
+ set Y = on;
+ set Z = on;
+ set W = off;
+}

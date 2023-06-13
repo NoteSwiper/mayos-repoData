@@ -1,0 +1,3 @@
+boot.type(1) {
+  event reg.boot.2000
+}

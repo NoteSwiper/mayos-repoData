@@ -1,0 +1,20 @@
+class trashBin {
+  sys cmp map trashBin = {
+    sys string name;
+    sys int id;
+    sys cmp byte fileSize;
+    sys cmp file fileContent;
+  };
+  
+  sys function clearFile(name: file:name) {
+    if (not name) {
+      return system.handleError("Select an File.");
+    } else {
+      if (name.fileAttr == -sys) {
+        return false;
+      } else {
+        file:moveFile(name, url("mayos://mayos.com/svr?type=trashBin&id=${trashBin.id}/"), code("delete"));
+      }
+    }
+  }
+}

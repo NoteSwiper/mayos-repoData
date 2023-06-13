@@ -1,0 +1,11 @@
+pcBh.ai.stats;
+pcBh.ai.stats.totalObjects = 9
+pcBh.ai.stats.totalBrains = 4
+pcBh.ai.stats.totalGenerations = 258832
+pcBh.ai.stats.totalScores = 992775
+pcBh.ai.stats.totalTokens = 2801
+pcBh.ai.stats.brain000a;
+pcBh.ai.stats.brain000a.brainId = 10583732225;
+pcBh.ai.stats.brain000a.score = 774
+pcBh.ai.stats.brain000a.fitness = 2.48
+pcBh.ai.stats.brain000a.gen = 200

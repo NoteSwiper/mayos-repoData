@@ -1,0 +1,45 @@
+systemcompile
+res=
+Local\systemcomp\
+compiler
+ system
+  lib
+   os
+    general;
+    source
+     screen
+      taskbar
+       menu
+        tile;
+        fix;
+       fix;
+     ID
+      EntityID;
+      Producter;
+      boot;
+      serial;
+    current
+     current;
+     power
+      power;
+      weekly
+       cpu;
+       gpu;
+       memory;
+      daily
+       cpu;
+       gpu;
+       memory;
+      cpu;
+      gpu;
+      memory;
+     system
+      GPU;
+      CPU;
+      Memory;
+      Tick;
+      System
+       time;
+     time;
+     cust;
+     usable;

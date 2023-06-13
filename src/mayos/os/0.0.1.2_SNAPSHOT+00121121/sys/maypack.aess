@@ -1,0 +1,42 @@
+class maypack {
+  cmdInfo info {
+    "name": "May Package Manager",
+    "id": "mayos.maypack",
+    "identifier": ["maypack","mpack","mpk"]
+  }
+  subcmd info {
+    return cmdInfo.info;
+  }
+  subcmd get(pkg?: string) {
+    json result;
+    obj msg;
+    if(pkg.value == /[^https?\:\/\/]|[^ftps?\:\/\/]/) {
+      result = pkg:getHttpStatus(pkg);
+    } elseif(pkg.value == /[pa?c?ka?ge?s?\:]|[ma?y?pa?c?ka?ge?s?\:]/) {
+      result = pkg:getHttpStatus("mayos://mayos.com/maypack/" + pkg.value:getregex(/\:^[A-Za-z0-9_.: \t\n\r\f\v]$/));
+    }
+    if(!result.isHttpAvaliable) {
+      msg = {
+        error,
+        [
+          "The package is not avaliable.",
+          "this error will appears on the package are not found or privated.",
+          "check your internet connection or storage space."
+        ],
+        nil
+      };
+    } else {
+      msg = {
+        info,
+        [
+          "completed installing Package " + package.name + " in " + maypack.pkginstallinfo.totalms + "ms",
+          "installed packages: ",
+          result:jsonToPlain()
+        ],
+        result:getValueFromJSON("info.meta.dataUrl", "info.data.*").load()
+      };
+    }
+    return msg, msg.dataUrl;
+  }
+  
+}

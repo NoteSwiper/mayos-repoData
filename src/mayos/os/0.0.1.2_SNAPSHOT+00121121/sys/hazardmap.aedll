@@ -1,0 +1,37 @@
+/*dll dynamic
+aedll
+ configution
+  hmap
+   g up600px, left800px, enable scaling
+    h2<MayOS Hazard Map>
+     scaler on
+     serverload googlemap map
+     clickable on
+     screen
+      menu
+       normal
+        load map normal
+       normal
+       earth
+        load map earth
+       earth
+      menu
+      frame
+       searchbar
+        text onEnter=searchscript
+       searchbar
+       frame
+        load map recommend
+       frame
+       recent
+        load map recented
+       recent
+     screen
+    h2
+   g
+  hmap
+ configution
+aedll
+
+
+PUBLICEncryptCode=4V7084OWMPAPNA8NDMU8PAYCTRVR4BR8IS3OAAM892AQ20MUV98NYQ78AVY7A2B67WBI7VWPWWVLO4784WO4W5O00W04ONVWBWGVWSBV

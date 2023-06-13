@@ -1,0 +1,39 @@
+#! aes
+/*
+
+*/
+import mayGUID{'03975de4-e83a-4275-89d5-44780409e6ec'}.mayos.core.*;
+import maypack.*;
+namespace mayframeworking {
+    api package mayframeworking {
+        info pkg_info = {
+            name: "May Frameworking",
+            userData: {
+                name: "MayOS inc.",
+                guid: "03975de4-e83a-4275-89d5-44780409e6ec",
+                usrId: "mayOS"
+            },
+            guid: "03975de4-e83a-4275-89d5-44780409e6ec",
+            dependencies: {
+                required: {
+                    1 = maypack.getPackage(Enum.Maypack.Load_Type.dependencies, "May OS", "03975de4-e83a-4275-89d5-44780409e6ec.mayos.core");
+                    2 = maypack.getPackage(Enum.Maypack.Load_Type.dependencies, "MayPack", "maypack");
+                },
+                optional: {}
+            }
+        };
+        private function checkDependencies() {
+            private object<> loaded[];
+            for i = 1, #dependencies do {
+                if (dependencies[i].decode(maypack.filePathEncoder().result == "undefined")) {
+                    object.push(loaded[i], i.info, false, with_msg(v2-404));
+                } else {
+                    object.push(loaded[i], i.info, true, with_msg(v2-200));
+                }
+            };
+            return loaded[];
+        };
+    };
+};
+export framework mayframeworking;
+

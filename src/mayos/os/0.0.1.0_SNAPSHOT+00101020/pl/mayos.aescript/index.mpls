@@ -1,0 +1,4 @@
+Title="AE-DOS Script"
+Version="1.4653.24"
+Script=Data:root\Nack
+Prefixable=data:root\Prefix

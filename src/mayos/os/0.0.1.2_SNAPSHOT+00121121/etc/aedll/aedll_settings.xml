@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes" ?>
+<settings>
+  <aedll>
+    <schemaUrl>mayos://mayos.com/aedll/aedll_2023.aesch</schemaUrl>
+    <path>
+      <sysStatSaving>./aedll_stat.aestat</sysStatSaving>
+      <customStatSaving>./${pkg}_stat.aestat</customStatSaving>
+      <log>./${add(date() + "_" + name())}.aelogging</log>
+    </path>
+  </aedll>
+</settings>

@@ -1,0 +1,6 @@
+using lib
+ using lib.os
+  using lib.os.compiler;
+Compiler(lib\Conpiler\System.cmp ~systemcomp\);
+dynamics linker
+ current;

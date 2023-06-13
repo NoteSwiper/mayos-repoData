@@ -1,0 +1,17 @@
+startuptype 1
+password off
+process code 8FB4HG-56GHT-56H7R-5JFG7
+ip 144.5643.545.34
+Microphone on
+cam off
+passcode yournameistheppa
+theme green
+version Nistra.0.563
+edition pro
+id PC735547
+Web ID 5TTDH47T84G907Y65
+tell off
+come off
+OS.web
+network on
+device 4disks

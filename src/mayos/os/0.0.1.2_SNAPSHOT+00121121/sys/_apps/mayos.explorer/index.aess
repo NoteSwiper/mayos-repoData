@@ -1,0 +1,34 @@
+class explorer {
+  aedll design main {
+    <aedll url="mayos://mayos.com/schemas/aedll.aesch" version="2.5">
+      <design name="Explorer" id="mayos.system.explorer" dataId="0">
+        <menu>
+          <menu-group name="File" id="file">
+            <menu-group name="Share" id="share">
+              <menu-item name="None" id="none" />
+              <aes p="getSharer()" />
+            </menu-group>
+            <menu-item name="New" id="new" />
+            <menu-item name="Open" id="open" />
+            <menu-item name="Save" id="save" />
+            <menu-item name="Save as" id="save-as" />
+            <menu-item name="Close" id="close" />
+          </menu-group>
+          <menu-group name="Help" id="help">
+            <menu-item name="About" id="about" />
+          </menu-group>
+        </menu>
+        <content alw="loadFileExplorerScreen()"></content>
+      </design>
+      <design name="Explorer About" id="mayos.system.explorer.about" dataId="0">
+        <icon value="./getFind?icon" />
+        <text value="getStrTableValByIndex0243" id="aboutmsg" />
+      </design>
+      <config>
+        <translation-data src="./_res/trl/window.aelang" />
+        <script-data src="./_res/spt/window.aes" />
+        <app-data src="./_res/app/window.aeconf" />
+      </config>
+    </aedll>
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "folders": {
+    "bin": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_INDEXSBN",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "outputs": {
+        "dir": "/bin/outputs/",
+        "name": "Builded Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_OUTPUTBN",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_buildprg"
+      },
+      "status": {
+        "dir": "/bin/status/",
+        "name": "Binary Status Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_STATUSBN",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_loggings"
+      }
+    },
+    "boot": {
+      "this": {
+        "dir": "/boot/",
+        "name": "Boot Loaders",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BOOTLDRS",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_pcPowers"
+      },
+      "img": {
+        "dir": "/boot/img",
+        "name": "Custom boot Image Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BOOTCUST",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_custombl"
+      }
+    },
+    "cmp": {
+      "this": {
+        "dir": "/cmp/",
+        "name": "Compiler Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_COMPILER",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_wrenchFl"
+      },
+      "cmp/*": {
+        "dir": "/cmp/*",
+        "name": "${getinfo(this.info).name} Folder",
+        "translationId": "MAYOSINC_CUSTOMID_${getinfo(this.info).translationId}",
+        "folderIcoName": "mayosInc_ICFolder_${getinfo(this.info).folderIconId}"
+      }
+    },
+    "dev": {
+      "this": {
+        "dir": "/dev/",
+        "name": "Device Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_DEVMNGRS",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_deviceMg"
+      }
+    },
+    "drv": {
+      "this": {
+        "dir": "/drv/",
+        "name": "Driver Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_DRIVERFL",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_driverlg"
+      },
+      "dev": {
+        "dir": "/drv/dev/",
+        "name": "Driver Config Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_19948F73",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_anything"
+      }
+    },
+    "etc": {
+      "this": {
+        "dir": "/etc/",
+        "name": "System Information Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_SYSINFOS",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_fileconf"
+      },
+      "aedll": {
+        "dir": "/etc/aedll/",
+        "name": "AEDLL Information Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_AEDLLETC",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_aedlletc"
+      },
+      "opt": {
+        "dir": "/etc/opt/",
+        "name": "Options info Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_OPTFILES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_addonIco"
+      },
+      "sgml": {
+        "dir": "/etc/sgml/",
+        "name": "SGML Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_SGMLOPTS",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_sgmlIcon"
+      },
+      "xml": {
+        "dir": "/etc/xml/",
+        "name": "XML Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_XMLOPTIS",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_xmlFiles"
+      }
+    },
+    "mayid": {
+      "this": {
+        "dir": "/mayid/",
+        "name": "mayId Master Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_MAYIDTRL",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_mayosWeb"
+      },
+      "numb": {
+        "regex": "[0-9A-Fa-f]\{0,4\}"
+      }
+    },
+    "mdst": {
+      "this": {
+        "dir": "/mdst/",
+        "name": "may Distration Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_MAYDISTT",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_distIcon"
+      }
+    },
+    "memos": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "opt": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "com.mayos.*": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "pkg": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "com.mayos.*": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "pl": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "mayos.*": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "run": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_advINS": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_misc": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_pp": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_protect": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_sysFolder": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "cmdsyntax": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "sbin": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "serve": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "mayos.server.*": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "shared": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "conf": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "font": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "grap": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "home": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "lang": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "lib": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "log": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "proc": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "root": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "test": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "theme": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "srv": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "mayos.srv.*": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "sys": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_apps": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_addons": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_cache": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_logs": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_res": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "_sysconf": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "tmp": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "drivers": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "scripts": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    },
+    "var": {
+      "this": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "cache": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "cfg": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "lib": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "prod": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      },
+      "tmp": {
+        "dir": "/bin/",
+        "name": "Binary Folder",
+        "translationId": "MAYOSINC_SYSFLDER_SFLDNAME_BINARIES",
+        "folderIcoName": "mayosInc_ICFolder_systemfd_programs"
+      }
+    }
+  }
+}

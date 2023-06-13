@@ -1,0 +1,10 @@
+@aegl(1.0)
+
+main() {
+  color bg = color.hex(#555);
+  color sd = color.rgba(0,0,0,0.3);
+  
+  var sizeX = AEGL.WINDOW.SIZE.X;
+  var sizeY = AEGL.WINDOW.SIZE.Y;
+
+}

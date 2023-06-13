@@ -1,0 +1,8 @@
+import mayos;
+
+private string text = "Hello World!";
+public state {};
+
+if(mayos) {continue}
+
+sys:print(text);

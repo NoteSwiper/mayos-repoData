@@ -1,0 +1,6 @@
+_name=mayos
+_authors=mayinc:aeinc
+_languageDir=./shared/~lang/*:./lang/*:./sys/System.*-*.may-msgTable?
+_ver=0.0.1.2
+_devType=beta
+_build=00121121

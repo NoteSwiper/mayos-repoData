@@ -1,0 +1,8 @@
+{
+  "app": {
+    "name": "Command Prompt",
+    "id": "mayos.shell.cmd",
+    "short": "cmd",
+    "dll": "ui"
+  }
+}

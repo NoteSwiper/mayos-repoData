@@ -1,0 +1,16 @@
+noise {
+  publicInt seed = this.seed, slider;
+  publicInt Size = this.size, slider;
+  btn Prosess = "Process Now", "prs", buttonEvent;
+
+  stateIf(app.prs = 1) {
+    process(noise.seed, noise.Size);
+    count(1);
+    return stateIf(app.prs = 1) {script.stateIf1}
+  }
+  draw {
+    size(640, 360);
+    bgColor(white);
+    draw(process);
+  }
+}

@@ -1,0 +1,6 @@
+0.0.0.1-SNAPSHOT+00019122_20230311: First release
+0.0.0.2-SNAPSHOT+00022141_20230323: added "api.mea"
+0.0.0.3-SNAPSHOT+00033861_20230324: added "systemConf.json"
+0.0.1.0-SNAPSHOT+00101020_20230402: fixed "/sys/_apps/mayos.application-template/index.mea"
+0.0.1.1-SNAPSHOT+00118323_20230406: edited directory structure from legacy to new one
+0.0.1.2-SNAPSHOT+00121121_20230414: fixed any file

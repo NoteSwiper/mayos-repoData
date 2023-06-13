@@ -1,0 +1,19 @@
+import lib.os.theme
+package(class)
+
+function checkTheme(folder) {
+  if folder {
+    return folder, true;
+  }
+}
+
+local themelib = checkTheme(this.par);
+
+public class Change {
+  function themeChange {
+    if(themeselect = target) {
+      theme(thm%_?_%set_target);
+      componentThemeSet(thm%_?_%set_target);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+local module = {}
+local ray = {}
+local shadow*
+  local ShadowResolution = 2.5
+  local shadowColor1 = color{r0, b0, g0, t0.7}
+  local shadowColor2 = {img.color.color_Shadow}
+  local FarShadowResolution = 0.685
+
+local sun*
+  Sunimg = {img.cast.sunmask}
+  Angle = wait(min^5) .angle+1
+  local Sunrays*
+    local SunRaysAmount = 0.634
+    local SunRaysSize = 0.983
+
+local 3d*
+  local BlockResolution = 256
+
+local misc*
+  local MetalicMode = 0
+  local spray*
+    local spraymask = 
+
+  local ai*
+    local AI = main.ai4
+

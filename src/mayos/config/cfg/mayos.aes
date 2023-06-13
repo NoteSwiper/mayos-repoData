@@ -1,0 +1,7 @@
+#!aes
+import '';
+
+if(requester.internal == ("both"|"BOTH")) {
+    return this.src._shebang.getShebangCode();
+};
+#!toml

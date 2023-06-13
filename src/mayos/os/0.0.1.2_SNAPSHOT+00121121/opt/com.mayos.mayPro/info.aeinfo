@@ -1,0 +1,16 @@
+import may.req as "req";
+import may.var as "mvar";
+import cloud.{mayPackage.packStrId:ofc.may-ext.all} as "extendsAll" from cloud;
+
+sharedInfo-conf may_info = {
+  name = "May PRO"
+  version = "1,0,0"
+  imgs = {
+    packageIcon = url(local:path/pack.packimg);
+    smallPackageIcon = url(local:path/pack_small.packimg);
+  }
+  requirement = {
+    req.memory = extendsAll.mem.mtiler(2000, "mem");
+    req.pckage = extendsAll.pkg.mstrg("may");
+  }
+}

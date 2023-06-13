@@ -1,0 +1,223 @@
+{
+  "system": {
+    "info": {
+      "name": ["May OS","may os","mayos","may-os"],
+      "version": [0,0,1,2],
+      "build": "00121121",
+      "productName": ["Snapshot","SNAPSHOT"]
+    },
+    "output": {
+      "output-filename": "${getName(..info.name.3val)}-${..info.version.format(\".\")}-${..info.productName.2val}\+${..info.build}",
+      "output-path": "../bin/output/",
+      "output-fileextension": ["zip","aearchive","tar"]
+    },
+    "changelog": {"path": ["./changelog.json", "./changelog.txt"]},
+    "urls": {
+      "roms": {
+        "system": ["mayos://mayos.com/api/get?id=mayos&type=iso&ver=${Version}&bld=${Build}","mayos://svr.mayos.com/dist/mayos-${Version}_${Build}.may-diskImage"]
+      },
+      "bases": {
+        "url": "mayos://mayos.com/",
+        "svr": ["mayos://svr.mayos.com/","mayos://mayos.com/svr?id=${getId()}/"],
+        "tmp": ["mayos://tmp.mayos.com/","mayos://tmp.pris.vr/getSvr?id=mayos.${}/"]
+      },
+      "svrs": {
+        "base": "mayos://svr.mayos.com/check?id={}/",
+        "temp": "mayos://tmp.pris.vr/getSvr?id=mayos.{}/",
+        "mayp": "mayos://svr.plgt.com/{}/fetch"
+      }
+    },
+    "id": {
+      "id": "abb46C6-dB66d32",
+      "registerId": "jkf88vb7ajm9ucby36ga78fh93hg",
+      "time": "time",
+      "tz": "tzone",
+      "updId": ["upd","mayUpdate","mayupdate","tmpupd","betaupd"],
+      "updnm": "mayos_updProgram{updId}"
+    },
+    "pkgs": {
+      "system": "com.mayos.core",
+      "aecore": "com.ae.core",
+      "ae-gui": "com.ae.ui",
+      "ae-web": "com.ae.web"
+    },
+    "pathData": {
+      "files": {
+        "sys": {
+          "bld": "btl/bootLoader.btl",
+          "mst": "sys/master.aes",
+          "mtb": {
+            "langId": {
+              "en-us": "./system_en-us.may-msgtables",
+              "ja-jp": "./system_ja-jp.may-msgtables"
+            }
+          },
+          "rdm": ["/README.txt","/README","/README.md"],
+          "ust": "sys/usr.encp",
+          "trl": "system.may-trltables",
+          "fet": {
+            "langId": {
+              "en-us": "./fileExtension_en-us.may-msgtables",
+              "ja-jp": "./fileExtension_ja-jp.may-msgtables"
+            }
+          },
+          "folderCustomizations": "./folderCustom.json"
+        }
+      },
+      "folders": {
+        "res": {
+          "ind": "sys/_res/",
+          "srs": "ind/system/",
+          "thm": "/theme/",
+          "lgo": "srs/logo/",
+          "gui": "srs/ui/"
+        },
+        "sys": {
+          "lib": {
+            "new": "/pkg/",
+            "old": "/lib/"
+          },
+          "cfg": {
+            "shared": "shr/conf/"
+          },
+          "grp": {
+            "shared": "shr/graphics"
+          },
+          "sys": {
+            "entire": "/sys/"
+          },
+          "btl": {
+            "entire": "/boot/"
+          },
+          "cmp": {
+            "entire": "/cmp/"
+          },
+          "fnt": {
+            "entire": "shr/font/"
+          },
+          "lng": {
+            "entire": "shr/lang/"
+          },
+          "ext": {
+            "entire": "/opt/"
+          },
+          "srv": {
+            "entire": "/serve/"
+          },
+          "drv": {
+            "entire": "/drv/"
+          },
+          "dev": {
+            "entire": "drv/dev/"
+          },
+          "pkg": {
+            "entire": "lib/"
+          },
+          "shr": {
+            "entire": "/shared/"
+          },
+          "log": {
+            "entire": "shr/log/"
+          },
+          "bin": {
+            "entire": "/bin/",
+            "output": "/bin/outputs/",
+            "status": "/bin/status"
+          },
+          "dvm": {
+            "entire": "/dev/"
+          },
+          "agr": {
+            "entire": "/etc/"
+          },
+          "hme": {
+            "entire": "shr/home/"
+          },
+          "tst": {
+            "entire": "shr/test/"
+          },
+          "scg": {
+            "entire": "sys/_conf/"
+          },
+          "cah": {
+            "entire": "sys/_cache/"
+          },
+          "app": {
+            "entire": "sys/_apps/"
+          },
+          "mda": {
+            "entire": "sys/_media/"
+          },
+          "stx": {
+            "entire": "sys/cmdsyntax/"
+          }
+        }
+      }
+    }
+  },
+  "time": {
+    "url": "mayos://svr.mayos.com/get?id=timesvr"
+  },
+  "core": {
+    "config": {
+      "name": "mayos_core",
+      "gui": {
+        "defaultResource": "gui",
+        "logo": "logo",
+        "scale": 1,
+        "connections": {
+          "mouse": {
+            "x": "cur.x",
+            "y": "cur.y",
+            "isClick": {
+              "left": {
+                "default": "cur.click",
+                "optional": "action.clicked"
+              },
+              "right": {
+                "default": "cur.menu",
+                "optional": "action.menuclicker"
+              }
+            },
+            "wheel": {
+              "up": "action.scroll.up",
+              "down": "action.scroll.down",
+              "click": {
+                "default": "cur.click",
+                "optional": "action.wheel.click"
+              }
+            }
+          },
+          "keymap": {
+            "general": {
+              "window": {
+                "content.copy(selected.clipboard)": {
+                  "shortcut": ["ctrl","c"]
+                },
+                "content.paste(selected.clipboard)": {
+                  "shortcut": ["ctrl","v"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "api": {
+    "mayos": {
+      "enabled": true,
+      "version": "getValueFrom system.info.version",
+      "apis": {
+        "mouse": {
+          "cur": {
+            "x": "getCursorPositionX",
+            "y": "getCursorPositionY",
+            "click": "getCursorClick",
+            "menu": "getCursorMenu"
+          }
+        }
+      }
+    }
+  }
+}

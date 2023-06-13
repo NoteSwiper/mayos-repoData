@@ -1,0 +1,15 @@
+using General;
+using lib
+ using lib.web
+  using lib.web.download;
+  using lib.web.currentserver;
+ using lib.os;
+
+public function "com.general" {
+  cmd.when;
+  open(open.exe);
+  svr.load(type(ftp)URL(WinOS/AE-DOS/34/MayOS45/pro/x64/MayOS45Pro64x.iso));
+  DownloadInstall;
+  
+  end()
+ }

@@ -1,0 +1,25 @@
+@class <aes>
+
+import cloud.csl.*;
+import cloud.app.*;
+import cloud.app3d.*;
+
+
+application_runtime app3d {
+  info app3d {
+    title = "Application3D Runtime",
+    author = "MayOS Inc",
+    description = "Allows 3D Application.",
+    requires = "app, csl, app3d",
+    engine = "AEScript.MayOS_engine";
+  }
+  
+  loopclass checkframe(tick, target) {
+    dot(x, y, color.r, color.b, color.g);
+  }
+  
+  class 3dsquare(x.pos,y.pos,x.scale,y.scale,angle,color) {
+    spawn(square, x.pos, y.pos, x.scale, y.scale, angle, color);
+    checkframe(5, this);
+  }
+}

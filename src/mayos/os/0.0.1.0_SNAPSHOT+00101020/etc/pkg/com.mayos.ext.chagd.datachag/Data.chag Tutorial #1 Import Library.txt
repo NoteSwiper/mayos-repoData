@@ -1,0 +1,18 @@
+Data.chag Tutorial #1 - Import Library
+step1 - Copy library's URL.
+there is libraryURL List.
+data.chag://data/chug/library/00001%starter-library/ - Starter Library for Starter or Begginer
+data.chag://data/chug/library/00002%advanced-library/ - Advanced Library for Learner
+data.chag://data/chug/library/07352%game-engine-library/ - Game Engine
+
+step2 - write code in html or js or css
+on html =
+<link href="index.css" rel="stylesheet" type="text/css"/>
+<script language="javascript" src="index.js" type="text/javascript"></script>
+<script language="javascript" src="library/starter/library.js" type="text/javascript"></script>
+
+step3 - test if working
+if not working, you need to install or write configution file like this:
+[Chag]
+chag = data.chag://data/chug/
+index = chag/index.chag

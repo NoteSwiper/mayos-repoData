@@ -1,0 +1,54 @@
+import device.* as "maydevice";
+
+/=
+<maydevice:getDevice(deviceType, dataType, deviceName);>
+Audio Input = 0, 0, def
+Audio Output = 0, 1, def
+Video Device = 1, 0, def
+=/
+
+class main() {
+  parameter asrc = getParam;
+  api audio audioSource = maydevice:getDevice(0, 0, def);
+  public float volume = 1.0;
+  public float windowRange = 1.0;
+  public float updateRate = 1.0;
+  private float currentAmplitude;
+  private int sampleRate = audioSource:getStatus("signal.sampleRate");
+  
+  public noUserEdit int maxSoundRange = sampleRate / 2;
+  
+  graph gp = new Graph();
+  gp.graphType(2);
+  gp.valueTime(maxSoundRange);
+  
+  dict windowFunctions = {
+    "Hamm"|1 = Enum.WDF.Hamm,
+    "Hamming"|2 = Enum.WDF.Hammming,
+    "FlatTop"|3 = Enum.WDF.FlatTop,
+    "Triangular"|4 = Enum.WDF.Triangular,
+    "Retangular"|5 = Enum.WDF.Retangular,
+    "Smart"|6 = Enum.WDF:getValueByIndex(smart)
+  };
+  
+  int counts;
+  
+  private list amplitudePerFreq[] = blank[];
+  loopWhile(application:getStatus("app.APP_STOPPED"|"app.APP_CRASHED"|"app.APP_FREEZED")) {
+    for(i = 1, i + maxSoundRange, i++ by(1.5)) {
+      counts += 1;
+      currentAmplitude = audioSource:getStatus("signal.currentAmplitude");
+      amplitudePerFreq[].push(currentAmplitude);
+    }
+    audio.filterWindow(windowFunctions["Smart"]);
+    gp.setValueData(maxSoundRange, amplitudePerFreq.getAllValue);
+    
+    if (memory.freeSpace < maxSoundRange x 2 | memory.randomModule.freeSpace < maxSoundRange x 2) {
+      clearMemory(memory:getDir("/${memory:getMemoryModuleNumberMatches(maxSoundRange)}/soundRanges/index.mem"));
+    }
+    writeMemory(amplitudePerFreq, memory:getDir("/${rand(1,memoryModules)}/soundRanges/index.mem"));
+    gp.clearValueData();
+    amplitudePerFreq[].clearAll();
+    counts = 0;
+  }
+}

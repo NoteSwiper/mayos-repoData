@@ -1,0 +1,3 @@
+What is AE Script?
+AE Script is a Advanced Endless easy programming.
+This script is currently used on mayOS.

@@ -1,0 +1,24 @@
+maylib
+  cube
+    cube.3d
+      cube.3d.model
+      cube.3d.decal
+      cube.3d.raycast
+    cube.2d
+      cube.2d.model
+      cube.2d.sprite
+      cube.2d.script
+    cube.1d
+      cube.1d.noise
+    cube.rgb
+      cube.rgb.red
+      cube.rgb.green
+      cube.rgb.blue
+    cube.hsv
+    cube.bits
+    cube.color
+    cube.resolution
+    cube.raycast
+    cube.raymarch
+    cube.model
+    cube.fps

@@ -1,0 +1,196 @@
+// Advanced Graphics Library Systems
+
+<BEGIN DESCRIPTION BLOCK
+This Graphics Library is Created By MayOS Inc.
+Making Better like realistic and faster.
+to Use Import Module, type importer "import cube.*;".
+Conpleted Task will far from your feeling task.
+END DESCPIPTION BLOCK>
+
+<BEGIN LICENSE BLOCK
+This graphics is Advanced Basic Graphics.
+requires Middle Spec GPU.
+Lower Spec GPU Was Do Lagging.
+if you edit and save this graphics, do guideline license "MayOS Protection License".
+END LICENSE BLOCK>
+
+string Title = CubeGraphicsLibrary v1.57.0223
+
+export final info may_info = {
+    "name":		"Cube Graphics Library",
+    "author":		"MayOS Inc",
+    "version":		(2.1.3.40),
+    "location":		"Render.Graphics.Mode",
+    "description":	"Default Graphics For MayOS",
+    "warning":		"this graphics has exeprimental.",
+    "category":		"Graphics",
+    "library_version":	(1.5.2.1535a),
+    "library_id":	"mayos.exp.Simside-GraphicsLibrary",
+    "engine_version":	(0.252b),
+    "engine_id":	"mayos.exp.Simside-exepriment-engine",
+    "raycast_engine":	"mayos.exp.Simside-raytracer"
+}
+class main() {
+  get 1d.axis			= X;
+  get 2d.axis			= [X, Y];
+  get 3d.axis			= [X, Y, Z];
+  get 4d.axis			= [W, X, Y, Z];
+  
+  api string setColorBit	= "256 bits";
+  function getColorBitrate() { return system:colorBit[?]}
+  
+  axm red.color			= {r-255, g-0, b-0};
+  axm orange.color		= {r-255, g-102, b-0};
+  axm yellow.color		= {r-255, g-242, b-0};
+  axm green.color		= {r-0, g-255, b-0};
+  axm Lightblue.color		= {r-0, g-255, b-255};
+  axm blue.color		= {r-0, g-0, b-255};
+  axm pink.color		= {r-255, g-0, b-255};
+  llp Hue.color;
+  llp Saturation.color;
+  llp Valve.color;
+  
+  if (sys:getGraphics().isRaytracingEnabled) {
+    this.rayTracing = true;
+  } else {
+    this.rayTracing = false;
+  }
+  class shadowdraw {
+    int shadowres = 0.6;
+    int farres = 0.23;
+    // Looping as inf.
+    forever {
+      // easy say i say.. when find the unstable(Says, Shadow) at sun.
+      find sun.angle unstable;
+      if unstable finded {
+        // wait to drawing shadow at screen.
+        wait(framerate);
+        draw unstable shadowres;
+        if shadow.dist = mid {
+          blur dist.mid 1+dist;
+        }
+      }
+    }
+  }
+  
+  class sunrays {
+    forever true {
+      if sun == true {
+        calculate sun.angle to 0.1;
+        show calculated sunrays;
+      }
+    }
+  }
+  WaveFX {
+    function(CuSc=sine~effectassect) {
+      OnForever(numbvar.isWaveEnabled) {
+        ScreenPixel(this.screenx, this.screeny == sinpixel(screen));
+        check 2 + 0.331 - screenx;
+      }
+    }
+  }
+  class shadowdraw(pixel, res, far) {
+    int shadowres = this.script.res;
+    int farres = this.script.far;
+    // Looping as inf.
+    forever {
+      // easy say i say.. when find the unstable(Says, Shadow) at sun.
+      find sun.angle unstable;
+      if unstable finded {
+        // wait to drawing shadow at screen.
+        wait(framerate);
+        draw unstable shadowres;
+        if shadow.dist = mid {
+          blur dist.mid 1+dist;
+        }
+      }
+    }
+  }
+  
+  class sunrays() {
+    forever true {
+      if sun == true {
+        calculate sun.angle to 0.1;
+        show calculated sunrays;
+      }
+    }
+  }
+  class shadowdraw {
+    int shadowres = 0.6;
+    int farres = 0.23;
+    // Looping as inf.
+    forever {
+      // easy say i say.. when find the unstable(Says, Shadow) at sun.
+      find sun.angle unstable;
+      if unstable finded {
+        // wait to drawing shadow at screen.
+        wait(framerate);
+        draw unstable shadowres;
+        if shadow.dist = mid {
+          blur dist.mid 1+dist;
+        }
+      }
+    }
+  }
+  1D = X;
+  1d {
+    class move(time, amount) {
+      loop(time) {
+        //Xç¿ïWÇ…Ç«ÇÃÇÆÇÁÇ¢ìÆÇ©Ç∑
+        set(x == x + amount);
+      }
+    }
+  }
+  2D = X, Y;
+  2d {
+    class move2d(time, amount) {
+      loop(time) {
+        
+        set(x == x + amount);
+      }
+    }
+    class turn(time, amount) {
+      loop(time) {
+        set(angle == angle + amount);
+      }
+    }
+    class jump(time, amount) {
+      loop(time) {
+        set(y == y + amount);
+      }
+    }
+  }
+  3D = X, Y, Z;
+  3d {
+    class move3d(time, x, y, z) {
+      loop(time) {
+        set(position == position + x, y, z);
+      }
+    }
+    class turn3d(time, x, y, z) {
+      loop(time) {
+        set(angle3d == angle3d + x, y, z);
+      }
+    }
+    class jump3d(time, x, y, z) {
+      loop(time) {
+        set(jump == jump + x, y, z);
+      }
+    }
+  }
+  4D = W, X, Y, Z;
+  Systemcode = 4D0069006E0074004300750062006520470072006100700068006900630073002000530079007300740065006D004D00610079004F0053002000500072006F00740065006300740069006F006E0020004C006900630065006E0073006500
+  FPS boost ={
+    forever {
+      boosting screen fps {
+        refresh fasterRender;
+      }
+    }
+  }
+  Ray.Tracing;
+  Shadow 0.0;
+  G Effect;
+  Wave = {CuSc=sine~effectassect};
+  orta = {CuSc=bit~effectassect};
+  dist = {CuSc=post~effectassect};
+}

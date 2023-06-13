@@ -1,0 +1,21 @@
+class cube_marching(target, vector) {
+  public int resolution = 16;
+  public bool fluid = true;
+  public list type = lists{fluid, honey, lava, cube, model, fog};
+  public bool gravity = true;
+  public vec2 gVec = vec2(0, -3, 0);
+  public model target = this.target;
+  public vec3 color = vec3(0, 0, 0);
+
+  local cubeModel = syspath(file\res\cube\);
+  local cube = instance.new(calculate.cube);
+  
+  forever {
+    if(cube = check(cube.march)) {
+      find model resultmodel
+      if(findModel = target) {
+        send target model
+      }
+    }
+  }
+}

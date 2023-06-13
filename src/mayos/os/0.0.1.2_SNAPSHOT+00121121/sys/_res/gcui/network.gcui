@@ -1,0 +1,7 @@
+gcui
+<icon_src=src/Network.ast>
+<txtlabel(function_IP)>
+
+function IP
+on every = time
+<IP>

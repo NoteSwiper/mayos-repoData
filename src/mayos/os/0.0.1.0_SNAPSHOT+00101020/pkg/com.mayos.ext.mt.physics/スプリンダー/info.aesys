@@ -1,0 +1,9 @@
+may_info = {
+  name = "Sprinter"
+  author = "MayOSJP Inc"
+  version = (1.0.00)
+  location = "レンダー > 物理設定 > 物理モード"
+  description = "リアルな物理拡張エンジン"
+  library = "maylib-MayPhys"
+  engine = "BasicGLScriptEngine"
+}

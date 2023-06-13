@@ -1,0 +1,26 @@
+may_info = {
+  name = "Shadow";
+  script = "shadow.gl"
+  devloc = "shadow.decl"
+    locbool = "‰e‚ğƒIƒ“‚É‚·‚é", true;
+    loclist = "‰e‚Ì‰ğ‘œ“x", list{
+      ’á‰æ¿ = respixel(360), 64;
+      ’†‰æ¿ = respixel(480), 96;
+      ‚‰æ¿ = respixel(720), 512;
+      ’´‚‰æ¿ = respixel(1080), 1024;
+      UHD = repixel(2080), 2096;
+    }
+    locfloat = "‰“‚¢‰e‚Ìİ’è"(0.01, 0.5), 0.3;
+  
+}
+
+cloud.may.gl.*;
+
+shadow {
+  int resolution = loclist.sdres
+  int angle = gl.settings_sunAngle;
+  calculate(sunAngleShadow, resolution);
+  if(calculated) {
+    show(calcshadow.result setColor(0, 0, 0));
+  }
+}

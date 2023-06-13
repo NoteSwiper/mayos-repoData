@@ -1,0 +1,10 @@
+local module = {};
+local soundengine = OpenSL;
+local graphicsengine = OpenGL;
+local parent = script.parent;
+local soundFolder = getFolder("Sound")
+
+function {
+ load sound
+ cmade
+}

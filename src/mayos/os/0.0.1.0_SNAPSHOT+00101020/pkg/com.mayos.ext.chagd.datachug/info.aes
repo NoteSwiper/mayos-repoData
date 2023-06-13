@@ -1,0 +1,22 @@
+library_info {
+  name = "AEOSData.Chag Library"
+  author = "AEOS.Inc","Data.chag","libraryMonster","aeOS","aeOS-WebInt-Protocol-Provider"
+  chagVersion = "3.0"
+  var = {
+    chagURL   = datachag://libchug.lcg/
+    chagIndex = chagURL + index.chg/
+    chagSrc   = chagIndex + src/
+    chagCU    = chagSrc + Upcheck.mea
+    chagIns   = chagSrc + chagjs/chaginstall.exe
+    chagSrv   = chagURL + service/
+    var.Installer = {
+      pth = chagIns
+      cmd = "datachag://libchug.lcg/index.chg/cmd/installer=gui%1cmd253r_timer=set-5.0"
+      exe = "datachag://libchug.lcg/index.chg/cmd/exec-installer=1"
+    }
+  }
+  importer = true,use(chagLib, AEWeb(datachag://libchug.lcg/may/libs/)){
+    cloud.{MayUser(12087462)}.chag
+    chagLib
+  }
+}

@@ -1,0 +1,10 @@
+using lib.os;
+local module = {};
+
+local function {
+ int HandleID = 00013abb3;
+ int power = 248d;
+ bool enabled = on;
+ 
+ 
+}

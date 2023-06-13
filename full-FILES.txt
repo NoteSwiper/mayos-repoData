@@ -1,0 +1,72 @@
+/											root
+/bin/						folders.sys.bin.entire;			binary files
+/bin/outputs/					folders.sys.bin.output;			outputs
+/bin/status/					folders.sys.bin.status;			status of binaries
+/bin/status/status_<binStatusID>.aep							files
+/boot/						folders.sys.btl;			on os boots, any files stored in this folder
+/boot/bootloader.btl									for Boot loader
+/boot/Img/										images for custom behaviour boot loading
+/cmp/						folders.sys.cmp;			compiler stored here
+/cmp/*.cmp										
+/cmp/*/											
+/dev/						folders.sys.dvm;			on devices connects, stored in this folder
+/drv/						folders.sys.drv;			on drivers connects, drivers stores in this folder
+/drv/dev/					folders.sys.dev;			
+/drv/port.aedry										
+/etc/						folders.sys.agr;			on system generated files, would stored here
+/etc/aedll/										
+/etc/opt/										
+/etc/sgml/										
+/etc/xml/										
+/memos/											an memos for development
+/opt/						folders.sys.ext;			extension files stored here
+/opt/com.example.package/								
+/pkg/						folders.sys.lib, folders.sys.pkg;	any packages stored in here
+/pkg/com.mayos.<type>.<name>/								
+/pl/											
+/pl/mayos.<name>/									
+/pl/mayos.<name>/prefix/								
+/pl/mayos.<name>/nack/									
+/pl/mayos.<name>/index.mpls								
+/run/											
+/run/_advINS/										
+/run/_misc/										
+/run/_pp/										
+/run/_protect/										
+/run/_sysFolder/									
+/run/cmdsyntax/										
+/sbin/											
+/serve/						folders.sys.srv;			
+/serve/mayos.server.<name>/								
+/serve/mayos.server.<name>/svricon.png							
+/serve/mayos.server.<name>/config/							
+/serve/mayos.server.<name>/config/server.aeconf						
+/serve/mayos.server.<name>/array/							
+/serve/mayos.server.<name>/array/array.txt						
+/serve/mayos.server.<name>/content/							
+/serve/mayos.server.<name>/script/							
+/serve/mayos.server.<name>/script/error.aes						
+/shared/					folders.sys.shr;			
+/shared/conf/					folders.sys.cfg;			
+/shared/font/					folders.sys.fnt;			
+/shared/Graphics/				folders.sys.grp;			
+/shared/home/					folders.sys.hme;			
+/shared/lang/					folders.sys.lng;			
+/shared/log					folders.sys.log;			
+/shared/proc/										
+/shared/root/										
+/shared/test/					folders.sys.tst;			
+/shared/theme/					folders.sys.thm;			
+/srv/											
+/sys/						folders.sys.sys;			
+/sys/_application-addon/								
+/sys/_apps/										
+/sys/_res/					folders.res.ind;			
+/sys/_syscfg/										
+/sys/_cache/										
+/tmp/											
+/tmp/drivers/										
+/tmp/scripts/										
+/var/											
+/var/cache/										
+/var/lib/										

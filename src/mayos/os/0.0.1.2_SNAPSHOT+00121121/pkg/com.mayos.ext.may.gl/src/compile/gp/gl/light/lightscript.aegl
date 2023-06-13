@@ -1,0 +1,4 @@
+GL.light
+  distance 0, 120 gradist light
+  source light on
+  

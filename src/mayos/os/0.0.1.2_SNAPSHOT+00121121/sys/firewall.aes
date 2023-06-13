@@ -1,0 +1,23 @@
+using lib
+ using lib.security;
+
+public function "com.firewall" {
+  int count = 0; 
+  int find = 0;
+  int currentwall = none;
+  int fluidID = 24x39a2;
+  
+  function "com.firewall.find" {
+    if find ware "com.misc.virusware" {
+      int find = 1;
+      add var "count" 1;
+      else;
+      int find = 0;
+      return;
+     }
+    
+   }
+  if gvar.find = 1 {
+    show.warning
+   }
+ }

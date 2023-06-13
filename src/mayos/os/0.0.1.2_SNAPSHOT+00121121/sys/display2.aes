@@ -1,0 +1,5 @@
+import extension.display;
+
+while true do
+  shoot 1 = <display-framerate>
+end

@@ -1,0 +1,7 @@
+script {
+  clicked {
+    slidespray.t 1 12
+    wait.(0.01)
+    impct 0.1 previous
+  }
+}

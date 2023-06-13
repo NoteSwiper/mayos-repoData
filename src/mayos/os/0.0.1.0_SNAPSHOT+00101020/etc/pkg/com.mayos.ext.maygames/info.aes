@@ -1,0 +1,30 @@
+export net.maygames:information;
+
+information info {
+  api final string PackageName = "Maygames.net";
+  api final string PackageId = "maygames";
+  api final string PackageNamespace = "net.maygames.*";
+  api final array PackageVersion = [1,0,0,0];
+  api final list PackageDependencies = {
+    package may,
+    package mayWeb
+  };
+  api final list PackageOptionalDep = {
+    package mayAI,
+    package AI,
+    package gEntity,
+    package gModel,
+    package Game,
+    package Game3D,
+    package NN,
+    package App,
+    package App3D,
+    package mayCPU,
+    package mayEffect,
+    package may3D,
+    package mayRender,
+    package mayApp,
+    package maySvr
+  };
+  api final cache PackageCaches = may.cache.getCache(this);
+}

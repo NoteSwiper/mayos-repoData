@@ -1,0 +1,4 @@
+if system.loaded and system.loaded.loadType == system.plugin.loadvar and system.loaded.pluginName == mPro {
+  ae.loadInfoFromAeInfomationFile(pathLocalUrl("main:path/plugins/mayPro-x64-v1.mplugin/info.aeinfo"));
+
+}

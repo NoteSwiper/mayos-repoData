@@ -1,0 +1,37 @@
+script {
+  error.code {
+    e.code = 404.00;
+    e.message = "Not Found";
+    e.reason = "Your Selected Website Was Not Founded. Try Watch Another Website";
+    e.type = "found:web";
+    e.expo = "NT_FOUND";
+  }
+  error.code {
+    e.code = 100.00;
+    e.message = "Continue";
+    e.reason = "Accepted";
+    e.type = "cont:web";
+    e.expo = "CNTNUE_";
+  }
+  error.code {
+    e.code = 102.00;
+    e.message = "Processing";
+    e.reason = "Your Selected Website Was Processing.";
+    e.type = "process:web";
+    e.expo = "PROCESING_";
+  }
+  error.code {
+    e.code = 200.00;
+    e.message = "OK";
+    e.reason = "Go!";
+    e.type = "ok:web";
+    e.expo = "OK_";
+  }
+  error.code {
+    e.code = 500.00;
+    e.message = "Internal Server Error";
+    e.reason = "Oops! Somebody Have Destroyed Server Process!";
+    e.type = "serverint:web";
+    e.expo = "INT_SVR_ERR";
+  }
+}

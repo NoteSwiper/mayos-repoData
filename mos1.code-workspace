@@ -1,0 +1,27 @@
+{
+    "folders": [
+        {
+            "name": "May-OS-Repositories",
+            "path": "."
+        },
+        {
+            "name": "lastest",
+            "path": "C:\\Users\\user\\mayos-beta\\mayos-beta"
+        }
+    ],
+    "settings": {
+        "xml.codeLens.enabled": true,
+        "tslint.jsEnable": true,
+        "material-icon-theme.folders.associations": {
+            "outputs": "Export",
+            "status": "Task",
+            "boot": "Other"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-azuretools.vscode-docker",
+            "editorconfig.editorconfig"
+        ]
+    }
+}

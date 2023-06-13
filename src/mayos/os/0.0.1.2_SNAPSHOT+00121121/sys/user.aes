@@ -1,0 +1,27 @@
+@class <aes>
+
+import cloud.csl.*;
+import cloud.user.*;
+
+
+class User(type, user) {
+  
+  info User {
+    title = "UserId Checker",
+    author = "MayOS Inc",
+    description = "Checks UserId.",
+    requires = "user, csl",
+    engine = "AEScript.MayOS_engine";
+  }
+  
+  function GetUserId(User) {
+    this.csl.result = new result(UserId);
+    this.csl.target = this.User.user;
+    
+    function result(target) {
+      onActivate {
+        userId(usr.tag.info);
+      }
+    }
+  }
+}

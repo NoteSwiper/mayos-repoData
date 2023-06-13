@@ -1,0 +1,7 @@
+e_(
+when.pc_freespace.1GB>low
+show.estimated/msg/e_lowspc
+when.application.dll_missing
+show.msg/e_dllmiss
+when.internet.wifi.lost
+show.msg/e_conlost,interlose

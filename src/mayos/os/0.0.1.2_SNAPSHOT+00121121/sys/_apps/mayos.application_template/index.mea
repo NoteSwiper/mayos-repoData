@@ -1,0 +1,70 @@
+# Index.mea for template application
+# scripted using May Executable Application Script
+# author: MayOS Inc.
+# free to use these template for developing application.
+# full MayOS Beta Github repository URL: https://github.com/${author.githubname}/mayos-beta/
+# enter this name to get highlighting on Visual Studio Code Marketplace: May (OS) (AE) Script Highlighting Support
+# MayExecutableApplicationScript was inspired by Assembly x86 / ASM x86 Scripting
+
+$define ExecutableApp, new App, index.mea
+$memory 512MB, return error, getErrMsg[${suggest.emd}]
+
+scriptType, MayExecutableApplication, <mayIDCOMPILED:000v00a0b838ababb7cbd7a86866e8da68fbe68ad
+
+get resources	= getUrl ./_res/
+get window	    = getUrl ./window.aedll
+get autorun	    = getUrl ./autorun.aes
+get lib		    = getUrl ./lib/
+get bin		    = getUrl ./bin/
+get logging	    = getUrl ./log/
+get online	    = getUrl ./online/
+get linker	    = getUrl lib/dlinkLibraries/
+
+pcs process	= createProcess window:getname
+
+array allowOPNM	= [
+  "./bin/" + get compiler, array library[] + ".cpl.aedll|.cpl.mdl|.prc",
+  "./bin/classes/op"
+]
+
+$may-include	[	"mayinclude://app",		1 ]
+$may-include	[	"mayinclude://usb",		2 ]
+$may-include	[	"mayinclude://cpu",		3 ]
+$may-include	[	"mayinclude://asm?external",	4 ]
+$may-include	[	"mayinclude://var",		5 ]
+$may-include	[	"mayinclude://may",		6 ]
+
+defif get linker, exist
+  deffor i init 1, get linker
+    defif linker.target:isCodeCompilable, true
+      defif dir.output, exist
+        skip
+      add defif, false
+        create dir, linker.target.folder, ./bin/
+      endif
+      compile target, ./bin/output/{fname}.aeedl
+    endif
+  endfor
+endif
+
+defif get app:opened, true
+  deffor i init 1, chg get, array, gets[], #gets[]
+    defif ${gets[i]} exist
+      compile ${gets[i]}, ./bin/
+      defif top:compile, name, dir > dname[i], file > fname[i]
+        create dir, compile target, ./bin/dname[i]/
+        compile target, ./bin/{fname.dirname}/fname[i]
+      add defif, defif top:compile, true
+        compile this, ./bin/output/app.compiled.mea
+      endif
+    add defelse, defif
+    defif in defelse, !exist
+      valreturn
+        error E_FAILURE_NONEXIST_MPF8, get logger, ./log/*.log ? *.maylogging
+        move cur, +1
+      endreturn
+    endelse, endif
+  endfor
+endif
+
+compile this, top:defif, 992PCM, ldpcm

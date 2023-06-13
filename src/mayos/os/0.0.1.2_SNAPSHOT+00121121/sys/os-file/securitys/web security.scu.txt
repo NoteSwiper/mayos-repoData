@@ -1,0 +1,3 @@
+when.web.have(Virus.malware.trojan)
+website.disconnect
+close

@@ -1,0 +1,23 @@
+aeconfig-name configName = "Default";
+aeconfig settings = aeconfig.new({
+  settings { 
+    requires {
+      req svr.ae.os.example{general};
+      req svr.ae.os.ai;
+      req svr.ae.os.agents;
+    }
+    using {
+      use svr.lib.aelib.os;
+      use svr.lib.aelib.ai;
+    }
+    aeconfig {
+      int ai = req.lib.ai
+      if example do {
+        print to="hello"
+      }
+      Print to="Hello World!"
+    }
+  }
+});
+
+exportAEConfig(settings,as(configName));

@@ -1,0 +1,32 @@
+using os;
+
+master function "com.window" {
+  private function "com.window.open" {
+    onbroad"window.open"
+    show system.<gvar.ID>.<appname>
+  }
+  private function "com.window.close" {
+    onbroad"window.close"
+    close system.<gvar.ID>.<appname>
+  }
+  private function "com.window.swichwindow" {
+    onbroad"window.swind"
+    change state <windowID>"com.window.windows" = 1
+  }
+  private function "com.window.swichwindowf" {
+    onbroad"window.swindf"
+    change state <windowID>"com.window.windows" = 0
+  }
+  private function "com.window.miniliz" {
+    onbroad"window.minil"
+    change state <windowID>"com.window.minilize" = 1
+  }
+  private function "com.window.miniliz1" {
+    onbroad"window.minil1"
+    change state <windowID>"com.window.minilize" = 0
+  }
+  private function "com.window.slide" {
+    onbroad"window.slid"
+    slide <WindowID>
+  }
+} 

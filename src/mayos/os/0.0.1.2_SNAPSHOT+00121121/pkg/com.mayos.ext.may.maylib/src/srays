@@ -1,0 +1,8 @@
+package UI.Spray
+
+script {
+  Clone {
+    duplicate target power
+    wait.(e)
+  }
+}

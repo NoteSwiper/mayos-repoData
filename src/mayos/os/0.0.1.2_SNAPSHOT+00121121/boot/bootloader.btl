@@ -1,0 +1,6 @@
+<boot schemaUrl="mayos://schema/btl/2022/" version="1.2" bootId="core">
+  <event e="onStartup()">
+    <set type="var" name="bootname">mayos</set>
+    <execute>./boot.aeapp</execute>
+  </event>
+</boot>

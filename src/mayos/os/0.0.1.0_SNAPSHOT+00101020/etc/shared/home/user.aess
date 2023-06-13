@@ -1,0 +1,19 @@
+class user {
+  map userInfo = {
+    string name;
+    int userId;
+    string identifierId;
+    string userUrl;
+  }
+  
+  event onUserRegister {
+    if(this.usernameTab.value) {
+      userInfo.name = target;
+    }
+    userInfo.userId = math.rand(1,99999999);
+    userInfo.identifierId = userInfo.name:encode(enum.encodeType.URL);
+    userInfo.userUrl = checkUrl("mayos://mayos.com/svr?id=usr/" + userInfo.identifierId + "/getInfo").finalUrl;
+    
+    file.duplicate(enum.fileType.Folder, path.getUrl(./tmp/*));
+  }
+}

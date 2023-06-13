@@ -1,0 +1,39 @@
+<aedll lang="en", auto>
+  <configuetion>
+    <clock size=screen.x, screen.y>
+      <top>
+        <text txt="Clock", font="SourceSansPro">
+        <text>
+      <top>
+      <scr>
+        <world>
+          <load world/clock.gui>
+        <world>
+        <alarm>
+          <load world/alarm.gui, offline>
+        <alarm>
+        <clock>
+          <load world/time.gui>
+        <clock>
+        <timer>
+          <load world/timer.gui>
+        <timer>
+        <stopwatch>
+          <load world/stopw.gui>
+        <stopwatch>
+      <scr>
+      <sidebar>
+        <if -sideenabled>
+          <enable Sidebar.gui>
+        <if>
+      <sidebar>
+      <hidden>
+        <title="Clock", lang=auto>
+        <powerLostWarning 1.4359970>
+      <hidden>
+      <taskbar>
+        <task scr.mcs>
+      <taskbar>
+    <clock>
+  <configuetion>
+<aedll>

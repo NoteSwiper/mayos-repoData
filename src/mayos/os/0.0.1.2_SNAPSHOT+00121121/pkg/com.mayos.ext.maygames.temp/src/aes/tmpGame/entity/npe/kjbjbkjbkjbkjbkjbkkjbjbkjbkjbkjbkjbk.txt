@@ -1,0 +1,9 @@
+ae://
+ aesys://     - ae://aeos.com/aep/aesys/
+ aeos://     -  ae://aeos.com/aep/aeos/
+  mayos://    - ae://mayos.com/mayos.aep/
+   aesvr://   - ae://aesvr.net/prot.aep/
+   maysvr://  - ae://mayos.com/svr/getp/
+   may://     - ae://mayos.com/may/
+   package:// - ae://mayos.com/pkg/
+   chag://    - ae://chag.com/chag/data/protocol?f=lastest/

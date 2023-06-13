@@ -1,0 +1,30 @@
+{
+  "font": {
+    "Metadata": {
+      "Name": "System",
+      "Range": [
+        "alphabet",
+        "generic_specialCharacter"
+      ],
+      "version": null
+    },
+    "Sprites": {
+      "lower": [
+        0,
+        1
+      ],
+      "upper": [
+        1,
+        2
+      ],
+      "number": [
+        2,
+        3
+      ],
+      "special": [
+        3,
+        4
+      ]
+    }
+  }
+}

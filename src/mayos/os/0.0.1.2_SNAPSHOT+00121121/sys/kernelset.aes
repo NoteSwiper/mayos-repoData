@@ -1,0 +1,7 @@
+Kernel {
+  if System.Error == 1 {
+    send 127.0.0.1:1392 {
+      script title(msgbox-Host Error) message("Error Occured - ErrorCode" + error.num)
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<設定>
+  <画面設定>
+    <レイトレース>
+      <script shadow title="影設定">
+      <script ao title="SSAOの設定">
+      <script cloud title="雲の設定">
+      <script particle title="エミッターの設定">
+      <script pom title="POMの設定">
+    <レイトレース>
+  <画面設定>
+<設定>

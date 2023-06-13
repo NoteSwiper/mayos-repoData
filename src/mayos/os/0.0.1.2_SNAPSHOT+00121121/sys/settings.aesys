@@ -1,0 +1,145 @@
+Cmd_text (
+#open - Open program
+open <Path/Filename>
+#close - Open program
+close <path/filename>
+#display - Display Performance
+display <cpu/ram/gpu/ping>
+#quit - Quit command prompt
+quit
+networkchange <add/remove> <client/service/prctl>
+install <software.name> <path>
+netcreate <brige>
+show
+destination <IP>
+mask
+media <play/stop>
+send <IP/Domain> <channel>
+claim <IP/Domain> <channel>
+serverload <https://www.example.com>
+serverclient
+download <https://www.example.com>
+IPSender <IP>
+gateway
+prefix
+interface
+nexthop
+publish <IP/Domain>
+store
+firewall <on/off>
+updatecheck
+uninstall <filename>
+adduser <name> <admin/menber>
+changelanguenge <lan.name>
+netconnect <wireless/prodband/dialup/vpn/wiyard/brige/netfile/printer>
+set <thing>
+unset 
+status
+enter
+?
+clear 
+preset <Presetname>
+radio <Frequency>
+changeos <OSname>
+stop
+msdos
+create <folder/file>
+shoutcut
+font
+asset
+folder <path>
+path
+debug <roll/exit/enter>
+vol <create/delete>
+ver
+verify
+taskkill
+date
+sort
+shutdown
+rename <path/Filename> <newname>
+replace
+recover
+move <path1> <path2>
+more
+mode <OS>
+label <create/delete> <name>
+help
+goto
+format <drive.name>
+find
+echo
+erase
+diskpart
+del
+copy
+convert
+conpact
+chkdisk
+cd <path>
+call
+break
+)
+CommandPronpt_Message (
+error_msg(
+Cannot run these command for low space. ;
+this cmd text was incorrect text. ;
+warning : when you activated format, C Drive Was cleared in times. ;
+The cmdText was unacceptable for any reason.
+ )
+)
+cmddot(
+.
+,
+_
+~
+-
+?
+/
+\
+]
+[
+{
+}
+)
+OS_msg(
+e_Lowspc<your pc was too low space>
+e_inslowspc<Cannot run Installer Foe Low Space.>
+e_fataerr<Fatal Error>
+e_sbsmiss<<path.name> this application`s side by side was not already,i can`t run This Application.>
+e_dllmiss<<dllmissing.name> was not here,cannot run this application.>
+e_conlost<connection losed.>
+e_interlose<internet Connection losed.>
+cmd_examples (
+open test.exe
+open data\test.exe
+close
+close test.exe
+close data\test.exe
+display cpu
+display ram
+display gpu
+display ping
+quit
+networkchange add client
+networkchange add service
+networkchange add proctl
+networkchange remove client
+networkchange remove service
+networkchange remove proctl
+install TestProgram mnt.1
+netcreate brige.1
+show
+destination 126.80.3.1
+mask
+media play https://youtube.com/watch?v=g7hH4g57H
+media stop
+send 127.0.0.1 hi
+send domain.com hi
+claim 127.0.0.1 1
+claim domain.com 1
+serverload https://www.download.com/win10
+serverclient pc169\user\download\test.exe
+download mps://main.org/p
+
+)

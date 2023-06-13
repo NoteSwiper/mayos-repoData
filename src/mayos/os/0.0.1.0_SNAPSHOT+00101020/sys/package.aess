@@ -1,0 +1,20 @@
+system library class package {
+  syntax class setPackage(target, newPackageName) {
+    if checkActivePackage(target) {
+      requestData("aeos://mayos.com/request?type=package&pkgname={target}&newname={newPackageName}");
+      return true, "Rename Package Process Sucessful";
+    } else {
+      handle(error, "no package found from setPackage(target)");
+      return false, "Rename Package Process failure";
+    }
+  }
+  
+  syntax class getPackage(target) {
+    if checkActivePackage(target) {
+      if script.imported == csl {
+        this.cslgen.var.package = down;
+        return getName(aeos://mayos.com/request?type=getpackage&pkgname={target});
+      }
+    }
+  }
+}

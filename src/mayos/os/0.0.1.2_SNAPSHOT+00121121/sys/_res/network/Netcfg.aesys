@@ -1,0 +1,5 @@
+[Config]
+src = mas:net
+netservers = {
+  aesvr://mst.brok.svr/${net.getRandomID(1)}/${net.getRandomID(2)}
+}

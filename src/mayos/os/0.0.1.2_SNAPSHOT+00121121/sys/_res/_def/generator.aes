@@ -1,0 +1,5 @@
+system action class newContentFunctions(target) {
+  if target == oneof system.newcontent.contents[] {
+    system.fileExplorer:CreateNewContent(target);
+  }
+}

@@ -1,0 +1,12 @@
+Network {
+  publicInt apName = No WIFI;
+  publicInt apIP = 0.0.0.0;
+  publicInt ap = 1937ac;
+  
+  stateIf(net.connect = 1) {
+    apName = net(connectedID);
+    apIP = netIP(connectedID);
+    ap = ap(connectedID);
+    netConnect(apName, apIP, ap);
+  }
+}

@@ -1,0 +1,29 @@
+scriptMode
+using lib
+ lib.os
+  lib.os.{all}
+   lib.os.{all}.{383rf-4f4ef-4ddv4-gggg4}..
+
+Int var.grobal{GUID} = {GUIDS};
+Int var.ID = {ID};
+
+public function "org.dll.system" {
+ script state change if ID(28dh3u) {
+  Handle Error "e-404"
+  close
+ }
+ script state change if ID(not 28dh3u) {
+  Compile com.dll.system/System.cmp
+ }
+}
+
+htmlMode
+aedll
+ system
+  sys
+   compiler=com.dll.system/System.cmp
+   Handle Current
+  sys
+ system
+aedll
+PUBLICEncryptCode=4V7084OWMPAPNA8NDMU8PAYCTRVR4BR8IS3OAAM892AQ20MUV98NYQ78AVY7A2B67WBI7VWPWWVLO4784WO4W5O00W04ONVWBWGVWSBV

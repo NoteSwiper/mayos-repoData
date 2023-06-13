@@ -1,0 +1,4 @@
+when.load(PC)
+enter.text(please press key to setup)
+key.all.press(
+open setup.ini

@@ -1,0 +1,4 @@
+[Cloud]
+CloudName = May OS Cloud Package
+CloudID = a7ByOl7MhS2
+CloudURL = mayos://mayos.com/cloud?name=cloud&id={CloudID}/

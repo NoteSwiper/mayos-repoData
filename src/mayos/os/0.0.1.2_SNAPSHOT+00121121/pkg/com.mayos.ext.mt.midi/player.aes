@@ -1,0 +1,18 @@
+local player = this.app.midi
+local midipath = player.path
+local midisoundfont = player.sf
+
+function PlayMidi {
+  if(midipath = path() and midisoundfont = sf()) {
+    soundfont(midisoundfont);
+    playMidi(midipath, midisoundfont, 1, 1);
+  }
+}
+
+function StopMidi {
+  stop(midi);
+}
+
+
+app.midi.midistop:Connect(StopMidi)
+app.midi.midiplay:Connect(PlayMidi);

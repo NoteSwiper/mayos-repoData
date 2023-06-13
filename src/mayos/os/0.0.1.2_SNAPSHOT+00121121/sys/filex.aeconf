@@ -1,0 +1,4 @@
+mp3 = comp/mp3.audio
+mp4 = comp/mp4.video
+avi = comp/avi.video
+wav = comp/wav.audio

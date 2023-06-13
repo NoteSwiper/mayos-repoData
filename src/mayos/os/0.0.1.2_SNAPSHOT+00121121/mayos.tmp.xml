@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE mayos [
+    <!ENTITY mayinccopyright "">
+]>
+<?xml-model href="../schemas/2023-mayos.xsd" type="application/xml-xsd"?>
+<mayos exec="none" id="sys:core">
+  <meta>
+    <name>$getValueFromPropertiesId("mayos.ini", "env.def.versionIdentifier")</name>
+    <memo>
+      Made by "May Inc.".<br/>
+      &mayinccopyright;
+    </memo>
+  </meta>
+  <content>
+    <getscript path="under construction" />
+  </content>
+  <config ext="108400" internal="BOTH">
+    <directories>
+        <srcDir>..../src/</srcDir>
+        <execDir>${src}/?mayos/exec/exec.mea</execDir>
+        <cacheDir>${src}</cacheDir>
+    </directories>
+    <cfg type="typeId" name="string" value="used this attribute except empty" version="editVersion" >stringId</cfg>
+    <cfg type="empty" name="tyle" value="sys,system,may,mayos,os" />
+    <cfg type="string" name="version">$getValueFromPropertiesId("mayos.ini","env.def.version")</cfg>
+    <rule ext="./rules/mayos.sys.aerule" />
+  </config>
+</mayos>

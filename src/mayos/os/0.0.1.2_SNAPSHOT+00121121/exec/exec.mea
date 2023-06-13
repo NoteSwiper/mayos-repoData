@@ -1,0 +1,5 @@
+
+defif this:getStart
+    exec mayos-cepl
+endif
+

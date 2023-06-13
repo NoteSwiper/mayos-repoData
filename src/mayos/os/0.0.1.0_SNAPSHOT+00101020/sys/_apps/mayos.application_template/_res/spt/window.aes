@@ -1,0 +1,9 @@
+function cleanDocument(document) {
+  if(document.isEditedWithoutSaving = true) {
+    dialog("Warning","Save the file" + document.name + "?",["Save","Don't Save"]);
+    if(dialog.button.status = 1) {
+      getSystemWindow("open fileChooser:toSaver",save = new File(););
+      file:write(document:getCurrentData(), save);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# first
+defapi return:	get value, value; send value;
+
+# Datatypes
+defapi string:	return "v=(a-z|A-Z|uni)";
+defapi bool:	return "v=((true)|(false))|((0)|(1));";
+defapi float:	return "v=(!(a-z|A-Z);*(0-9|((0-9)|.|(f))|((0-9)|.|(0-9)))";
+defapi int:	return "v=(!(0-9=#.*)";
+defapi byte:	return "v=(!(g-z|G-Z))";
+defapi null:	return "v=(null)";
+defapi import:
+  get url, url
+  get res
+  defif !url, exist
+    res 0
+  add if, defif, !url, geturl:404
+    res 0
+  endif
+  res geturl, url
+  return res
+endapi

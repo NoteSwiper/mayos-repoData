@@ -1,0 +1,10 @@
+// Unused Script
+cloud.may.gl.*;
+
+shadow {
+  int angle = gl.settings_sunAngle;
+  calculate(sunAngleShadow);
+  if(calculated) {
+    show(calcshadow.result setColor(0, 0, 0));
+  }
+}

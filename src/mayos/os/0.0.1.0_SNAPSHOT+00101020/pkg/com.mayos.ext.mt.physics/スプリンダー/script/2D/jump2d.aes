@@ -1,0 +1,16 @@
+class jump2d(amount) {
+  //•¨—‚ğì¬‚·‚é‚½‚ß‚Ìİ’è
+  2drb = instance.newrb(sphere, 1, 0, rigidbody2d);
+  vector = 0;
+  size = 1;
+  jumped = 0;
+  mat = mat(bounce1);
+  joint1 = joint(none);
+  joint2 = joint(none);
+  pivot = vec3(0, 0, 0);
+  jumpPower = vec3(0, 5, 0);
+  onActivated {
+    jumped == 1;
+    
+  }
+}

@@ -1,0 +1,53 @@
+class errormsgs {
+  win7c.msg
+    if os == os.win7
+      msg show "Cannot Run in Windows 7"
+
+  win8c.msg
+    if os == os.win8
+      msg show "Cannot Run in Windows 8"
+
+  win8.1c.msg
+    if os == os.Win8.1
+      msg show "Cannot Run in Windows 8.1"
+
+  win10c.msg
+    if os == os.win10
+      msg"Cannot Run in Windows 10"
+
+  winxpc.msg
+    if os == os.WinXP
+      msg"Cannot Run in Windows XP"
+
+  p1.msg
+    if proccessor == cpu.1GHz
+      msg"Cannot Run In proccessor 1ghz"
+  pp.msg
+    if processor == 0
+      msg"CPU Error occured. Processor is not working."
+
+  mem1.msg
+    if memory 1GB
+      msg"Low Memory 1gb"
+
+  mem2.msg
+    if memory 2GB
+      msg"Low Memory 2gb"
+
+  mem3.msg
+    if memory 3GB
+      msg"Low Memory 3gb"
+
+  mem4.msg
+    if memory 4GB
+      msg"Low Memory 4gb"
+
+  intel.msg
+    if graphics intel
+      msg"Cannot Run in Intel"
+
+  nvidia.msg
+    if graphics NVIDIA
+      msg"Cannot Run in NVIDIA"
+
+}

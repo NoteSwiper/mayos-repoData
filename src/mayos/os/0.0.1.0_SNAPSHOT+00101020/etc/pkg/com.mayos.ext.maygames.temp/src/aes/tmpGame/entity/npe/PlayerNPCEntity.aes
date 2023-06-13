@@ -1,0 +1,58 @@
+// you don't need to insert import here because auto importing is enabled here!
+
+class PlayerNPCEntity {
+  /* ENTITY INFORMATION VARIABLES */
+  protected final api string entityName 	= "Human NPC Template";			// defines Entity's Name
+  protected final api stringin entityId 	= exampleMod.modId + ":npc";		// defines Entity's ID
+  protected final api entityType entityAiType 	= enum.GENTITY.AI_TYPE.GENERIC;		// defines Entity's AI Type
+  protected final api g-eggBehaviour egg 	= game.makeEgg(this,game.tmp.npc);	// defines Entity's Spawn egg
+  protected final api gameitem entityDrop 	= game.setItem("item_blank");		// defines Entity's Dropping item
+  protected final api float entityHealth	= gentity.setHealth(1);			// defines Entity's health
+  protected final api sel-entities target 	= gentity.select(player);		// defines a target entities for attacker class
+  protected final api entityconfig mobConfig 	= game3d.createConfig({
+    entityName,
+    entityId,
+    entityAiType
+  });   // defines a configuration for working entity behaviours
+  protected final api varList variables 	= game3d.createVarList({
+    nbt isGrounded$def{false};
+  });	// defines a variables that entity requires
+  protected final api tex entityTexture 	= gmodel.loadTexture(enum.GMODEL.FILE_EXTENSION.PNG,"mcxml://${this.project.foldername}@/resources/textures/entity/npc_texture.png");	// defines texture file for entity rendering completely
+  protected final api model EntityModel 	= gmodel.loadModel(enum.GMODEL.FILE_EXTENSION.XML,"mcxml://${this.project.foldername}@/resources/models/entity/npc_model.xml");		// defines model file for entity rendering completely
+  
+  /* ENTITY MOVEMENT BEHAVIOUR FUNCTIONS */
+  // produces
+  public default PlayerNPC() {
+    if (game.gameEvents:onWorldLoads) {
+      setup(this);
+    }
+  }
+  public class setup(target) {
+    event onActivate {
+      game3d.init.initEntity(target);
+    }
+  }
+
+  // this is triggers list that used by event on entity
+  class publicApi>?:$trga triggers {
+
+    // Executes if entity died
+    event game.entity.onDeath() {
+      gentity.dropEntity(entityDrop, item);
+    }
+    // Executes if entity spawn
+    event game.entity.onSpawn() {
+      // do spawning without 5 spawning value
+      if (not spawnType == 5) {
+        gentity.summon(this);
+      } else {
+        game.chat.handleError("cannot spawn " + entityName + " for 5dv.", "summon");
+      }
+    }
+  }
+  aiTaskList Tasks {
+    gentity.ai.tasks.attack(1f,target,+2f);
+    gentity.ai.tasks.waterFloat();
+    gentity.ai.tasks.walkin();
+  }
+}

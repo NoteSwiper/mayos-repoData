@@ -1,0 +1,25 @@
+1.0.0b: First release
+1.1.0b: added "api.mea"
+1.1.1b: added "systemConf.json"
+1.1.2b: fixed "/sys/_apps/mayos.application-template/index.mea"
+1.2.0b:
+1.2.1b:
+2.0.0b:
+2.0.1b:
+2.0.2b:
+2.0.3b:
+2.0.4b:
+2.0.5b:
+2.0.6b:
+2.0.7b:
+2.0.8b:
+2.1.0b:
+2.1.1b:
+2.1.2b:
+2.1.3b:
+2.1.4b:
+2.1.5b:
+3.3.0b:
+3.3.1b:
+3.3.2b:
+3.3.3b: edited directory structure from legacy to new one

@@ -1,0 +1,22 @@
+local module = {}
+
+local time = {PC.Time}
+
+function time {
+ int time = 00:00:00
+  int time.hour = 00;
+  :
+  int time.min = 00;
+  :
+  int time.sec = 00;
+ change var.time + 1;
+ if var.time.sec = 60 {
+  add var.time.min 1
+ }
+  if var.time.min = 60 {
+  add var.time.hour 1
+ }
+ if var.time.hour = 24 {
+  add var.time 00:00:00
+ }
+}

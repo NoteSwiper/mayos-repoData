@@ -1,0 +1,11 @@
+dev_name: zero
+dev_path: /dev/zero/
+dev_id: zero
+
+dev_main() {
+  any val;
+  override this.onDeviceActivated {
+    val = ${getDeviceInputId()}.zero;
+  }
+  return val;
+}

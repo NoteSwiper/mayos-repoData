@@ -1,0 +1,42 @@
+Title = Turca Sound Engine System v1.57.0223
+
+// Advanced Sound Engine Library System
+// *** BEGIN DESCRIPTION BLOCK ***
+// This sound library system was made by MayOS Inc.
+// makes sound better by using this.
+// to import, use this package module namespace to "import turca.*;".
+// result of feature was make getting far from thinking.
+// *** END DESCPIPTION BLOCK ***
+
+// BEGIN LICENSE BLOCK
+// This Sound engine is advanced basic sound.
+// been low spec User will happens lag.
+// if you edit and save this Sound Engine like overriding, read guideline license "MayOS Protection License".
+// END LICENSE BLOCK
+
+may_info = {
+    "name": "Turca Sound Library System",
+    "author": "MayOS Inc",
+    "version": (6.32.5532),
+    "location": "Render > SoundEngine > Mode",
+    "description": "Simple Sound Engine For MayOS",
+    "warning": "Will be Exeprimental",
+    "category": "SoundEngine",
+    "library_version": (1.582.0535a),
+    "engine_version": (5.242b),
+    "engine": "MayOS I Sound ShakerEngine",
+    "SoundEffectEngine": "MayOS I SoundE Engine",
+} 
+
+class playPath(Path, Looping) {
+  int defaultpath = data:src/example/sound.wav
+  int Path = this.Path
+  int looping = this.Looping
+  onCreated {
+  int Path = this.int.defaultpath
+  }
+  if this.class activated {
+    int Path = this.Path
+    Power SoundEngine Audiofile(this.Path)
+  }
+}

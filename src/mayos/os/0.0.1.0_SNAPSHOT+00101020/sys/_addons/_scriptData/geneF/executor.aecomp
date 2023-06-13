@@ -1,0 +1,6 @@
+[CompilerInfo]
+name=scriptCompiler
+id=may.sys.compiler
+[Executor]
+onActivated={append(window, compiler)}
+onError={append(window, error)}

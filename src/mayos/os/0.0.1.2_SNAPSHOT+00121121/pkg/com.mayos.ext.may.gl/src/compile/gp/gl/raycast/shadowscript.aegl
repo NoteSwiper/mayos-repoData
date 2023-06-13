@@ -1,0 +1,16 @@
+GL.Shadow
+  Resolution = gpray.shadow.1
+  far = gpray.shadow.4
+  color = gpray.shadow.2, 3
+
+GL.Shadow.Script
+  Find target for sun.angle += 1 in rayshadow
+  change rayshadowwaittime = Wait.calculateTime
+  set gl.shadow.res = var.Resolution
+  if find target result
+    show calculated rayshadow = 1
+    Wait(find.rayshadowwaittime)
+    return
+  end
+end
+  

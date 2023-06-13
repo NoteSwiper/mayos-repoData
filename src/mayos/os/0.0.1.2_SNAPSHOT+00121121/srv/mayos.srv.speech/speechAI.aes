@@ -1,0 +1,13 @@
+Name=SpeechAI
+Script=
+Using speech
+Using AI
+
+
+Void Speech()
+{ 
+onEnter
+{
+Selected
+}
+}

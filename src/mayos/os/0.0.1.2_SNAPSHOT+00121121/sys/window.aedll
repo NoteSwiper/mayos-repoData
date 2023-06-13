@@ -1,0 +1,24 @@
+<aedll url="mayos://mayos.com/schemas/aedll-2023-01.1.134.aesch">
+  <design name="Default Window" id="mayos.system.window" dataId="0">
+    <menu>
+      <menu-group name="File" id="file">
+        <menu-item name="New" id="new" />
+        <menu-item name="Open" id="open" />
+        <menu-item name="Save" id="save" />
+        <menu-item name="Save as" id="save-as" />
+        <menu-item name="Close" id="close" />
+      </menu-group>
+      <menu-group name="Help" id="help">
+        <menu-item name="About" id="about" />
+      </menu-group>
+    </menu>
+  </design>
+  <design name="Default Window About" id="mayos.system.window.about" dataId="0">
+    <text value="strtable.003" id="aboutmsg" />
+  </design>
+  <config>
+    <translation-data src="./_res/trl/window.aelang" />
+    <script-data src="./_res/spt/window.aes" />
+    <app-data src="./_res/app/window.aeconf" />
+  </config>
+</aedll>

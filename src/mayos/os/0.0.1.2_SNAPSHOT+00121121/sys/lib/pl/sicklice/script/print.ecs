@@ -1,0 +1,5 @@
+eventOn
+if comtext equal (script "/?")
+start cmd.exe script(sendtxt="print script is send text")
+then
+send127.0.0.1(txt)

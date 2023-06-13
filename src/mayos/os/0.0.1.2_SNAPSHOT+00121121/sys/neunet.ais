@@ -1,0 +1,33 @@
+NeuralNetwork.Inc
+Warning:The file was script using by windows. Do not delete this script.
+Example commands:
+-nei neuron inputs.
+-nebs neuron brain size
+-nen neuron number
+-ne1~n1000 neurons
+-neo neuron output
+-nes neuron secrets
+samples
+-nei -nebs 12 -nen 5 -n1 -n2 -n3 -n4 -n5 neo
+enter to start solving.
+
+script {
+ function nei {
+  if text = nei{number} {
+   set.neural/input = {number}
+  }
+ }
+ 
+ function nebs {
+  if text = nebs{number} {
+   set.neural/brainsize = {number}
+  }
+ }
+ 
+ function nen {
+  if text = nen{number} {
+   set.neural/number = {number}
+  }
+ }
+ 
+}

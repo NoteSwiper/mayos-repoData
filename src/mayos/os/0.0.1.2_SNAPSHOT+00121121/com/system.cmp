@@ -1,0 +1,39 @@
+systemcompile
+res=
+Local\sys\Compile\systemcomp\
+compiler
+ system
+  lib
+   os
+    general;
+    source
+     ID
+      EntityID;
+      Producter;
+      boot;
+      serial;
+    current
+     current;
+     power
+      power;
+      weekly
+       cpu;
+       gpu;
+       memory;
+      daily
+       cpu;
+       gpu;
+       memory;
+      cpu;
+      gpu;
+      memory;
+     system
+      GPU;
+      CPU;
+      Memory;
+      Tick;
+      System
+       time;
+     time;
+     cust;
+     usable;

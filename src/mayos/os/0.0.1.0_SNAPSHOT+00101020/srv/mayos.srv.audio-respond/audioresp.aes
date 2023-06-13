@@ -1,0 +1,21 @@
+audioresp {
+  if(resp = hello) {
+    respond(hello!);
+  }
+
+  if(resp = who are you) {
+    respond(im Surry!)
+  }
+
+  if(resp = what is [%names%]) {
+    respond(here to search result on [%names%].)
+  }
+
+  if(resp = Open [%app%name%]) {
+    do(open([%app%name%]))
+  }
+
+  if(resp = beatbox) {
+    beatbox();
+  }
+}

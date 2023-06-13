@@ -1,0 +1,5 @@
+local module = {}
+
+function {
+ int min = 0;
+}

@@ -1,0 +1,28 @@
+class ease {
+  ease1(tgmot) {
+    ease(0);
+    ease(5);
+    ease(8);
+    ease(9);
+    ease(9.5);
+    ease(9.8);
+    ease(9.9);
+    ease(9.95);
+    ease(9.98);
+    ease(9.99);
+    ease(10);
+  }
+  ease2(tgmot) {
+    ease(0);
+    ease(1);
+    ease(2);
+    ease(3);
+    ease(4);
+    ease(5);
+    ease(6);
+    ease(7);
+    ease(8);
+    ease(9);
+    ease(10);
+  }
+}

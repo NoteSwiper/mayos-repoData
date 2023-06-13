@@ -1,0 +1,5 @@
+local searchTarget = 
+
+function onEnter {
+  enter search var.searchTarget as google
+}

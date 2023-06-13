@@ -1,0 +1,18 @@
+array messages {
+  booting.1
+  windows.1
+  is.1
+  enjoy.1
+  Textbox(Wait)
+  wait
+}
+
+override boot system {
+ lc system set.ID = 37728a;
+ if pc.boot {
+  load OS/system.cmp
+  if pc.Error = 1 {
+   load OS/system.cmp as(Handle.Error)
+  }
+ }
+}

@@ -1,0 +1,5 @@
+command{[Nanananse]}
+direct command[0, 0, 0]
+info(
+  show info;
+ )

@@ -1,0 +1,43 @@
+MayOS X Advanced Graphics Library
+import cloud.may.gl.*;
+
+nodes {
+  GL_* = {
+    GL_SHAW = {
+      GL_SHAW_SHAW = shadow(target, calculatortarget);
+      GL_SHAW_AO = anbientOcclusion(target, sun);
+      GL_SHAW_CLD = clouds(color, resolution);
+      GL_SHAW_NORMMAP = normal(target, normalmap);
+      GL_SHAW_HEGMAP = height(target, heightmap);
+      GL_SHAW_REFLCTMAP = reflection(target, reflectionmap);
+      GL_SHAW_PARTLE = particle(image, size, vec3.speed);
+      GL_SHAW_POM = pom(image, normal, height, reflection);
+      GL_SHAW_LGT = light(scene, x, y);
+    }
+    GL_SCR = {
+      GL_SCR_BUFR = buffer(screen);
+      GL_SCR_REC = recordscreen(targetScreen);
+      GL_SCR_RNDR = render(scene, scaleX, scaleY, resolution);
+      GL_SCR_BTTN = button(label, clickToSendTargetClass);
+      GL_SCR_WIN = {
+        GL_SCR_WIN_REC = recordwindow(targetWindow)
+      }
+    }
+    GL_MODL = {
+      GL_MODL_BLCK = block(vec6.image, vec3.size);
+      GL_MODL_IMG = image(imagepath);
+      GL_MODL_MAT = mat(target, maps);
+      GL_MODL_OBJ = obj(partname, modelpath);
+      GL_MODL_MODL = model(partname, modelpath);
+    }
+    GL_2D = {
+      GL_2D_TXT = text(partname, text);
+      GL_2D_TRIGLE = tre(vec3.points);
+      GL_2D_SQRE = square(vec4.points);
+      GL_2D_IMGSHD = {
+        GL_2D_IMGSHD_MANDELBROT = mandelbrot(real, img, size, iteration, morphPower);
+        GL_2D_IMGSHD_BLUR = blur(amount, size, shape);
+      }
+    }
+  }
+}

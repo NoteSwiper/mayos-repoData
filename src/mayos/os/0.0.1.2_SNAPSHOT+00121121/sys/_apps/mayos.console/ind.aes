@@ -1,0 +1,14 @@
+app api class consoleApp {
+  private env environment;
+  info app-info = getinfo(json.decodeJSON("./appConfig.json"));
+  
+  default window {
+    define title Title = app-info.title;
+    define img Icon = app-info.icon;
+    define menu MenuData = app-info.menu;
+    if(app-info.menu.*) {
+      define menuSelectionc, e ### = getOneSel(app-info.menu.*);
+    }
+  }
+  
+}

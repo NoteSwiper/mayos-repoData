@@ -1,0 +1,87 @@
+import {
+  system as system,
+  pack.may as may,
+  pack.mayos as mayos,
+  cloud.ofc.mayWeb as mayWeb,
+  cloud.ofc.ai as ai,
+  cloud.ofc.ai.behaviour as aiBehaviour,
+  cloud.ofc.nn as nn,
+  cloud.ofc.render as render,
+  cloud.mayos.maygames as mayGames,
+  cloud.game3d as game3d,
+  cloud.ofc.game as game;
+};
+
+system.packManager:makePkgByNamespace("sld", version(1.0.0), {
+  #inc(002048244);
+  #defif system.ver <below(1.5.9)>;
+    return false, package:requireUpgradeSystem();
+  #endif;
+  
+  comment commentInfo = getComment(localpath("./comment.aet"));
+  
+  info LibraryInfo = getInfo(url("mayos://pkg.mayos.com/sld/info.aeinfo"));
+  
+  public var pInfo = {
+    list statitics = {
+      int      totalObjects;
+      int      totalHits;
+      float    currentAccValue;
+      url      currentBrokeServer;
+      string   currentId;
+      map list objects;
+      list     graphicsStatus;
+    }
+    list config = {
+      float   bounceThreshold = 0.0026;
+      float   sleepTime = 0.5;
+      vector2 gravity2d = vector2:newVec2(0,-9.82);
+      vector3 gravity3d = vector3:newVec3(0,-9.82,0);
+      bool    isDebugMode = false;
+    }
+  }
+  
+  sub 2d {
+    sub physics {
+      class setGravity(gravity: vector2) {
+        return pInfo.config.gravity2d = gravity;
+      }
+      class update(speed: float, friction: float, elasticless: float, mass: float, ground: object, object: object) {
+        if(object & object.type == dynamic | moveable) {
+          if(object.y below: ground.y) {
+            object.vector.y = invert(object.vector.y) / elasticless;
+          }
+          if(object.y below: pInfo.config.bounceThreshold) {
+            object.vector.y = 0;
+          }
+          object.vector.x = object.vector.x / (friction / 16);
+          object.vector.y = object.vector.y - pInfo.config.gravity2d.y / (mass / 8);
+        } else {
+          return error, {"error occured on executing sld.2d.physics.update(): cannot update physics for the object is null or setted into static. check the object"};
+        }
+      }
+      sub inst {
+        class object(name, info, any) {
+          return {
+            string name1 = object.name,
+            aeinfo info1 = object.info:jsonify(),
+            aeinfo status;
+          }
+        }
+      }
+      sub object {
+        class create(name, info) {
+          return new physics.inst.object(name, info);
+        }
+      }
+      sub movement {
+        class jump(object, amount) {
+          return object.vector.y += amount;
+        }
+        class move(object, vector2) {
+          return object.vector += vector2 / 8;
+        }
+      }
+    }
+  }
+});

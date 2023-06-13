@@ -1,0 +1,2 @@
+eventOn
+if comtext equal (script "/?")

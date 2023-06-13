@@ -1,0 +1,19 @@
+imports new Array ({
+    mayos.core.*,
+    cloud
+});
+
+class application {
+    info app_Info = {
+        "name": "Span RAMDA",
+        "packageId": "mayos.music.span-ramda",
+        "cloudId": "129948221",
+        "author": {
+            "name": "mayos Inc",
+            "cloudId": "1",
+            "url": "mayos://mayos.com/cloud/user?id=${this.cloudId}/info",
+            "header": "mayos://mayos.com/api/get/?type=user&subcat=header&formatInto=json/result"
+        },
+        "url": "mayos://mayos.com/cloud/pkg?id=${this.cloudId}&ifPkgDups=accessIntoUserId&usrId=${this.author.cloudId}/info"
+    };
+}

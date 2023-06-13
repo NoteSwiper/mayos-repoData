@@ -1,0 +1,33 @@
+lib mayos = {
+  map variable = {
+    map type = {
+      vrt byte
+      vrt short
+      vrt int
+      vrt float
+      vrt bool
+      vrt string
+      vrt file
+      vrt info
+      vrt object
+      vrt list
+      vrt map
+      vrt structure
+      vrt vector
+      vrt vector2
+      vrt vector3
+      vrt code
+      vrt array
+      vrt null
+      vrt state
+      vrt status
+      vrt util
+      vrt execute
+      vrt img
+      vrt cache
+      vrt complex
+      vrt dict
+      vrt set
+    }
+  }
+}

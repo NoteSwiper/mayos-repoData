@@ -1,0 +1,8 @@
+local module = {};
+local soundengine = OpenSL;
+local graphicsengine = OpenGL;
+local parent = script.parent;
+
+function {
+ color manage
+}

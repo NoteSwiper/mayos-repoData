@@ -1,0 +1,17 @@
+local reverb = {}*
+  local reverbSize = 5
+  local reverbDelay = 0.3
+  local reverbDamp = 0.5
+  local reverbWidth = 1
+
+function reverb {
+  soundengine reverbin
+  if sound.reseived and reverb.powered {
+    power reverb
+    wait(reverb.Delay)
+    sound.panwit enable reverb.Width
+    wait(reverb.Size *5)
+    damp reverb.Damp
+    off damp
+  }
+}

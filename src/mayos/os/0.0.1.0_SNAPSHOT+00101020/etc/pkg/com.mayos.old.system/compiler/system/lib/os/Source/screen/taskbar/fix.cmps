@@ -1,0 +1,7 @@
+local module = {}
+
+function fix {
+ if handle error = 1 {
+  fix.target
+ }
+}

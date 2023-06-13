@@ -1,0 +1,7 @@
+if (./index.mea) {
+  wait:while(getExecutables(./index.mea.shortcut):get("started")) {
+    system:getServ("dynamicCompiler"):compile(getExecutables("./index.mea"):runWithSat());
+  } else {
+    handle(error);
+  }
+}

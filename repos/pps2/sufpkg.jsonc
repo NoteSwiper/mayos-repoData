@@ -1,0 +1,64 @@
+{
+  "infos": {
+    "dataId_1": {
+      "meta": {
+        "name": "Example",
+        "ids": ["example","Example","exam"],
+        "authors": [
+          {
+            "name": "John Doe",
+            "email": "example@example.com",
+            "phone": ["en-us",[555,555,1234]],
+            "socials": {
+              "website": "https://example.com/?from=unknown",
+              "github": "example",
+              "youtube": {
+                "handle": "example",
+                "channelId": null
+              },
+              "twitter": "example",
+              "facebook": "example",
+              "instagram": "example",
+              "discord": {
+                "userId": "exam#1234",
+                "servers": {
+                  "example": {
+                    "id": null,
+                    "invite": true
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "repos": {
+            "git": {
+                "url": "//127.0.0.1:8080/pps2/git",
+                "git_url": "//127.0.0.1:8080/pps2.git" // for Github users?
+            },
+            "svn": null,
+            "cvs": null,
+            "jenkins": null,
+            "maven": null,
+            "docker": null,
+            "kubernetes": null,
+            "gradle": null
+        }
+      },
+      "content": {
+        "include": ["file_path","../suf/include.suf"]
+      },
+      "configs": {
+        "suf": {
+            "folders": {
+                "setupFolder": ["../suf/setup/**"],
+                "binFolder": ["../suf/bin/", "files=*,dir=*,exclude=![.exe,.cmd,.bat,.com,.dll,.cfg,.conf,.config,.tmp,.db,.log,.save,.suf]"]
+            }
+        }
+      },
+      "addons": {
+
+      }
+    }
+  }
+}

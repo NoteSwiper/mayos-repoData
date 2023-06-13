@@ -1,0 +1,12 @@
+import turca.*;
+class tone shepardtone {
+  int basefrequency = 1000;
+  tone = {};
+  tonelib;
+  Forever {
+    cutpasslow(100);
+    cutpasshigh(3050);
+    sharploop(20, 50, 4000, true);
+    turcaoutput(soundoutput);
+  }
+}

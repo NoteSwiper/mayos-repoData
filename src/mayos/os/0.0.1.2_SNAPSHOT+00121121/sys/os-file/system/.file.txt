@@ -1,0 +1,17 @@
+.app
+.appk
+.alog
+.softw
+.exe
+.elg
+.sly
+.bly
+.web
+.jpegs
+.pnh
+.logsd
+.65gfvf464gntehg
+.errorload
+.downloaddisconne
+.lage
+.cache

@@ -1,0 +1,10 @@
+local shadow = gpray.local.shadow*
+  local ShadowResolution = shadow.1
+  local shadowColor1 = shadow.2
+  local shadowColor2 = shadow.3
+  local FarShadowResolution = shadow.4
+
+local enabled = false
+local gl = Parent(gl)
+while var.enabled == true do
+  load shadowscript.aegl

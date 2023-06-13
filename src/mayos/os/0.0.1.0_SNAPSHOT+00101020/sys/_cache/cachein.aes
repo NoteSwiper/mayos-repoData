@@ -1,0 +1,14 @@
+lib class cache {
+  folder cacheFolder = file.getCurrentDirectory();
+  folder blobCacheFD = file.getFolderByFilePath(cacheFolder + "/Blob/");
+  folder CodeCacheFD = file.getFolderByFilePath(cacheFolder + "/Code/");
+  folder FileCacheFD = file.getFolderByFilePath(cacheFolder + "/File/");
+  folder GPUCacheFD = file.getFolderByFilePath(cacheFolder + "/GPU/");
+  folder LSCacheFD = file.getFolderByFilePath(cacheFolder + "/localStorage/");
+  
+  file cache = file.generateFileExtension("*.aecache", ${func.getCacheType});
+  
+  function getCacheType() {
+    return eventeccsim{3yrh87y3riwut7r3v};
+  };
+}

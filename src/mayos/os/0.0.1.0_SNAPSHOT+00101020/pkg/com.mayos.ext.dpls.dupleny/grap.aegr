@@ -1,0 +1,8 @@
+export this.all;
+
+may_info = info(graphics, {
+  name   = "DupLeny"
+  ver    = ver(ver.type(aegrap), "1.0.0.0")
+  engine = engine(MayOSEngine) 
+})
+

@@ -1,0 +1,5 @@
+[LOG] Getting Executable...
+[LOG] Harshed!
+[LOG] "ERROR_HANDLE=1" detected!
+[LOG] Compiler Error: unexcepted failure occured.
+[LOG] {"get":{"error": true, "type": "UNEXCEPTED", "path": "./index.mea.tmp"}}

@@ -1,0 +1,24 @@
+aedll
+ configution
+  window
+   top
+    menu
+     file
+      new
+       script=instance.new("text")
+      new
+      load
+       script=load("text") or all
+      load
+      save
+       script=save("text") or all
+      save
+     file
+    menu
+   top
+   screen
+    Text
+   screen
+  window
+ configution
+aedll

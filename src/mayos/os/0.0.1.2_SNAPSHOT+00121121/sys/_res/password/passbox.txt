@@ -1,0 +1,7 @@
+pasword{
+  if input == password.text {
+    send welcome 192.20.5.1 3323
+  else
+    send Wrong 192.20.5.1 3323
+  }
+}

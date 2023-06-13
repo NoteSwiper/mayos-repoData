@@ -1,0 +1,4 @@
+Video.default
+format = mp4,avi,mpeg,wmv
+Bitrate = 100,120,132,134
+current.formats = 1;

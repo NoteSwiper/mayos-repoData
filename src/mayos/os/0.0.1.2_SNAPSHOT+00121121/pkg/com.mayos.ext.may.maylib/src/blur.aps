@@ -1,0 +1,44 @@
+package maylib.effect.blur;
+import os.img;
+
+binvar.blurbinary = 00000000;
+numbvar.isenabled = 1;
+scrvar.screen = [arrays];
+
+########BEGIN DESCRIPTION BLOCK########
+#
+aeconfig[
+  public blurRadius = 1
+  public shape = 0
+  public blurID = 80881
+];
+parameter {
+  public {
+    blurID {
+      onCreated {
+        blurID = random.rg(000000, 999999)
+      }
+    }
+  }
+}
+script {
+  scan() {
+    meet(this.screen) {
+      image x = <get-src.img.xscale>;
+      image y = <get-src.img.yscale>;
+    }
+  }
+
+  blur() {
+    meet(this.screen) {
+      once {setpos(0, 0)};
+      colorblend1pixel(this.screen);
+      move 1, 0
+      if x == img.x {
+        move 0, 1
+        once{setpos(0, this.pixel.y)}
+      }
+      repeat img.x & img.y
+    }
+  }
+}

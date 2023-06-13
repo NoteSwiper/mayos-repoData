@@ -1,0 +1,16 @@
+class exporter {
+  function export(name: string, cont: any) {
+    if(!name) {
+      return false;
+    }
+    return new File(cont, name, name.get("!uni,=[.]>'';"));
+  }
+}
+
+aeinfo infor = {
+  "Name": "Exporter";
+  "ID": "ae:mayos.exporter";
+  "FileIdentifier": "export.may-cmpDLL";
+};
+
+export exporter, aeinfo(infor);

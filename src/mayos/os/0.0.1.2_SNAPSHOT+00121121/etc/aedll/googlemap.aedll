@@ -1,0 +1,35 @@
+/*dll dynamic
+aedll
+ configution
+  gmap
+   g up600px, left800px, enable scaling
+    h2<GoogleMap>
+     scaler on
+     serverload googlemap map
+     clickable on
+     screen
+      menu
+       normal
+        load map normal
+       normal
+       earth
+        load map earth
+       earth
+      menu
+      frame
+       searchbar
+        text onEnter=searchscript
+       searchbar
+       frame
+        load map recommend
+       frame
+       recent
+        load map recented
+       recent
+     screen
+    h2
+   g
+  gmap
+ configution
+aedll
+

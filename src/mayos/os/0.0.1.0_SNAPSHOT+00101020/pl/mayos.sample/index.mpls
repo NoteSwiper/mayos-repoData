@@ -1,0 +1,4 @@
+Title="SAMPLE"
+Version="1.00.1"
+Script=Data:root\Nack
+Prefixable=data:root\Prefix

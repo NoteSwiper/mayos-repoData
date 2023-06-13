@@ -1,0 +1,10 @@
+[English]
+file = File
+file.new = New
+file.open = Open
+file.save = Save
+file.save-as = Save as
+file.close = Close
+help = Help
+help.about = About
+aboutmsg = Default Window

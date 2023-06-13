@@ -1,0 +1,21 @@
+/*dll Dynamics
+aedll
+ configution
+  head
+    title=WebAEX
+  head
+  Web
+   h2 Web Browser
+    screen
+     top
+      searchbar onenter=searchscript
+      serachbar
+     top
+     middle
+      iframe website
+     middle
+    screen
+   h2
+  Web
+ configution
+aedll

@@ -1,0 +1,69 @@
+package maylib.effect.fillbot;
+
+binvar.fillbinary = 00000000;
+numbvar.isenabled = 1;
+
+########BEGIN DESCRIPTION BLOCK########
+#aeconfig is used for managing fillbot AI.
+#isenabled - The fillbot AI Is Enabled Parameter.
+#paintRadius - The fillbot AI's Paint Brush Scale Parameter.
+#blurRadius - the fillbot AI's Blur Brush Scale Parameter.
+#blurBrightness - the fillbot AI's Blur Brightness Parameter.
+#aiscript - the fillbot AI's Options Script Parameter.
+#qualityType - fillbot AI's Quality Parameter.
+#qualityTypee#
+    faster   
+     fast    
+    middle
+    midium
+     H  D
+   Very  HD
+     8  K
+     auto    
+ auto -radius
+##
+#botType = fillbot AI's Type
+aeconfig[
+  isenabled = 1
+  paintRadius = 2.5
+  blurRadius = 0.9254220000
+  blurBrightness = 1.0321200
+  aiscript = (ai.fillcommand=type_customaeconfig)
+  qualityType = "auto-radius"
+  botType = (gen=17955.000132, findcmd=A*)
+  learner = 1.02*5
+  custommode = @=
+  [
+    let'find:
+      brushp shape.square 1.5
+      return paintrepeater
+    b * o = 102sat(sup)
+    mode = normalEQ
+  ]
+];
+parameter {
+  findcmd {
+    A* {
+      load subfile(file:data\maylib\src\files\algorithm\A_algorythm.aest)
+      load pathfinder(pathfinder.0a1.a*)
+    }
+    aespath {
+      load pathfinder(pathfinder.0a1.aepath)
+    }
+    IDA* {
+      load pathfinder(pathfinder.0a1.ida*)
+    }
+    Trace {
+      load pathfinder(pathfinder.0a1.trace)
+    }
+  }
+}
+script {
+  fill() {
+    if numbvar1 == 1; {
+      ai.fill on pwr1332 letconfig(aeconfig[]);
+      wait(0.013351);
+      off;
+    }
+  }
+}

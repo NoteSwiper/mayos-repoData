@@ -1,0 +1,33 @@
+<aedll url="aeos://mayos.com/src/aedll/aedll-2022.examl">
+ <configution>
+  <color>
+   <CLIBRARYS>
+    <color>
+     set.red = r4
+     set.orange = r2 y2
+     set.yellow = y4
+     set.lightgreen = y2 g2
+     set.green = g4
+     set.lightblue = g2 b2
+     set.blue = b4
+     set.violet = b2 p2
+     set.pink = p4
+    <color>
+    <bright>
+     black = b1
+     dark = b0.9
+     darklight = b0.7
+     mid = b0.5
+     light = b0.3
+     verylight = b0.1
+     white = b0
+    <bright>
+    <saturate>
+     mono = s0
+     film = s0.553
+     colorness - s1
+    <saturate>
+   <CLIBRARYS>
+  <color>
+ <configution>
+<aedll>

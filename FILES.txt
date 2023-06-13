@@ -1,0 +1,33 @@
+/			Root
+ bin/			Binaries for System
+ boot/			files related to Booting System
+ cmp/			files related by compiler files
+ dev/			files contains for Devices
+ drv/			driver files for system
+ etc/			Configuration files for System
+     opt/		Configuration files for "/opt/"
+     sgml/		Configuration files for Generic Markup Language
+     xml/		Configuration files for Extended Markup Language
+ font/			an font file that used by any
+ home/			a Home folder for Users
+ lib/			an libraries for bin and sbin's basic Executable files
+     <bits>/		same with '/lib', but seprated by Bit
+ media/			an Mounting point for Media Drives
+ mnt/ 			an Temporary mount point for File System or Drives
+ opt/			an Option extension files contains here with any names
+     <pkg>/bin/		binaries for Addon 
+     <pkg>/doc/		Document file in Addon that explains how to addon using
+     <pkg>/include/	Include files for Addon requires to making applications
+     <pkg>/info/	an Information files contains this folder like: ini, xml, html, any files etc.
+     <pkg>/lib/		libraries of executable files for options
+     <pkg>/man/		manifest and user files contains
+ proc/			virtual file system process files contains here
+ root/			an Root user home
+ run/			got changed by executing for it
+ sbin/ 			system binaries for managing system
+ srv/ 			an files that served by systems
+ tmp/			temporary files for any app
+ usr/			multiuser
+ var/			variables files for any
+     cache/		cache files
+     lib/		status information files by libraries uses

@@ -1,0 +1,58 @@
+import cloud.ai.*;
+import cloud.nn.*;
+
+class learning {
+　　//人工知能の情報
+  local AIState {
+    local ais = script.ai.*; //知能のスクリプト
+    
+    local dist = script.ai.target.dist; //ターゲットからの距離
+    
+    local ray = instance.new(ai.ray); //レーダー本体
+    
+    local tg = script.ai.target.*; //ターゲット本体
+    
+    local shke = script.ins.shake.*; //揺れ表現
+    
+    local learn = script.ai.learn.*; //学ぶための一時保存データ
+  };
+  //人工知能のレーダー情報
+  local AIRadar {
+    //レーダーを接続
+    local ray = AIState.ray
+    //衝突したのかのバイナリ
+    local isHit = 0;
+    //衝突用のリスト
+    local Col {
+      //どの形のが衝突したのかのテキスト
+      local shape = box;
+      //衝突のサイズ
+      local size = 1;
+      //レーダーの線が衝突している個数
+      local rayhits = 0;
+    };
+    //サーバー側での処理用サーバー
+    local server = svr://146.38.77.452/;
+  };
+  onStarted {
+    ai.addBehaviour(ai.getBehaviour("Timer"));
+    ai.setTimer(0);
+    ai.generate("Person", new aiBrain());
+    position(vec2(0, 0));
+    loop(250) {
+      clone();
+    };
+  };
+  function(ai.timer=10) {
+    ai.setTimer(0);
+    ai.respawn(ai.getObject("Person"), aiBrain());
+    position(vec2(0, 0));
+  };
+  ai(target) {
+    ai.move(ai.aiBrain);
+    instance.new(ray);
+    if(ray.hit) {
+      agen(speed);
+    }
+  }
+};

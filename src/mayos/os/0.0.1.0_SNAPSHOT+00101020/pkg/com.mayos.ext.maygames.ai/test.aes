@@ -1,0 +1,28 @@
+
+/* MayOS X - AI EX 1.0 */
+export all sys.namespace(aims);
+import cloud.ofc.ai as ai;
+import cloud.ofc.ai.behaviour as aiBehaviour;
+import cloud.ofc.nn as nn;
+import cloud.ofc.render as render;
+
+public class AI {
+  object Trainer = object.getObject();
+  aiBrain brain = ai.genBrain(math.random);
+  ai ai = ai.genAi(new aiInfo(def), aiBrain brain);
+
+  event OnStart {
+    ai.spawnBrain(ai ai,object Trainer);
+    ai.addBehaviour(ai.getBehaviour(aiBehaviour.Timer), 0);
+  }
+  event OnUpdate2 {
+    ai.setTimer(ai.getTimer(aiBehaviour.Timer), Timer + 1);
+  }
+  event OnUpdate {
+    ai.calc(ai ai,aiBrain brain,object Trainer,object Trainer.transform);
+    ai.mover(ai ai,aiBrain brain,object Trainer, this.ai-calc().vec3_Result);
+    if Timer > 10 {
+      ai.setTimer(ai.getTimer(aiBehaviour.Timer), 0);
+    }
+  }
+}

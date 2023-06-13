@@ -1,0 +1,4 @@
+com./Role./console
+if var.mast.error = 1
+remain time 60 msg"Error Occured. Loading 60Mode..."
+console cmd"execute cur.usr say"Wait For 60sec.""

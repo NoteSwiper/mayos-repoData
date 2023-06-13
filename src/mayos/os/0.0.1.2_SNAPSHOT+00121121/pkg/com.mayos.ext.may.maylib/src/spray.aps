@@ -1,0 +1,14 @@
+import UI.spray
+package maylib.effect.spray;
+
+fvar.sprayimg =  
+listvar.reload
+  numvar.reload.time = 0.11275;
+script {
+  spray() {
+    onActivated {
+      spray img 12
+      wait(reload.time)
+    } 
+  }
+}

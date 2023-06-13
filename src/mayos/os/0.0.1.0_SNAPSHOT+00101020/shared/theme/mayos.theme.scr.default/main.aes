@@ -1,0 +1,6 @@
+
+export this.all;
+
+class main() {
+  infoFile infomation = getFile(info.aeinf);
+}

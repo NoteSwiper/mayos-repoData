@@ -1,0 +1,2 @@
+set folder displayName this
+set subfolder displayName getsubfolder.Name

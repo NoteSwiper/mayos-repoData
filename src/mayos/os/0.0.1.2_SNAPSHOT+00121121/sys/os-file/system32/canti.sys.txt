@@ -1,0 +1,11 @@
+error message=errormessage.msge
+ns-painter.exe
+icons.dll
+web.icon
+system.ini
+system.32ini
+64bitfill.bit
+32bitfill.bit
+wasted.dkl
+resource.dllicon
+pcos.os

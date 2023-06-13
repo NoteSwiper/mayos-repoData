@@ -1,0 +1,8 @@
+ABCDEFGHIJKLMNOPQRSTUWVXYZ
+abcdefghijklmnopqrstuwvxyz
+12345678890
+!"#$%&'()
+-^\
+=~|
+`{}*+<>?_
+@[;:],./\

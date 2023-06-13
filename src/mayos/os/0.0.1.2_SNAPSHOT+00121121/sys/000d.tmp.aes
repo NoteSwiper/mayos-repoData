@@ -1,0 +1,38 @@
+// third party using modules & packages
+import <TLD>.<DomainName>.<Product|Module|Package>;
+
+import company.product.divide;
+import cloud.company.product.divide;
+import cloud.{usrId[nat-fir-las]}.divide;
+import com.example.package;
+import com.example.module.aemd;
+export company.product.divide;
+class className {}
+function funcName(parameter: type) {return value;}
+system:moveFile(Name, URL, Code);
+
+// Variables
+byte - binary byte
+short
+int
+float
+bool
+string
+file
+info
+object
+list
+map
+structure
+vector
+vector2
+vector3
+code
+array
+null
+state
+status
+util
+execute
+img
+cache

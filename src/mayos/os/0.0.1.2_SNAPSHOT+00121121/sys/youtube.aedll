@@ -1,0 +1,52 @@
+/*dll dynamic
+aedll
+ configution
+  yout
+   screen
+    top
+     searchbar
+      text onenter=searchscript 
+       onenter
+        searchedvideo
+         show
+        searcjedvideo
+       onenter
+     searchbar
+     logo
+      youtube
+     logo
+     account
+      image-circle usericon
+       onClick
+        hover
+         tops
+          account
+           script load youtube account show
+          account
+          text blue "swich Account"
+           onclick
+            hover
+             accounts
+              script load youtube accounts
+               onclick=swich
+             accounts
+            hover
+           onclick
+          load youtube options
+         tops
+        hover
+       onclick
+      image-circle
+     account
+    screen
+   top
+   middle
+    recommended video
+     load recomvid
+    recommended video
+   middle
+  yout
+ configution
+aedll
+
+PUBLICEncryptCode=4V7084OWMPAPNA8NDMU8PAYCTRVR4BR8IS3OAAM892AQ20MUV98NYQ78AVY7A2B67WBI7VWPWWVLO4784WO4W5O00W04ONVWBWGVWSBV

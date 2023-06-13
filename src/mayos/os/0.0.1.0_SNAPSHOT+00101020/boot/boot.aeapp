@@ -1,0 +1,24 @@
+if(this.activated) {
+  listVar bootVariables = checkVariables("/pc/get>type:variable,id:pc.boot");
+  if (bootVariables:isActive()) {
+    switchCauses (bootVariables.bootType = new var(bootType, float)) {
+      case 1.0 {
+        ui.load(os.startup);
+      }
+      case 1.1 {
+        ui.load(os.startup,error);
+      }
+      case 1.2 {
+        ui.load(os.startup,safe);
+      }
+      case 2.0 {
+        ui.load(os.BIOS);
+      }
+      case 2.1 {
+        ui.load(os.BSOD);
+      }
+    }
+  } else {
+    log("unexcepted error occured.");
+  }
+}

@@ -1,0 +1,5 @@
+result {
+  if(csl = activated) {
+    get csl.ch_05.port_8080
+  }
+}

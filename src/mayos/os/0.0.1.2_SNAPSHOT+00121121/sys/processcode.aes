@@ -1,0 +1,7 @@
+process = 0000-0000-0000-0000-0000
+mask = 0000-0000-0000-0000-0000
+ap = abcdefghijklmnopqrstuvwxyz1234567890
+
+class random {
+  processCode(mask, ap);
+}

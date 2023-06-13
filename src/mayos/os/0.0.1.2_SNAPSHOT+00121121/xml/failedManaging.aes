@@ -1,0 +1,9 @@
+get failedData = worker.import(executor.XML().fail);
+
+export value returns() {
+    return failedData + os.file.JSON.new({
+        code: failedData.code,
+        reason: failedData.reason,
+        extra: failedData.extra
+    }) + extra.new("82nc8z001338basl");
+}

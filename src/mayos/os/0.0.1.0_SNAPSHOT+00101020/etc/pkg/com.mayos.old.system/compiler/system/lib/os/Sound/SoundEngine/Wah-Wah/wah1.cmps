@@ -1,0 +1,12 @@
+local wahwah = {}; // this is local module like.
+local strengh = 1; // this is a wah-wah Amp.
+local frequency = 200; // this is a speed.
+local amount = 30; // this is a wet.
+local chid = OnEvery(); 
+local function str()
+	link strengh "Slide";
+	state change "lib.os.sound.SoundEngine.WahWah.""strengh","amount" to {linker}:
+	end
+OnEvery()
+	sin;
+	end

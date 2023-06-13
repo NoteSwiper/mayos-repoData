@@ -1,0 +1,24 @@
+class mayos {
+  api lib = {};
+  function lib.addLibrary(URL: string) {
+    return new File(URL:getPackageInfoFromURL(URL + "/info.aeinfo").name, URL:getPackageInfoFromURL(URL + "/info.aeinfo"));
+  };
+  api os = {};
+  api os.time = {};
+  function os.time.getCurrentTime() {
+    return svr:get("mayos://mayos.com/svr?id=time/index.aess");
+  };
+  api os.login = {};
+  state bool os.login.isLogin = {
+    return user.status.login.istrue;
+  };
+  api os.fs = {};
+  function os.fs.getFolder(name?: string, id?: string, path?: url) {
+    return param:decodepath();
+  };
+  api math = {};
+  function math.add(v1, v2) {
+    float result;
+    return v1 + v2;
+  };
+};

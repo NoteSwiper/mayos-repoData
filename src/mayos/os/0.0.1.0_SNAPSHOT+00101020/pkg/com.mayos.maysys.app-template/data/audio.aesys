@@ -1,0 +1,18 @@
+app_audio {
+  info bulaud.adc {
+    title = "Bulit-In Audio Device",
+    author = "MayOS Inc",
+    origin = "bulaud.adc",
+    description = "This is Bulti in Audio."
+  }
+  
+  play(target, volume, pitch, loop, playoffset) {
+    activated {
+      target:audioPlay();
+      setVolume(volume);
+      setPitch(pitch);
+      setLooping(loop);
+      setPlayOffset(playoffset);
+    }
+  }
+}

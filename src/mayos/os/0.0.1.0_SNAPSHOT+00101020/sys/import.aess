@@ -1,0 +1,13 @@
+global var config {
+  string aesvrparam = {.id=mayos%.ver=1.2.45%.confsvr=onLoad(genlibView(getlibfolder))/};
+}
+
+system syntax class import"@capUnvisible"(datalibrary importer) {
+  list dataLibrarys listData = this.getAesvr(aesvr://pris.vr/get_content + var.string.aesvrparam);
+  var dataLibrary LibData = importer;
+  var textLog result;
+  if LibData == listData.dataText {
+    connect(scriptData/normalScript.aeps);
+    serverDownload(script);
+  }
+}

@@ -1,0 +1,11 @@
+earthquake {
+  checkEarthquake(3.0, 5-);
+  if(earthquake = 1) {
+    eqalert:soundPlay();
+    alert(earthquake Detected!, earthquake Occured at [eq.occur]. stay safe.);
+    if(lang = jp) {
+      eqalert:soundPlay();
+      alert(’nk‚ğŒŸ’m‚µ‚Ü‚µ‚½, [eq.occur.jp]‚Å’nk@‹­‚¢—h‚ê‚ÉŒx‰ú);
+    }
+  }
+}

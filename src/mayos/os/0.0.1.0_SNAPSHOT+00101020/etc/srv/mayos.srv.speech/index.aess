@@ -1,0 +1,27 @@
+class speech {
+  public api speechId;
+
+  object speechType = [
+    "english_male01": "English Male 01";
+    "english_male02": "English Male 02";
+    "english_female01": "English Female 01";
+    "english_female02": "English Female 02";
+  ];  
+
+  ui settings {
+    style settings window.inside {
+      category General {
+        category Speech {
+          selection Type $speechType;
+          
+        }
+      }
+    }
+  }
+  
+  public api speech {
+    return {
+      name: 
+    };
+  };
+}

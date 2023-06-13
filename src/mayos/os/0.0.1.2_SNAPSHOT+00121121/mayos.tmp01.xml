@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE mayos [
+    <!ENTITY mayinccopyright "MayOS Inc. 2023 All rights reserved.">
+]>
+<?xml-model href="../schemas/2023-mayos.xsd" type="application/xml-xsd"?>
+<mayos exec="getDir" id="system:core">
+  <meta>
+    <name>$getValueFromPropertiesId("mayos.ini", "env.def.versionIdentifier")</name>
+    <memo>
+      Made by "May Inc.".<br/>
+      $mayinccopyright
+    </memo>
+  </meta>
+  <content>
+    <getscript path="..../src/?mayos/os/1-0-0beta/xml/contentManaging.aes" />
+    <getscript if="error" define="err_msg, err_id, err_code" path="..../src/?mayos/os/1-0-0beta/xml/failManaging.aes" />
+  </content>
+  <config ext="./cfg/mayos.sys.aecfg" internal="both">
+    <directories>
+        <srcDir>..../src/</srcDir>
+        <execDir>${src}/?mayos/exec/exec.mea</execDir>
+        <cacheDir>${src}</cacheDir>
+    </directories>
+    <cfg type="typeId" name="string" value="used this attribute except empty" version="editVersion" >stringId</cfg>
+    <cfg type="empty" name="tyle" value="sys,system,may,mayos,os" />
+    <cfg type="string" name="version">$getValueFromPropertiesId("mayos.ini","env.def.version")</cfg>
+    <rule ext="./rules/mayos.sys.aerule" />
+    <cfg type="file" name="defaultApplicationHandling" value="..../src/?mayos/os/1-0-0beta/_def/app.aedll" />
+  </config>
+</mayos>

@@ -1,0 +1,71 @@
+CubeGraphicsLibrary v1.57.0223
+Advanced Graphics Library Systems
+import lib.g.1d;
+import lib.g.cpu;
+import lib.g.3d;
+import lib.g.2d;
+import lib.g.4d;
+import lib.g.color;
+import lib.g.resolution;
+import lib.g.graphics;
+1D=X
+2D=X,Y
+3D=X,Y,Z
+4D=W,X,Y,Z
+Color=256bits
+bits
+1
+2
+4
+8
+16
+32
+64
+128
+256
+312
+512
+1024
+5000
+RGB
+Red 255
+set red.color = {r-255, g-0, b-0}
+set orange.color = {r-255, g-102, b-0}
+set yellow.color = {r-255, g-242, b-0}
+set green.color = {r-0, g-255, b-0}
+set Lightblue.color = {r-0, g-255, b-255}
+set blue.color = {r-0, g-0, b-255}
+set pink.color = {r-255, g-0, b-255}
+Green 255
+Blue 255
+HSV
+Hue.color
+Saturation.color
+Valve.color
+Resolution
+120 144p
+240 240p
+360 360p
+480 480p
+560 560p
+720 720p
+1080 1080p
+2160 2k
+3240 3k
+4320 4k
+8120 8k
+Graphics
+NVIDIA GeForce RTX =
+if graphicsc = nvidia.geforcertx
+enable Ray.Tracing
+NVIDIA GeForce GTX
+if graphicsc = nvidia.geforcegtx
+enable Ray.Tracing
+Intel HD Graphics
+if graphicsc = intel.hdgraphics
+disable Ray.Tracing
+Ray.Tracing
+Shadow 0.0
+G Effect
+Wave = {CuSc=sine~effectassect}
+portas = {CuSc=bit~effectassect}

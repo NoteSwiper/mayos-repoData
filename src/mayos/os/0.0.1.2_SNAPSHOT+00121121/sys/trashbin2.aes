@@ -1,0 +1,24 @@
+
+@mayosscript("0.26.331");
+
+using may.general;
+using cloud.svr;
+using cloud.ui;
+
+public class trashbin {
+  int trashbinID = <TID>
+  int stack = <stack>
+  int size = <size>
+
+  public function tb.clearFiles() {
+    if var(stack, size) > 1 {
+     if {usingPkg.1ab77cb17db7a71bd}.findButtonBehaviourByName("delete now").Event.clicked {
+       move(trashbin.files,URL(aeos://mayos.com/trashbinSvr?id=1102873/))
+       show(msgbox(name=Host, Message=<stack>file, <size>bytes removed!))
+       if tb.error == true {
+        show(msgbox(name=Host, Message=Error Occured!))
+       }
+      }
+    }
+   }
+ }

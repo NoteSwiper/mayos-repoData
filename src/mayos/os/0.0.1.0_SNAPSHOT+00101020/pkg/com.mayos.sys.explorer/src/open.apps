@@ -1,0 +1,5 @@
+script {
+  if reseive main.script.open {
+    openrequest()
+  }
+}

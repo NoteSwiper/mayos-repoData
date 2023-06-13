@@ -1,0 +1,33 @@
+System.text(
+m1a loading
+m1b 
+m1c .
+mcd ..
+mce ...
+m2a ....
+m2b .....
+m2c windows
+m2d mayos
+m2e is
+m3a has
+m3b was
+m3c as
+m3d that
+m3e now
+m4a no
+m4b yes
+m4c start
+m4d starting
+
+local script = requires(Word2.dll/void/script)
+
+function boot {
+ Event(loading) {
+  create.text m1a
+  create.text mo
+  change text mo se(1b,1c,1d,1e,2a,2b)
+ }
+ Event() {
+  break()
+ }
+}

@@ -1,0 +1,11 @@
+conf app = {
+  name = "App Template"
+  desc = "this is template"
+  this.package = "com.mayos.app-temp"
+  packages = {}
+  tag = {5,13,432,4228}
+  folders = {
+    data = "app/data/"
+    lib = "app/lib/"
+  }
+}

@@ -1,0 +1,8 @@
+local ray = {}
+local ShadowResolution = 2.5
+local FarShadowResolution = 0.685
+local SunRaysAmount = 0.634
+local SunRaysSize = 0.983
+local BlockResolution = 256
+local AI = main.ai4
+

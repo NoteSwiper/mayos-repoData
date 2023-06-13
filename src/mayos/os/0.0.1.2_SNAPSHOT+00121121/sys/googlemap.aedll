@@ -1,0 +1,38 @@
+/*dll dynamic
+aedll
+ configution
+  gmap
+   g up600px, left800px, enable scaling
+    h2<GoogleMap>
+     scaler on
+     serverload googlemap/data/map
+     clickable on
+     screen
+      menu
+       normal
+        load map normal
+       normal
+       earth
+        load map earth
+       earth
+      menu
+      frame
+       searchbar
+        text onEnter=searchscript
+       searchbar
+       frame
+        load map recommend
+       frame
+       recent
+        load map recented
+       recent
+     screen
+    h2
+   g
+  gmap
+ configution
+aedll
+
+
+PUBLICEncryptCode=4V7084OWMPAPNA8NDMU8PAYCTRVR4BR8IS3OAAM892AQ20MUV98NYQ78AVY7A2B67WBI7VWPWWVLO4784WO4W5O00W04ONVWBWGVWSBV
+StreamingCode=yvvww0w404wsgohugvomg60sgv745e82azqsxc2de5vrf36btg74yhv85uj69i70k,0mcrn8bxfvd5exrbc6ymb8nvcvx6bc7n8vvbt4cvr6de6v3b7tgdb4vb4t74c7fc4gfy

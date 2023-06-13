@@ -1,0 +1,13 @@
+import lib.os.music
+import lib.os.video
+import lib.os.document
+import lib.os.file
+
+function tar {
+  video {
+    codec = mp4, avi, mov, wmv, mpeg, flv, f4v, m4v
+  }
+  audio {
+    codec = mp3, wav, aac, ogg, m4a, 
+  }
+}

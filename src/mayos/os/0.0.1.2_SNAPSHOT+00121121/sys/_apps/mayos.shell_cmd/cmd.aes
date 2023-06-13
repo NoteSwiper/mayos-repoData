@@ -1,0 +1,20 @@
+import app.*;
+
+public class main() {
+  appInfo app_info = system:makeAppInfoFromJSON(path("../_conf/app_inf/cmd.json", file.type("JSON")).getJson());
+  app application = app:createApplication(app_info);
+
+  if (getRunningUser()) {
+    if (!this:isUiLinkLibraryExist()) {
+      return {
+        application.exit(1),
+        application.createDialogFromJSON(path("../_conf/app_inf/dialog/dll.json").getJson());
+      }
+    } else {
+      return {
+        application.run(this);
+      }
+    }
+  }
+}
+

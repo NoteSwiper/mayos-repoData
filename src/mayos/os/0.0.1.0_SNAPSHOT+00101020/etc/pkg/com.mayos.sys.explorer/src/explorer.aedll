@@ -1,0 +1,30 @@
+<aedll lang="en" comp:url="mayos://mayos.com/src/aedll_2023.examl" url="mayos://mayos.com/schemas/aedll_2023.aeschemas" ver="1.3.2" >
+  <config>
+    <title default="1">Explorer</title>
+    <req>may</req>
+    <import>
+      <pack name="explorersearchd" />
+      <pack name="GUID" />
+      <pack name="hlp" />
+      <pack name="notepad" />
+    </import>
+  </config>
+  <design name="explorer" id="mayos.system.explorer" dataId="0">
+    <explorer>
+      <top>
+        <searchbar ext="/src/events/search/onExecute.aes"></searchbar>
+        <menu>
+          <load target="/src/explorer.mcs" />
+        </menu>
+      </top>
+      <exp>
+        <1>
+          <load cloud:explorer.mcs\recentbar1 />
+        </1>
+        <2>
+          <file-system:exp.scn>
+        </2>
+      </exp>
+    </explorer>
+  </design>
+</aedll>

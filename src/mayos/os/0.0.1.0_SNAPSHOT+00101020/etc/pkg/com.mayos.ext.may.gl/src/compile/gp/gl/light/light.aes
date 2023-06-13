@@ -1,0 +1,5 @@
+local light
+
+function light {
+  load lightscript.aegl
+}

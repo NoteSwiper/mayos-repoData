@@ -1,0 +1,31 @@
+using General
+ requires General.os.Sound;
+using lib
+ requires lib.min;
+ requires lib.max;
+ requires lib.os
+  requires lib.os.sound;
+  requires lib.os.full;
+ requires lib.GL
+  requires lib.GL.UI;
+using lib.Net
+ requires Net.IP;
+ requires com.net.name;
+
+public script function NetworkWork 
+ {
+  private function1 
+  {
+   public var.IP = function.IP
+   if Net(var.IP=<something>) = 1 
+    {
+      create UI(gcui/network.gcui)
+    }
+   end
+  }
+  private function IP 
+  {
+   on Every =time
+   IP
+  }
+ }

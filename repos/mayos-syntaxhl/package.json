@@ -1,0 +1,227 @@
+{
+    "$schema": "https://json.schemastore.org/package",
+    "name": "aes-syntaxhlr",
+    "displayName": "MayOS AE Script Syntax Highlighting Support",
+    "description": "this extension allows to highlight May OS's AE Script.",
+    "version": "0.2.0",
+    "publisher": "NoteSwiper",
+    "engines": {
+      "vscode": "^1.75.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/NoteSwiper/mayos-script-syntax-highlight.git"
+    },
+    "categories": [
+      "Programming Languages"
+    ],
+    "contributes": {
+      "configurationDefaults": {
+        "[*]": {
+            "editor.semanticHighlighting.enabled": true,
+            "editor.tokenColorCustomizations": {
+                "textMateRules": [
+                    {"scope":   "support.type", "settings": {"foreground":  "#FF0000",  "fontStyle":    "bold"  }},
+                    {"scope":"support.function","settings":{"foreground":"#0F5555","fontStyle":"italic bold underline"}},
+                    {"scope":"meta.preprocessor","settings":{"foreground":"#555500","fontStyle":"bold"}},
+                    {"scope":"keyword.control.import","settings":{"foreground":"#ff7722","fontStyle":"bold"}},
+                    {"scope":"entity.name.type","settings":{"foreground":"#555500","fontStyle":"bold"}},
+                    {"scope":"storage.modifier","settings":{"foreground":"#ff3344","fontStyle":"bold"}},
+                    {"scope":"storage.type","settings":{"foreground":"#798845","fontStyle":"bold"}},
+                    {"scope":"entity.name.type","settings":{"foreground":"#555555","fontStyle":"bold"}},
+                    {"scope":"meta","settings":{"foreground":"#444400","fontStyle":"bold"}},
+                    {"scope":"support.variable","settings":{"foreground":"#888800","fontStyle":"bold"}},
+                    {"scope":"keyword.control","settings":{"foreground":"#588325","fontStyle":"bold"}},
+                    {"scope":"string.quoted.double","settings":{"foreground":"#21aa33","fontStyle":"bold"}},
+                    {"scope":"constant.character.escape","settings":{"foreground":"#555555","fontStyle":"bold"}},
+                    {"scope":"constant.numeric","settings":{"foreground":"#828222","fontStyle":"bold"}},
+                    {"scope":"keyword.other","settings":{"foreground":"#22FF22","fontStyle":"bold"}},
+                    {"scope":"comment.line.shebang","settings":{"foreground":"#22FF00","fontStyle":"bold"}},
+                    {"scope":"comment.line.double-slash","settings":{"foreground":"#33FF33","fontStyle":"bold"}},
+                    {"scope":"comment.block.documentation","settings":{"foreground":"#008700","fontStyle":"bold"}},
+                    {"scope":"invalid.illegal","settings":{"foreground":"#992200","fontStyle":"bold"}},
+                    {"scope":"storage.modifier.returns","settings":{"foreground":"#999933","fontStyle":"bold"}}
+                ]
+            },
+            "editor.semanticTokenColorCustomizations": {
+                "[Default Dark+ Experimental]": {
+                    "enabled": true,
+                    "rules": {
+                        "keyword": "#8f8f00",
+                        "regexp": "#555fff",
+                        "number": "#f8f800",
+                        "namespace": "#db1a1a",
+                        "type": "#6ed445",
+                        "struct": "#7a80d6",
+                        "class": "#1b5f18",
+                        "enum": "#ff0000",
+                        "interface": "#8e8fdd",
+                        "typeParameter": "#bb8ba8",
+                        "parameter": "#366d64",
+                        "variable": "#9ea034",
+                        "property": "#759290",
+                        "enumMember": "#77678a",
+                        "decorator": "#5f8676",
+                        "event": "#ff5f89",
+                        "function": "#5fff53",
+                        "method": "#40f3f3",
+                        "macro": "#3f3f0f",
+                        "label": "#ff44f3",
+                        "comment": "#007f00",
+                        "string": "#7f8f7f",
+                        "operator": "#f5f500",
+                        "class.readonly": {
+                           "foreground": "#3b6e39",
+                           "fontStyle": "bold italic"
+                        },
+                        "*.definition" : {
+                            "fontStyle": "italic bold",
+                            "foreground": "#b3b35c65"
+                        },
+                        "*.static":{
+                            "foreground": "#0000ff65"
+                        },
+                        "*.deprecated": {
+                            "foreground": "#ff000065",
+                            "fontStyle": "bold strikethrough"
+                        },
+                        "*.async": {
+                            "foreground": "#0000ff70",
+                            "fontStyle": "underline"
+                        },
+                        "*.modification": {
+                            "foreground": "#fff00070",
+                            "bold": true
+                        },
+                        "*.documentation": "#ff000090",
+                        "*.declaration" : {
+                           "fontStyle": "bold"
+                        },
+                        "*.readonly" : "#696869"
+                    }
+                }
+            }
+        }
+      },
+      "languages": [
+        {
+          "id": "aes",
+          "aliases": [
+            "aescript",
+            "aes",
+            "AES"
+          ],
+          "extensions": [
+            ".aes",
+            ".ae",
+            ".may-script",
+            ".may",
+            ".aesrg",
+            ".aemay",
+            ".maycode",
+            ".maycd"
+          ],
+          "firstLine": "",
+          "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "aess",
+            "extensions": [
+                ".aess",
+                ".may-script2",
+                ".may2",
+                ".aec"
+            ],
+            "aliases": [
+                "AESS",
+                "aess"
+            ],
+            "configuration": "./aess.language-configuration.json"
+        },
+        {
+            "id": "aeasm",
+            "extensions": [
+                ".aeasm",
+                ".mea",
+                ".may-assembly",
+                ".may-asm",
+                ".mayasm",
+                ".aecmp",
+                ".maycmp",
+                ".aecpl"
+            ],
+            "aliases": [
+                "AEASM",
+                "aeasm"
+            ],
+            "configuration": "./aeasm.language-configuration.json"
+        },
+        {
+            "id": "aeini",
+            "extensions": [
+                ".aeini",
+                ".aeconf",
+                ".aesys",
+                ".may-config",
+                ".maycfg",
+                ".aecfg"
+            ],
+            "aliases": [
+                "AECFG",
+                "aecfg"
+            ],
+            "configuration": "./aeini.language-configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "aes",
+          "scopeName": "source.aes",
+          "path": "./syntaxes/aes.tmLanguage.json"
+        },
+        {
+            "language": "aess",
+            "scopeName": "script.aes.aess",
+            "path": "./syntaxes/aess.tmLanguage.json"
+        },
+        {
+            "language": "aeasm",
+            "scopeName": "script.aes.aeasm",
+            "path": "./syntaxes/aeasm.tmLanguage.json"
+        },
+        {
+            "language": "aeini",
+            "scopeName": "script.aes.aeini",
+            "path": "./syntaxes/aeini.tmLanguage.json"
+        }
+      ],
+      "semanticTokenTypes": [
+        {
+          "id": "aescript",
+          "superType": "aes",
+          "description": "A template script type."
+        }
+      ],
+      "semanticTokenModifiers": [
+        {
+          "id": "native",
+          "description": "the thing are here"
+        }
+      ],
+      "semanticTokenScopes": [
+        {
+          "scopes": {
+            "aescript": [
+              "scripts"
+            ]
+          }
+        }
+      ],
+      "snippets": [
+        {
+          "language": "aes",
+          "path": "./snippets/aes.snippet.json"
+        }
+      ]
+    }
+  }

@@ -1,0 +1,36 @@
+local module = {2000}
+local data = getService("script.AEScript")
+local Name = script.Name
+local text = script.Name * {text.1} {text.2} {text.c}
+ local text.1 = {App}
+ local text.2 = {string}
+ local text.c = {debug, run, close, open, stop, edit}
+
+local function {
+ if text.1 = {App}, text.2 = {string} {
+  if text.c = debug {
+   debug {text.1}
+   log add {10947 - LOG debug log {text.1} }
+   if text.c = run {
+    run {text.1} {text.2}
+    log add {10947 - LOG run log {text.1} {text.2} }
+    if text.c = close {
+     close {text.1}
+     log add {10947 - LOG close log {text.1} }
+     if text.c = open {
+      open {text.1}
+      log add {10947 - LOG open log {text.1} }
+      if text.c = stop {
+       stop {text.1}
+       log add {10947 - LOG stop log {text.1} } 
+       if text.c = edit {
+        edit {text.1}
+        log add {10947 - LOG edit log {text.1} }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,34 @@
+import cloud.ai.*;
+import cloud.speech.*;
+import cloud.sound.*;
+
+//TTSの設定
+conf speech {
+  soundEngine = speech.setOutputEngine(cloud.sound);
+  voiceSynthesis = ai.runScript(cloud.{299vn.v2}.voice);
+  
+  //ボイスは以下のテキストで利用できます。
+  //m1 michael
+  //m2 james
+  //m3 sam
+  //m4 josh
+  //m5 tosh
+  //f1 anna
+  //f2 james
+  //f3 emily
+  //jm1 傳田
+  //jm2 安生
+  //jm3 配島
+  //jf1 桃子
+  //jf2　紫織
+  //jf3 佐織
+  speech.AIVoice.voiceType = m1
+  speech.AIVoice.voiceSpeed = 1
+  speech.AIVoice.voicePitch = 1
+  speech.marrys_voicerepairement = true
+}
+class speech {
+  class sendtts(text) {
+    say(this.text, {fmdAI});
+  }
+}

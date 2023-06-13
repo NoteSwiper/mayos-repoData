@@ -1,0 +1,5 @@
+local module = {}
+
+OnEvery {
+ 32px tile;
+}

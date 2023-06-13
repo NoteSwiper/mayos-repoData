@@ -1,0 +1,22 @@
+def.mayCode:exportAsPlugin(sys.aeconf({
+    name("May Pro"),
+    package(
+      pkgNamespace("mayos.com/pkg?type=plugin&make=true/com.mayos.maypro")
+    ),
+    info(local:root/showInfo.aess, local:root/info.aeinfo),
+    source(local:root/{find:script})
+  }), true);
+
+array-Import(Package,default.pkgImportFileExt(setFile=_def/pkg.aeimport), {
+  mayos.com/pkg/origin/ae/
+  mayos.com/pkg/origin/may/
+  mayos.com/pkgNumId/1471994/
+});
+
+plugin public class main() {
+  config package = config.getFile(local:root/info.aeinfo);
+  send isLoaded = sendService:sendRequest(mayos.com/request?type=packageSend/isLoaded.aess);
+  if isLoaded {
+    sendService:sendRequest(mayos.com/request?type=packageChange/isLoaded?changeTo=true);
+  }
+}

@@ -1,0 +1,1 @@
+"*.png" OR "*.jpeg" OR "*.jpg" OR "*.gif" OR "*.avi" OR "*.mp4" OR "*.mov" "C:\Users\user\" | "G:\" NOT "AppData\" NOT ".mcreator\" NOT ".thumbnails\" NOT ".vscode\" NOT "anaconda3\" NOT "bra\" NOT "Desktop\VST3" NOT "Documents\"

@@ -1,0 +1,14 @@
+midi.sound.main.piano {
+  s(c1, c2) {
+    wave(piano, 0.1, 1, (c1 ~ c2));
+    autoint(wave());
+  }
+  s(c2, c5) {
+    wave(piano, 0.1, 2, (c2 ~ c5));
+    autoint(wave());
+  }
+  s(c5, c10) {
+    wave(piano, 0.1, 3, (c5 ~ c10));
+    autoint(wave());
+  }
+}

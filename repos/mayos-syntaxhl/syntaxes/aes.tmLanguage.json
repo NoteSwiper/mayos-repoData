@@ -1,0 +1,633 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "MayOS AE Script",
+    "patterns": [
+        { "include": "#document" },
+        { "include": "#keywords" },
+        { "include": "#labels" },
+        { "include": "#comments" },
+        { "include": "#shebang" },
+        { "include": "#strings" },
+        { "include": "#asm" },
+        { "include": "#operators" },
+        { "include": "#numbers" }
+
+    ],
+    "repository": {
+        "document": {
+            "patterns": [{ "include": "#comment" },{ "include": "#namespace" }]
+        },
+        "namespace": {
+            "begin": "\\b(namespace)(?<=\\b[.[:alnum:]]+|[ \\t]*[ \\t]"
+        },
+        "labels": {
+            "patterns": [
+                {
+                    "name": "support.type",
+                    "match": "\\.?\\w+:"
+                },
+                {
+                    "name": "support.type",
+                    "match": ":\\w+"
+                },
+                {
+                    "name": "markup.heading",
+                    "match": "\\..+?\\b"
+                }
+            ]
+        },
+        "preprocess": {
+            "patterns": [
+                {
+                    "match": "define\\s(.+?)\\s(.*)$",
+                    "captures": {
+                        "1": { "name": "support.function" },
+                        "2": {
+                            "name": "support.type",
+                            "patterns": [
+                                { "include": "#strings" },
+                                { "include": "#numbers" }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "match": "(\\w+)\\b(.+)$",
+                    "captures": { "2": { "name": "support.function" } }
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "match": "#(.*)$",
+                    "name": "meta.preprocessor",
+                    "captures": { "1": { "patterns": [ { "include": "#preprocess" } ] } }
+                },
+                {
+                    "match": "//.*$",
+                    "name": "comment.line"
+                },
+                {
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "name": "comment.block"
+                }
+            ]
+        },
+        "import-clause": {
+            "begin": "(\\bimport\\b|[ \\t]*\\+=)",
+            "end": "(?={)",
+            "beginCaptures": { "1": { "name": "keyword.control.import" } },
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "begin": "(\\b[.\\*[:alnum:]]+)",
+                    "end": "(?={)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "entity.name.type.import",
+                            "patterns": [
+                                { "include": "#qualified-name-with-wildcard" },
+                                { "include": "#invalid-name" }
+                            ]
+                        }
+                    },
+                    "patterns": [
+                        { "include": "#comment" },
+                        { "include": "#import-clause" }
+                    ]
+                }
+            ]
+        },
+        "declarations": {
+            "begin": "(?<={)",
+            "end": "(?=})",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#doc-comment" },
+                { "include": "#abstract-entity" },
+                { "include": "#entity" },
+                { "include": "#service" }
+            ]
+        },
+        "abstract-entity": {
+            "begin": "\\b(abstract)\\b",
+            "beginCaptures": { "1": { "name": "storage.modifier" } },
+            "end": "(?<=})",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#entity" }
+            ]
+        },
+        "entity": {
+            "begin": "\\b(entry)\\b",
+            "beginCaptures": { "1": { "name": "storage.type.entity" } },
+            "end": "(?<=})",
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "comment": "entityの定義(entity Entity ...)の、「entitiy」を除いた部分",
+                    "begin": "\\b([[:alnum:]]+)\\b",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "entity.name.type.namespace",
+                            "patterns": [
+                                { "include": "#identifier" },
+                                { "include": "#invalid-name" }
+                            ]
+                        }
+                    },
+                    "end": "(?<=})",
+                    "patterns": [
+                        { "include": "#comment" },
+                        { "include": "#include-clause" },
+                        {
+                            "begin": "{",
+                            "end": "}",
+                            "patterns": [
+                                { "include": "#comment" },
+                                { "include": "#doc-comment" },
+                                { "include": "#field-definition" }
+                            ],
+                            "name": "meta.entity.body"
+                        }
+                    ]
+                }
+            ],
+            "name": "meta.entity"
+        },
+        "include-clause": {
+            "begin": "(\\binclude\\b|[ \\t]*\\+=)",
+            "beginCaptures": { "1": { "name": "keyword.control.include" } },
+            "end": "(?={)",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#entity" },
+                {
+                    "begin": "([[:upper:]][.*[:alnum:]]*)",
+                    "end": "(?={)",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "entity.name.type.include",
+                            "patterns": [
+                                { "include": "#qualified-name" },
+                                { "include": "#invalid-name" }
+                            ]
+                        }
+                    },
+                    "patterns": [
+                        { "include": "#comment" },
+                        { "include": "#include-clause" }
+                    ]
+                },
+                { "include": "#doc-comment" },
+                { "include": "#include-clause" }
+            ]
+        },
+        "field-definition": {
+            "begin": "([[:alnum:]]+)\\s*",
+            "beginCaptures": {
+                "1": {
+                    "name": "support.variable",
+                    "patterns": [
+                        { "include": "#identifier" },
+                        { "include": "#invalid-name" }
+                    ]
+                }
+            },
+            "end": "(?<=;)",
+            "name": "meta.definition.field",
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "begin": "(:)|\\b(as)",
+                    "beginCaptures": {
+                        "1": { "name": "keyword.other.as" },
+                        "2": { "name": "keyword.other.as" }
+                    },
+                    "end": ";",
+                    "endCaptures": { "0": { "name": "punctuation.terminator.field" } },
+                    "patterns": [ { "include": "#modifiered-type" } ]
+                }
+            ]
+        },
+        "modifiered-type": {
+            "begin": "(\\?|!|\\brequire(?=\\b)|\\bnull(?=\\b))",
+            "beginCaptures": {
+                "1": {
+                    "patterns": [
+                        { "include": "#required" },
+                        { "include": "#nullable" }
+                    ]
+                }
+            },
+            "end": "(?=\\<|=|accept|return|;)",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#iteration-and-type" },
+                { "include": "#iteration-by-word-and-type" },
+                { "include": "#type" }
+            ]
+        },
+        "required": {
+            "match": "(!|require)",
+            "name": "storage.modifier.required"
+        },
+        "nullable": {
+            "match": "(\\?|null)",
+            "name": "storage.modifier.nullable"
+        },
+        "iteration-and-type": {
+            "begin": "\\s*(@|%)",
+            "beginCaptures": {
+                "1": {
+                    "patterns": [
+                        {
+                            "match": "@",
+                            "name": "storage.type.list-of"
+                        },
+                        {
+                            "match": "%",
+                            "name": "storage.type.dictionary-of"
+                        }
+                    ]
+                }
+            },
+            "end": "(?=\\<|=|accept|return|;)",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#iteration-and-type" },
+                { "include": "#iteration-by-word-and-type" },
+                { "include": "#type" }
+            ]
+        },
+        "iteration-by-word-and-type": {
+            "comment": "\"list of\"とか\"dictionary of\"の\"list\", \"dictionary\"の部分",
+            "begin": "\\b(list|dictionary|hash|map)",
+            "beginCaptures": {
+                "1": {
+                    "patterns": [
+                        {
+                            "match": "list",
+                            "name": "storage.modifier.list-of"
+                        },
+                        {
+                            "match": "dictionary|hash|map",
+                            "name": "storage.modifier.dictionary-of"
+                        }
+                    ]
+                }
+            },
+            "end": "(?=\\<|=|accept|return|;)",
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "comment": "\"list of\"とか\"dictionary of\"の\"of\"の部分",
+                    "begin": "(\\s*)(of)(?=\\b)",
+                    "beginCaptures": {
+                        "1": { "name": "punctuation.iteration" },
+                        "2": { "name": "storage.modifier.list-or-dictionary-of" }
+                    },
+                    "end": "(?=\\<|=|accept|return|;)",
+                    "patterns": [
+                        { "include": "#comment" },
+                        { "include": "#iteration-and-type" },
+                        { "include": "#iteration-by-word-and-type" },
+                        { "include": "#type" }
+                    ]
+                }
+            ]
+        },
+        "type": {
+            "begin": "",
+            "end": "(?=\\<|=|accept|return|;)",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#entity" },
+                { "include": "#primitive-type" },
+                { "include": "#reference-type" },
+                { "include": "#pseudo-type" }
+            ]
+        },
+        "pseudo-type": {
+            "include": "#string"
+        },
+        "primitive-type": {
+            "patterns": [
+                {
+                    "begin": "\\b(int\\()",
+                    "beginCaptures": { "1": { "name": "storage.type.integer-begin" } },
+                    "end": "\\)",
+                    "endCaptures": { "0": { "name": "storage.type.integer-end" } },
+                    "patterns": [
+                        {
+                            "match": "8|16|32|64",
+                            "name": "storage.type.integer-size"
+                        },
+                        {
+                            "match": "\\d+",
+                            "name": "invalid.illegal.integer-size.wrong-number"
+                        },
+                        {
+                            "match": "[^)[:space:]]+",
+                            "name": "invalid.illegal.integer-size.not-number"
+                        }
+                    ]
+                },
+                {
+                    "begin": "\\b(float\\()",
+                    "beginCaptures": { "1": { "name": "storage.type.float-begin" } },
+                    "end": "(?<=\\))",
+                    "patterns": [
+                        {
+                            "begin": "(bin|dec)",
+                            "beginCaptures": { "1": { "name": "storage.type.float-base" } },
+                            "end": "(?<=\\))",
+                            "patterns": [
+                                {
+                                    "begin": "[[:alnum:]]+",
+                                    "beginCaptures": {
+                                        "0": {
+                                            "patterns": [
+                                                {
+                                                    "match": "32|64",
+                                                    "name": "storage.type.float-size"
+                                                },
+                                                {
+                                                    "match": ".+",
+                                                    "name": "invalid.illegal.float-size"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "end": "\\)",
+                                    "endCaptures": { "0": { "name": "storage.type.float-end" } },
+                                    "patterns": [
+                                        {
+                                            "match": "[^[:space:])]+",
+                                            "name": "invalid.illegal.float-definition"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "match": "\\b(bool(?:ean)?|int(?:8|16|32|64|eger)?|s?byte|short|long|float(?:32|64)?|double|real|number|decimal(?:32|64)?|numeric|money|date(?:time)?|time(?:stamp)?|str(?:ing)?|bin(?:ary)?)(?!\\()(?=\\b)",
+                    "captures": { "1": { "name": "storage.type.primitive" } }
+                }
+            ]
+        },
+        "reference-type": {
+            "match": "([.[:alnum:]]+)",
+            "captures": {
+                "1": {
+                    "name": "support.type",
+                    "patterns": [
+                        { "include": "#qualified-name" },
+                        { "include": "#invalid-name" }
+                    ]
+                }
+            }
+        },
+        "service": {
+            "begin": "\\b(service)\\b",
+            "beginCaptures": { "1": { "name": "storage.type.service" } },
+            "end": "(?<=})",
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "comment": "serviceの定義(service ServiceXXX ...)の、「service」を除いた部分",
+                    "begin": "\\b([[:alnum:]]+)\\b",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "entity.name.type.service",
+                            "patterns": [
+                                { "include": "#identifier" },
+                                { "include": "#invalid-name" }
+                            ]
+                        }
+                    },
+                    "end": "(?<=})",
+                    "patterns": [
+                        { "include": "#comment" },
+                        {
+                            "begin": "{",
+                            "end": "}",
+                            "patterns": [
+                                { "include": "#comment" },
+                                { "include": "#doc-comment" },
+                                { "include": "#method-definition" }
+                            ],
+                            "name": "meta.service.body"
+                        }
+                    ]
+                }
+            ],
+            "name": "meta.service"
+        },
+        "method-definition": {
+            "begin": "([[:alnum:]]+)\\s*",
+            "beginCaptures": {
+                "1": {
+                    "name": "support.function",
+                    "patterns": [
+                        { "include": "#identifier" },
+                        { "include": "#invalid-name" }
+                    ]
+                }
+            },
+            "end": "(?<=;)",
+            "name": "meta.definition.method",
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "begin": "(:)|\\b(as)",
+                    "beginCaptures": {
+                        "1": { "name": "keyword.other.as" },
+                        "2": { "name": "keyword.other.as" }
+                    },
+                    "end": ";",
+                    "endCaptures": { "0": { "name": "punctuation.terminator.method" } },
+                    "patterns": [ { "include": "#method-request-response" } ]
+                }
+            ]
+        },
+        "method-request-response": {
+            "begin": "(?:\\b(?:(accept)|(return))(?=\\b)|\\s*(?:(<=)|(=>)))",
+            "beginCaptures": {
+                "1": { "name": "storage.modifier.accepts" },
+                "2": { "name": "storage.modifier.returns" },
+                "3": { "name": "storage.modifier.accepts" },
+                "4": { "name": "storage.modifier.returns" }
+            },
+            "end": "(?=;)",
+            "patterns": [
+                { "include": "#comment" },
+                { "include": "#modifiered-type" },
+                { "include": "#method-request-response" }
+            ]
+        },
+        "identifier": {
+            "match": "\\b[[:upper:]][[:alnum:]]*"
+        },
+        "qualified-name": {
+            "match": "\\b([[:upper:]][[:alnum:]]*)(\\.[[:upper:]][[:alnum:]]*)*"
+        },
+        "qualified-name-with-wildcard": {
+            "match": "\\b([[:upper:]][[:alnum:]]*)(\\.[[:upper:]][[:alnum:]]*)*(\\.\\*)?"
+        },
+        "invalid-name": {
+            "match": "[.*[:alnum:]]+",
+            "name": "invalid.illegal"
+        },
+        "string": {
+            "name": "string.quoted.double",
+            "match": "\"((?:(?:\\\\(?:b|f|n|r|t|\\\\|'|\"|x|u))|[^\\\\\"])*)\"",
+            "captures": {
+                "1": {
+                    "patterns": [
+                        {
+                            "match": "\\\\(?:b|f|n|r|t|\\\\|'|\"|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4})",
+                            "name": "constant.character.escape"
+                        },
+                        {
+                            "match": "\\\\(?:x|u)",
+                            "name": "invalid.illegal.constant.character.escape"
+                        }
+                    ]
+                }
+            }
+        },
+        "doc-comment": {
+            "name": "comment.block.documentation",
+            "begin": "\\/\\*",
+            "end": "\\*\\/",
+            "patterns": [
+                {
+                    "match": "(@[[:alpha:]]+)\\b",
+                    "name": "storage.type.class"
+                },
+                { "include": "text.xml" }
+            ]
+        },
+        "comment": {
+            "patterns": [
+                {
+                    "name": "comment.block",
+                    "begin": "(^[ \\t]+)?(\\/\\*)",
+                    "beginCaptures": { "1": { "name": "punctuation.whitespace.comment.leading" } },
+                    "end": "\\*\\/"
+                },
+                {
+                    "name": "comment.line.double-slash",
+                    "begin": "(^[ \\t]+)?(//)",
+                    "beginCaptures": {
+                        "1": { "name": "punctuation.whitespace.comment.leading" },
+                        "2": { "name": "punctuation.definition.comment" }
+                    },
+                    "end": "(?=^)"
+                }
+            ]
+        },
+        "shebang": {
+            "name": "comment.line.shebang",
+            "match": "\\A(#!).*(?=$)",
+            "captures": { "1": { "name": "punctuation.definition.comment" } }
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control",
+                    "match": "\\b(if|when|nor|while|for|returnvrv)\\b"
+                },
+                {
+                    "name": "keyword.other",
+                    "match": "\\b(else|on|and|of|from|goal|block|filed)\\b"
+                },
+                {
+                    "name": "storage.type",
+                    "match": "\\b(local|static|struct|asm|function)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator",
+                    "match": "(&|\\*)(?=\\w+)"
+                },
+                {
+                    "match": "(\\w+)(\\.|:)(\\w+)",
+                    "captures": {
+                        "2": { "name": "keyword.operator" },
+                        "3": { "name": "storage.type" }
+                    }
+                },
+                {
+                    "match": "\\[(.+?)\\]",
+                    "captures": {
+                        "0": { "name": "keyword.operator" },
+                        "1": { "patterns": [ { "include": "$self" } ] }
+                    }
+                }
+            ]
+        },
+        "asm": {
+            "patterns": [
+                {
+                    "begin": "asm",
+                    "end": "(?:})",
+                    "beginCaptures": { "0": { "patterns": [ { "include": "#keywords" } ] } },
+                    "patterns": [
+                        {
+                            "begin": "\\(",
+                            "end": "\\)",
+                            "patterns": [
+                                {
+                                    "name": "keyword.other",
+                                    "match": "\\b(A|B|C|X|Y|Z|I|J|PC|SP|IA|EX|PUSH|POP)\\b"
+                                },
+                                { "include": "$self" }
+                            ]
+                        },
+                        {
+                            "begin": "{",
+                            "end": "(?=})",
+                            "patterns": [
+                                { "include": "#comments" },
+                                { "include": "source" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric",
+                    "match": "\\b\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric",
+                    "match": "\\b0x[0-9A-Fa-f]+\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.aes",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.aes",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.aes"
+}

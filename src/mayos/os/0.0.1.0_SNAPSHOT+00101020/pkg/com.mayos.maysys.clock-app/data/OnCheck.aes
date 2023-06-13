@@ -1,0 +1,3 @@
+time.OnCheck {
+  this.app.config.time = time.osTime;
+}

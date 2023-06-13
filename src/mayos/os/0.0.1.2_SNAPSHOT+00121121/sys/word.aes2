@@ -1,0 +1,243 @@
+PC Worker Parts(
+DVD/CD
+IDE 
+ATAPI 
+SATA
+PCMCIA
+KEYBOARD
+COMPUTER
+SOUND,VIDEO OR GAME CONTROLLER
+SYSTEM DEVICE
+DISK DRIVE
+DISPLAY
+NETWORK
+BATTERY
+HUMAN INTERFACE DEVICE
+PROCESSER
+OTHER DEVICE
+MOUSE OR OTHER POINTING DEVICE
+MONITOR
+UNIVERSAL SRIAL BUS
+)
+Error.messagewords(
+Your OS is Cannot run Windows 7.
+error.Occur.handle
+Your PC was Older. Buy New Parts if you want fix this error.
+Asset Not Found.
+(program.name) was been stopped working.
+(Thing.opened) was no found.
+your OpenGL was old. please buy new Version.
+Cannot Run
+Cannot Recovery PC.
+Handle Error
+Compiler Occured Version.
+Virus Was Found.
+)
+System Message(
+Action Center
+Windows firewall
+system
+windows update
+battery options
+backup and recovory
+adminstrator tools
+Network and share center
+home group
+internet options
+device and printer
+auto play
+sound
+display
+windows moblity center
+program and settings
+default program
+user account
+windows cardspace
+windows manager
+mail
+pre-human settings
+taskbar and start menu
+computer easy center
+folder options
+font
+date and time
+company and laungage
+voice 
+)
+Program header text box(
+file
+edit
+view
+help
+(thing.programtextboxx.add1)
+(thing.programtextboxx.add2)
+(thing.programtextboxx.add3)
+)
+ShoutCut(
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+w
+v
+x
+y
+z
+Ctrl
+Alt
+Fn
+Shift
+1
+2
+3
+4
+5
+6
+7
+8
+9
+0
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+W
+V
+X
+Y
+Z
+Tab
+)
+system32(
+icon
+dll
+wav
+wma
+exe
+iso
+zip
+rar
+mp3
+mp4
+mpeg
+avi
+ogg
+acc
+png
+jpg
+gif
+)
+dll.(something)(
+add
+.
+clear
+,
+open
+os
+file
+error
+message
+shape
+create
+delete
+change
+when
+touch
+button
+server
+load
+save
+download
+its
+creator
+install
+cmd
+print
+DVD
+ROM
+-
+say
+message
+screen
+press
+key
+all
+update
+from
+claimed
+pressed
+event
+loading
+ui
+completed
+ch
+send
+pc
+version
+ver
+win
+updater
+to
+)
+Number(
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+)
+Start.word,End.word(
+Recording start
+Recording end
+Windows install start
+Windows install end
+Begin
+End
+Start
+end
+)
+Dll.name(
+win
+source
+Prepaid
+Paid
+)

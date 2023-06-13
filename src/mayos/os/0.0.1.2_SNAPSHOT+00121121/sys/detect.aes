@@ -1,0 +1,4 @@
+using os;
+master function "com.detect" {
+  detect <target>
+ }

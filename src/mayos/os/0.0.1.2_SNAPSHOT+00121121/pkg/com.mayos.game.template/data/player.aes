@@ -1,0 +1,17 @@
+game_playerClass {
+  imageVar {
+    imgSrc = package://com.mayos.game_template/data/img/player
+    playeridle = imgSrc/player.png
+  }
+  
+  class OnPressed(key) {
+    if(key = space_Key) {
+      if(game_type = 2d) {
+        up(0, 5, 0, player);
+      }
+    }
+    if(key = a, s, w, d + _key) {
+      move();
+    }
+  }
+}

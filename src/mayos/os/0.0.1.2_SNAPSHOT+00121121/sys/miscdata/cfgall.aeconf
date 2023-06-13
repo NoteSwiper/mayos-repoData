@@ -1,0 +1,512 @@
+systemcfg(
+systeminstaller=data\install\installer.exe
+lib=data\install\lib
+bin=data\install\bin
+rootdata=\data\
+OpenGL=<Open.GrLi>
+OpenSL=<Open.SoLi>
+SoundEngine=<Sound.e>
+SerialCodeMask=####-####-####-####-####
+FormEnabled=yes
+installprocotol=install.aes
+installicon=ins.aepic
+installlaung=data\laungunge\
+debug=64hhf74g5wh497yr48i
+cmdlist=cmd.cmdfiles
+debugfile=dbg.dbg
+testdbg=test.dbg
+32iso=32installer.iso
+64iso=64installer.iso
+dlllib=Lib.dll
+codefilegenerate=code.gnlt
+UID=3443dde2-37fe-4t2y-b833-748itiy54ygr
+cfgfile=cfgall.aeconf
+memory=osroot\sys\mem\win\memory.mdg
+[Manual Scan Configuration]
+UID = 2y7h6yda6-97hba-4h6t5-b5t4t0f-2d78d455y7568iuy1e
+Enable = 1
+IntelliScan = 1
+ActiveAction = 2ac
+AllowCfgs = 2
+ScanMemory = 3
+Memorytotal=132847MB
+ScanBooting = 1
+ScanCompressed = 1
+CompressedLayer = 2
+ScanSpyware = 1
+ScanAllFiles = 1
+ExtList = .ACE,.ARJ,.ASP,.BAT,.BIN,.BOO,.CAB,.CHM,.CLA,.CLASS,.COM,.CSC,.DAT,.DLL,.DOC,.DOT,.DRV,.EML,.EXE,.GZ,.HLP,.HTA,.HTM,.HTML,.HTT,.INI,.JAR,.JS,.JSE,.LNK,.LZH,.MDB,.MPD,.MPP,.MPT,.MSG,.MSO,.NWS,.OCX,.OFT,.OVL,.PDF,.PHP,.PIF,.PL,.POT,.PPS,.PPT,.PRC,.RAR,.REG,.RTF,.SCR,.SHS,.SYS,.TAR,.VBE,.VBS,.VSD,.VSS,.VST,.VXD,.WML,.WSF,.XLA,.XLS,.XLT,.XML,.Z,.ZIP, .ACCDB, .DOCX, .DOCM, .DOTX, .DOTM, .PPTX, .PPTM, .POTX, .POTM, .PPAM, .PPSM, .PPSX, .XLSX, .XLSM, .XLTX, .XLTM, .XLSB, .XLAM
+EnableExclusion = 1
+BkUpIfClean = 1
+MovewebDir = HTa://172.31.43.66
+CleanFailedMovewebDir = HTa://172.31.43.66
+ScanHiddenFolder = 1
+CustAction = Universe-5-4,Joke-4-2,Trojan-4-2,Virus-5-4,Test_Virus-1-1,Spyware-4-2,Packer-4-1,Generic-25-1,Other-5-4
+EnableUniAct = 1
+ScanNetwork = 1
+ScanSpeed = 5
+IntelliTrap = 1
+Reserved = 
+[Spyware Manual Scan Configuration]
+UID = 2y7h6yda6-97hba-4h6t5-b5t4t0f-2d78d455y7568iuy1e
+Enable = 1
+AllowCfg = 1
+ScanType = 1
+ActionType = 1
+EnableSpyExclusion = 1
+ExcludeFileExtList = MP3;
+[Manual Scan Configuration Ex]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+ExcludeTrendProduct = 1
+ExcludedFolder = 
+ExcludedFile = 
+ExcludedExt = 
+[Real Time Scan Configuration]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+Enable = 1
+IntelliScan = 0
+ActiveAction = 0
+AllowCfg = 0
+ScanBoot = 1
+ScanShutDown = 0
+ScanCompressed = 1
+CompressedLayer = 1
+ScanSpyware = 0
+ScanAllFiles = 0
+ExtList = ."",.ACE,.ARJ,.ASP,.BAT,.BIN,.BOO,.CAB,.CHM,.CLA,.CLASS,.COM,.CSC,.DAT,.DLL,.DOC,.DOT,.DRV,.EML,.EXE,.GZ,.HLP,.HTA,.HTM,.HTML,.HTT,.INI,.JAR,.JS,.JSE,.LNK,.LZH,.MDB,.MPD,.MPP,.MPT,.MSG,.MSO,.NWS,.OCX,.OFT,.OVL,.PDF,.PHP,.PIF,.PL,.POT,.PPS,.PPT,.PRC,.RAR,.REG,.RTF,.SCR,.SHS,.SYS,.TAR,.VBE,.VBS,.VSD,.VSS,.VST,.VXD,.WML,.WSF,.XLA,.XLS,.XLT,.XML,.Z,.ZIP,.{*, .ACCDB, .DOCX, .DOCM, .DOTX, .DOTM, .PPTX, .PPTM, .POTX, .POTM, .PPAM, .PPSM, .PPSX, .XLSX, .XLSM, .XLTX, .XLTM, .XLSB, .XLAM
+EnableExclusion = 1
+BkUpIfClean = 1
+MoveDir = HTTP://172.31.43.66
+CleanFailedMoveDir = HTTP://172.31.43.66
+ScanIncoming = 1
+ScanOutgoing = 1
+EnableUniAct = 1
+CustAction = Universe-5-4,Joke-4-2,Trojan-4-2,Virus-5-4,Test_Virus-1-1,Spyware-4-2,Packer-4-1,Generic-25-1,Other-5-4
+ScanNetwork = 1
+PopVirusFoundAlert = 1
+IntelliTrap = 1
+Reserved = 
+[Spyware Real Time Scan Configuration]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+Enable = 1
+AllowCfg = 0
+ActionType = 1
+PopSpywareFoundAlert = 1
+[Real Time Scan Configuration Ex]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+ExcludeTrendProduct = 4tr4h5tt4rgh6
+ExcludedFolder = con aux win
+ExcludedFile = con aux win
+ExcludedExt = extudw
+[Prescheduled Scan Configuration]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+Enable = 1
+IntelliScan = 1
+ActiveAction = 0
+AllowCfg = 1
+ScanMemory = 1
+ScanBoot = 1
+ScanCompressed = 1
+CompressedLayer = 2
+ScanSpyware = 0
+ScanAllFiles = 1
+ExtList = .ACE,.ARJ,.ASP,.BAT,.BIN,.BOO,.CAB,.CHM,.CLA,.CLASS,.COM,.CSC,.DAT,.DLL,.DOC,.DOT,.DRV,.EML,.EXE,.GZ,.HLP,.HTA,.HTM,.HTML,.HTT,.INI,.JAR,.JS,.JSE,.LNK,.LZH,.MDB,.MPD,.MPP,.MPT,.MSG,.MSO,.NWS,.OCX,.OFT,.OVL,.PDF,.PHP,.PIF,.PL,.POT,.PPS,.PPT,.PRC,.RAR,.REG,.RTF,.SCR,.SHS,.SYS,.TAR,.VBE,.VBS,.VSD,.VSS,.VST,.VXD,.WML,.WSF,.XLA,.XLS,.XLT,.XML,.Z,.ZIP, .ACCDB, .DOCX, .DOCM, .DOTX, .DOTM, .PPTX, .PPTM, .POTX, .POTM, .PPAM, .PPSM, .PPSX, .XLSX, .XLSM, .XLTX, .XLTM, .XLSB, .XLAM
+EnableExclusion = 1
+ScanRemoveable = 1
+ScanFixedDisk = 1
+ScanCDRom = 2
+Frequency = 54Hz
+Hour = 12
+Minute = 35
+AmPm = 2
+DayOfMonth = 1
+DayOfWeek = 7
+BkUpIfClean = 1
+MoveDir = HTTP://172.31.43.66
+CleanFailedMoveDir = HTTP://172.31.43.66
+CustAction = Universe-5-4,Joke-4-2,Trojan-4-2,Virus-5-4,Test_Virus-1-1,Spyware-4-2,Packer-4-1,Generic-25-1,Other-5-4
+EnableUniAct = 1
+PopVirusFoundAlert = 1
+ScanSpeed = 0
+IntelliTrap = 1
+Reserved = RΞ??????
+[Spyware Prescheduled Scan Configuration]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+Enable = 0
+AllowCfg = 1
+ScanType = 1
+ActionType = 1
+Frequency = 1
+Hour = 1
+Minute = 0
+AmPm = 1
+DayOfMonth = 1
+DayOfWeek = 1
+PopSpywareFoundAlert = 1
+EnableSpyExclusion = 1
+ExcludeFileExtList = MP3;
+[Prescheduled Scan Configuration Ex]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+ExcludeTrendProduct = 1
+ExcludedFolder = 
+ExcludedFile = 
+ExcludedExt = 
+[Scan Now Configuration]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+IntelliScan = 1
+ActiveAction = 0
+ScanMemory = 1
+ScanBoot = 1
+ScanCompressed = 1
+CompressedLayer = 2
+ScanSpyware = 0
+ScanAllFiles = 1
+ExtList = .ACE,.ARJ,.ASP,.BAT,.BIN,.BOO,.CAB,.CHM,.CLA,.CLASS,.COM,.CSC,.DAT,.DLL,.DOC,.DOT,.DRV,.EML,.EXE,.GZ,.HLP,.HTA,.HTM,.HTML,.HTT,.INI,.JAR,.JS,.JSE,.LNK,.LZH,.MDB,.MPD,.MPP,.MPT,.MSG,.MSO,.NWS,.OCX,.OFT,.OVL,.PDF,.PHP,.PIF,.PL,.POT,.PPS,.PPT,.PRC,.RAR,.REG,.RTF,.SCR,.SHS,.SYS,.TAR,.VBE,.VBS,.VSD,.VSS,.VST,.VXD,.WML,.WSF,.XLA,.XLS,.XLT,.XML,.Z,.ZIP, .ACCDB, .DOCX, .DOCM, .DOTX, .DOTM, .PPTX, .PPTM, .POTX, .POTM, .PPAM, .PPSM, .PPSX, .XLSX, .XLSM, .XLTX, .XLTM, .XLSB, .XLAM
+EnableExclusion = 1
+ScanRemoveable = 1
+ScanFixedDisk = 1
+ScanCDRom = 1
+BkUpIfClean = 1
+MoveDir = HTTP://172.31.43.66
+CleanFailedMoveDir = HTTP://172.31.43.66
+CustAction = Universe-5-4,Joke-4-2,Trojan-4-2,Virus-5-4,Test_Virus-1-1,Spyware-4-2,Packer-4-1,Generic-25-1,Other-5-4
+EnableUniAct = 1
+ScanHiddenFolder = 0
+ScanSpeed = 0
+IntelliTrap = 1
+Reserved = 
+Enable = 1
+ScanMethod = 0
+[Spyware Scan Now Configuration]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+Enable = 1
+AllowCfg = 0
+ScanType = 1
+ActionType = 1
+PopSpywareFoundAlert = 0
+EnableSpyExclusion = 1
+ExcludeFileExtList = MP3;
+[Scan Now Configuration Ex]
+UID = 2095dda6-97ba-4a7a-b80f-2d78da0f7f1e
+ExcludeTrendProduct = 1
+ExcludedFolder = 
+ExcludedFile = 
+ExcludedExt = 
+[Web Threat Protection]
+EnablePolicyIn = 0
+EnablePolicyOut = 0
+SecurityLevelIn = 1
+SecurityLevelOut = 2
+SendLogIn = 0
+SendLogOut = 0
+[Global Setting]
+WSLIMIT_L=100r4300000
+WSLIMIT_R=10r340rf40340000
+WSLIMIT_M=500034r34000
+WSPERIOD_L=3005rf43r3400
+WSPERIOD_R=303r43000
+WSPERIOD_M=300r3400
+BkFileKeepDay=7
+EnableGenericClean=1
+LogCookie=1
+EnableAssessment=0
+AssessmentUntil=1268924400
+CookieScanner=0
+CompressedFileCount=100
+PatternTooOldPopupMessage=
+PatternTooOldDays=14
+DiskReserved=60
+# 7=sunday, 1=monday, ... 6=saturday
+ScheduleUpdateStartWeekday=7
+# 0 - 23
+ScheduleUpdateStartHour=0
+# 0 - 59
+ScheduleUpdateStartMin=0
+# default=120 min
+ScheduleUpdateCompletePeriod=60
+ScheduleUpdateInterval=120
+ScheduleUpdateEnableDisable=1
+ScheduleCheckGlobalSetting=0
+ScheduledUpdateEnableUpdateConfigurationsOnlyOncePerDay=0
+NetworkScanOnOff=1
+ShellExtensionOnOff=1
+SplashScreenOnOff=1
+RebootNotifyOnOff=1
+PopupVirusFoundOnOff=1
+ZipCleanOnOff=0
+PatternTooOldWarningOnOff=0
+FqdnFirstOnOff=0
+OleLayer=3
+MaximumExtractFileSize=2
+MailScanPageOnOff=1
+ToolPageOnOff=1
+Pop3TrapOnOff=1
+OutlookScanOnOff=1
+WirelessProtectionOnOff=1
+CheckPointSecureClientOnOff=1
+ProxySettingOnOff=1
+ScheduleCleanInterval=0
+AuCacheOnOff=0
+SendVirusLogForcibly=1
+PurgeStandAloneHLog=0
+#	Run Pop3 mail scan module
+RunPop3Trap=0
+#	Run Outlook scan module
+RunOutlookScan=1
+#	Run Wireless Protection module
+RunWirelessProtection=1
+#	Install/upgrade POP3 mail scan module
+InstPOP3Scan=1
+#	Install/upgrade Outlook mail scan module
+InstOutlookScan=1
+#	Install/upgrade Wireless protection Manager
+InstWireless=2,0
+# Domain Type: 0=NetBIOS domain, 1 = Active Directory domain , 2 = DNS domain
+DomainType=86546
+Scheduled_Reestablish_Minutely=0
+GlobalLargeCompressedFileScanSetting=1
+ExcludeDatabaseFolder=1
+#Enable:1
+#Disable:0
+EnableVirusLogThrottle=1
+#Min: 1
+#Max: 100
+VLogThrottleCnt=20
+#Min: 1		(min)
+#Max: 120 (min)
+RedundantVirusPeriod=60
+#Default: 0 ; Enable: 1, Disable: 0
+LocalAUCacheOnOff=0
+#UpdateAgent Duplicate pattern flag.
+#Duplicate all incremental pattern: 0 (Default)
+#Duplicate one incremental pattern: 1
+#Smart Duplicate pattern: 2
+UADuplicateOption=0
+PingServerCheckDefault=1
+PingServerCheckMode=0
+RefHostsChkTimeout=3
+PingServerScheduleInterval=3600
+ReferenceHosts=
+RefHostsChkMode=1
+# Smart duplication value: 128
+# Incremental duplication value: 64
+UADuplicationOptValue=64
+AutoProxyDetection=0
+UseProxyAutoConfigScript=0
+ProxyAutoConfigScript=
+UrlFilterAlertEnabled=1
+DisableTSCAtStart=0
+ExcludeExchangeStore=1
+# Enable Legacy SSAPI5 engine/pattern update 0:Disabled(Default) 1:Enabled
+EnableSSAPI5Update=0
+#self protection
+SP_RestartService=1
+SP_RestartServiceAfter=60
+SP_RetryCount=5
+SP_ResetFailureCount=3600
+SP_EnableFileProtection=1
+SP_EnableRegistryKeyProtection=1
+SP_EnableProcessProtection=1
+#AEGIS
+EnableAEGIS=1
+SendLogPeriod=60
+EnableBatteryLifeCheck=0
+EnableNVTrustList=0
+EnableResumeScan=0
+MaxDelayCount=1
+MaxDelayDuration=3600
+MiniBatteryLife=20
+PFWLogReportInterval=3600
+ScanWarningTime=600
+Update_Agent_Direct_Update=0
+IsSMB=0
+ServerID=147dd507-f34f-46f0-94d3-db15f91f1db3
+WatchDogCheckInterval=300
+WatchDogRetry=5
+WatchDogOnOff=1
+WatchDogRunInTempDir=1
+WatchDogUseRandomName=1
+BMAskTimeOut=30
+BMTimeOutAction=0
+SendBMLogPeriod=3600
+BMAutoBlockInterval=180
+ECSP=1
+BMEnableNFC=0
+BMPopupLowRiskMsg=0
+Virus_Encyclopedia_URL=http://www.trendmicro.co.jp/vinfo/virusencyclo/default5.asp
+Spyware_Encyclopedia_URL=http://www.trendmicro.co.jp/vinfo/grayware/ve_GraywareDetails.asp
+AdditionalThreatCleanEnable=
+AdditionalThreatExclusionList=
+AdditionalThreatExclusionInfo=
+[CAV_INI_SESSION]
+#
+# Enable or disable the CAV, 0: Disable, 1: Enable
+CAV_ENABLE=0
+#
+# If the new network session count exceeds this number within x minutes, it will trigger a notification
+CAV_SESSION_EXCEED=10
+#
+# If the new network session count exceeds y within the specified number of minutes, it will trigger a notification.
+CAV_SESSION_WITHIN=3
+#
+# The SMTP notification settins below
+CAV_SMTP_ENABLE=0
+CAV_ALERT_SMTP_SERVER=
+CAV_ALERT_SMTP_PORT=25
+CAV_ALERT_SMTP_SEND_TO=
+CAV_ALERT_SMTP_SEND_FROM=Virus_Buster_Corp
+CAV_ALERT_SMTP_SUBJECT=ウイルスアウトブレークモニタ警告
+CAV_ALERT_SMTP_MESSAGE=%M分以内に%Sを超える新規ネットワークセッションが検出されました。\r\n詳細:\r\n%T
+CAV_SYSTEM_EVENT_LOG=ウイルスアウトブレークモニタ警告 %M分以内に%Sを超える新規ネットワークセッションが検出されました。
+CAV_ALERT_SMTP_SOURCE=感染元
+CAV_ALERT_SMTP_DEST=感染先
+CAV_ALERT_SMTP_DATE_TIME=日時
+[PFW]
+EnableNetVirusLogReport=1
+EnableInstallFWAfterReboot=1
+[INI_CLIENT_SETUP_SECTION]
+NT_TMLISTEN_SERVICE=OfficeScan NT Listener
+NT_REAL_TIME_SERVICE=OfficeScanNT RealTime Scan
+NT_PFW_SERVICE=OfficeScan NT Firewall
+[URL_FILTER_INI_SECTION]
+URLFilterRS = http://oscex-en.url.trendmicro.com
+URLFilterEnableTmProxyDNS = 0
+URLFilterEnableTMUFEDNS = 0
+URLFilterEnableTmProxyDNSInOffice = 0
+URLFilterEnableTmProxyDNSOutOffice = 0
+URLFilterEnableTMUFEDNSInOffice = 0
+URLFilterEnableTMUFEDNSOutOffice = 0
+URLFilterThresholdHigh=80
+URLFilterThresholdMedium=65
+URLFilterThresholdMediumLow=60
+URLFilterThresholdLow=50
+URLFilterRedirectPortList = 
+URLFilterServerAWSLMaxCount = 50
+URLFilterClientAWSLMaxCount = 50
+URLFilterProxyAccount = 
+URLFilterProxyPassword = 
+URLFilterAWSLCount_InOffice=11
+URLFilterAWSL_InOffice000=!CRYPT!41E87AFD5AAD9779014CE1AE49C00F138E0CB93545453DCDDF83C8E0F1EE98FFF7D7750550D
+URLFilterAWSL_InOffice001=!CRYPT!41DD78F192075635D6872CD47D531E566CC19BC569F507FBC5493AC27F94753A9D5725C1D18
+URLFilterAWSL_InOffice002=!CRYPT!5270C2F3CD5087D5B951FC1750683AE8575C4AE786A43466A1C7AB3E33E4C60A239BC150BF22C340D3C3248425D
+URLFilterAWSL_InOffice003=!CRYPT!62AC032B6FF834E2B3D33E6E9FB9ADD53BE41D18CAB41FB88A359A3E797990F9D17A7B1E82A40391E678734D334DC7BF2C01D396235
+URLFilterAWSL_InOffice004=!CRYPT!5264F6D6220F18A37784C49DA5B067C3586DBCE3B500A67870874AF92915E07C7EE3C8E0F1EE98FFF7D7D0A0615
+URLFilterAWSL_InOffice005=!CRYPT!4203C2A3E8BBB541D88ABBFE53FB57E1E8076C48FA692E3613111E2A109CAEA06745B346166
+URLFilterAWSL_InOffice006=!CRYPT!41B3754C1F0D0F49A7124B36E97785F82ECA218B71CCC2A7EDDAEC429DC2829011748262D24
+URLFilterAWSL_InOffice007=!CRYPT!52254B4D811E72724724C49DA5B067C35860F718246FB36ABD6CF0635ACC89D64192900C4203B55A09E06787D70
+URLFilterAWSL_InOffice008=!CRYPT!527A0303ADF865F9D099B1F790E12C135C0EE4D7F641338B359FB32E52897ABA608832A86F329286624284B4D5E
+URLFilterAWSL_InOffice009=!CRYPT!5246B83E3D9F49CFA041C78434D8E66DF2851215B87168561A367C3E3148CE9D14E44A0C79F5BBAAA0C71520E01
+URLFilterAWSL_InOffice010=!CRYPT!523A863760E524DDEDD2DF8F126E76BD424E7E57BC9B506363A299611E52BA46CC4AEC429DC282901174C202422
+URLFilterAWSLCount_OutOffice=11
+URLFilterAWSL_OutOffice000=!CRYPT!41E87AFD5AAD9779014CE1AE49C00F138E0CB93545453DCDDF83C8E0F1EE98FFF7D7750550D
+URLFilterAWSL_OutOffice001=!CRYPT!41DD78F192075635D6872CD47D531E566CC19BC569F507FBC5493AC27F94753A9D5725C1D18
+URLFilterAWSL_OutOffice002=!CRYPT!5270C2F3CD5087D5B951FC1750683AE8575C4AE786A43466A1C7AB3E33E4C60A239BC150BF22C340D3C3248425D
+URLFilterAWSL_OutOffice003=!CRYPT!62AC032B6FF834E2B3D33E6E9FB9ADD53BE41D18CAB41FB88A359A3E797990F9D17A7B1E82A40391E678734D334DC7BF2C01D396235
+URLFilterAWSL_OutOffice004=!CRYPT!5264F6D6220F18A37784C49DA5B067C3586DBCE3B500A67870874AF92915E07C7EE3C8E0F1EE98FFF7D7D0A0615
+URLFilterAWSL_OutOffice005=!CRYPT!4203C2A3E8BBB541D88ABBFE53FB57E1E8076C48FA692E3613111E2A109CAEA06745B346166
+URLFilterAWSL_OutOffice006=!CRYPT!41B3754C1F0D0F49A7124B36E97785F82ECA218B71CCC2A7EDDAEC429DC2829011748262D24
+URLFilterAWSL_OutOffice007=!CRYPT!52254B4D811E72724724C49DA5B067C35860F718246FB36ABD6CF0635ACC89D64192900C4203B55A09E06787D70
+URLFilterAWSL_OutOffice008=!CRYPT!527A0303ADF865F9D099B1F790E12C135C0EE4D7F641338B359FB32E52897ABA608832A86F329286624284B4D5E
+URLFilterAWSL_OutOffice009=!CRYPT!5246B83E3D9F49CFA041C78434D8E66DF2851215B87168561A367C3E3148CE9D14E44A0C79F5BBAAA0C71520E01
+URLFilterAWSL_OutOffice010=!CRYPT!523A863760E524DDEDD2DF8F126E76BD424E7E57BC9B506363A299611E52BA46CC4AEC429DC282901174C202422
+[LOCATION_AWARENESS_INI_SECTION]
+LocationAwarenessProfile_Count=0
+LocationCriteriaType=0
+[DDC]
+EnableDDC=0
+DDCMaxDelay=1800
+DDCPickupFolderCapacity=10
+[ICRC_SCAN_INI_SECTION]
+DefaultClientScanType=0
+DiagnosticDataCollectionIntervalMin=60
+ScheduledScanServiceSearchIntervalMin=3
+CheckScanServerStatusTimeoutMillisec=2000
+MaxSuspiciousFileRecordSize=5000
+QueryErrorGraceDurationSec=600
+QueryTotalErrorGraceFrequency=5
+QueryNetworkTimeoutGraceFrequency=5
+QueryServerErrorGraceFrequency=5
+QueryNetworkErrorGraceFrequency=5
+GlobalScanServerAddress=https://osce10.icrc.trendmicro.com/tmcss
+GlobalScanServerSSLVerifyPeer=1
+GlobalScanServerProxyUserName=
+GlobalScanServerProxyPassword=
+[DelayUpdate]
+EnableDelayUpdate=1
+DelaySendCriteria=1
+DelaySendCriteriaUBound=10
+DelaySendDdcInterval=60
+[Smart Schedule Scan]
+AllowSmartSleep=1
+LowUsagePercent=20
+LowSleepTime=6
+LowMustBelowFor=6
+MedUsagePercent=50
+MedSleepTime=3
+MedMustBelowFor=3
+HighUsagePercent=100
+HighSleepTime=0
+HighMustBelowFor=0
+[SPN_FEEDBACK_SECTION]
+SPNFeedbackEnabled=0
+SPNFileFeedbackEnabled=0
+SPNFeedbackInterval=300
+SPNFeedbackEntryNum=10
+SPNFeedbackBandWidthLimit=32
+SPNIndustryID=0
+[PostponedFileList]
+FileCount=25
+FileName1=ncfg.exe
+FileName2=tm_cfw.cat
+FileName3=TM_CFW.inf
+FileName4=TM_CFW.sys
+FileName5=TM_CFWMP.inf
+FileName6=tmCfwApi.dll
+FileName7=TmPfw.ini
+FileName8=tmHash.dll
+FileName9=TmPfw.exe
+FileName10=TmPfw.exe.manifest
+FileName11=TmPfwApi.dll
+FileName12=TmPfwCtl.dll
+FileName13=TmPfwRul.dll
+FileName14=tmwfpapi.dll
+FileName15=TmPfwLog.dll
+FileName16=tmlwf.cat
+FileName17=tmlwf.inf
+FileName18=TMLWF.sys
+FileName19=tmlwfins.exe
+FileName20=tmwfp.cat
+FileName21=tmwfp.inf
+FileName22=TMWFP.sys
+FileName23=tmwfpins.exe
+FileName24=DIFxAPI.dll
+FileName25=TmFpHcEx.exe
+[ICRC_CLOUD_SCAN_SERVICE_LIST]
+CloudScanServiceSource=1
+EnableStandardScanServiceSource=0
+Local_ScanService=
+Local_EnableProxy=
+Local_Proxy=
+Standard_EnableRandom=
+Standard_ScanService=
+Standard_EnableProxy=
+Standard_Proxy=
+Custom1_IPRange=
+Custom1_EnableRandom=
+Custom1_ScanService=
+Custom1_EnableProxy=
+Custom1_Proxy=
+URLFilterAWSLCount_OutOffice=11
+URLFilterAWSL_OutOffice=!CRYPT!41E87AFD5AAD9779014CE1AE49C00F138E0CB93545453DCDDF83C8E0F1EE98FFF7D7750550D
+URLFilterAWSL_OutOffice=!CRYPT!41DD78F192075635D6872CD47D531E566CC19BC569F507FBC5493AC27F94753A9D5725C1D18
+URLFilterAWSL_OutOffice=!CRYPT!5270C2F3CD5087D5B951FC1750683AE8575C4AE786A43466A1C7AB3E33E4C60A239BC150BF22C340D3C3248425D
+URLFilterAWSL_OutOffic=!CRYPT!62AC032B6FF834E2B3D33E6E9FB9ADD53BE41D18CAB41FB88A359A3E797990F9D17A7B1E82A40391E678734D334DC7BF2C01D396235
+URLFilterAWSL_OutOffice=!CRYPT!5264F6D6220F18A37784C49DA5B067C3586DBCE3B500A67870874AF92915E07C7EE3C8E0F1EE98FFF7D7D0A0615
+URLFilterAWSL_OutOffice=!CRYPT!4203C2A3E8BBB541D88ABBFE53FB57E1E8076C48FA692E3613111E2A109CAEA06745B346166
+URLFilterAWSL_OutOffice=!CRYPT!41B3754C1F0D0F49A7124B36E97785F82ECA218B71CCC2A7EDDAEC429DC2829011748262D24
+URLFilterAWSL_OutOffice=!CRYPT!52254B4D811E72724724C49DA5B067C35860F718246FB36ABD6CF0635ACC89D64192900C4203B55A09E06787D70
+URLFilterAWSL_OutOffice=!CRYPT!527A0303ADF865F9D099B1F790E12C135C0EE4D7F641338B359FB32E52897ABA608832A86F329286624284B4D5E
+URLFilterAWSL_OutOffice=!CRYPT!5246B83E3D9F49CFA041C78434D8E66DF2851215B87168561A367C3E3148CE9D14E44A0C79F5BBAAA0C71520E01
+URLFilterAWSL_OutOffice=!CRYPT!523A863760E524DDEDD2DF8F126E76BD424E7E57BC9B506363A299611E52BA46CC4AEC429DC282901174C202422
+
+

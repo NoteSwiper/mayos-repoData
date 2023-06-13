@@ -1,0 +1,11 @@
+required(Installer)
+system(root:data\cfgall.aeconf)
+function.path.opn(root:data\install\installer.exe)
+then
+ loadpath(root:data\install\graphics\GL_Main.aest)
+ load.error
+ then
+  loadscript ( error [ title="Load Error" maintext=path ( root:data\install\error.aes ) ] )
+ end
+ end
+end

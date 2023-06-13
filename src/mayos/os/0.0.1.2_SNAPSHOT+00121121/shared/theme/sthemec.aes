@@ -1,0 +1,8 @@
+import lib.os.theme
+package(class)
+
+public class Change {
+  function cmode {
+    set theme cgthm%to-<changetheme>
+  }
+}

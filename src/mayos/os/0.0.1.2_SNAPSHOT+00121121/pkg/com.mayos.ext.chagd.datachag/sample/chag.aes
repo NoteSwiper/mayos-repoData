@@ -1,0 +1,7 @@
+import cloud.inst.*;
+
+id chagData = data.chag://data/chug/;
+
+install {
+  install(svr://local:2847/chagData);
+}

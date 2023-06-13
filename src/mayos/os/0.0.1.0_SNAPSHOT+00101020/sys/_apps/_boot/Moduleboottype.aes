@@ -1,0 +1,19 @@
+switch
+  case 0;
+    boot locate 0;
+    change state booted = 1;
+    change state error = 0;
+    load module.System;
+    end;
+  case 1;
+    boot locate 1;
+    change state booted = 1.1;
+    change state error = 0;
+    load module.commandprompt;
+    end;
+  case 2;
+    boot locate 2;
+    change state booted = 0;
+    change state error = 1;
+    load module.recovery;
+    end;

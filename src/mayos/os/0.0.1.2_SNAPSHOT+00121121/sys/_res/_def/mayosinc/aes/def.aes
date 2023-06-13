@@ -1,0 +1,15 @@
+using General;
+using lib;
+
+class def {
+  public function "com.general" {
+    local module
+    print("Hello World...!");
+    if error.handler = execute 1 {
+   
+      onBreak {
+        end()
+      }
+    }
+  }
+}

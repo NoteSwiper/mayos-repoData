@@ -1,0 +1,34 @@
+when open(Media Player.exe)
+ Show.launcher(MPC.png.lun)
+ wait(10)
+ Hide.launcher
+ open.exe(mPA.exe)
+ mpa.exe.inside(
+  Player.button(
+   Radio(
+    AM,FM(
+     range.am(300khz-1999khz)
+     range.fm(70.0mhz-200.0Mhz)
+     Button.radio.<,>,<<,>>
+     <(
+      go.left.1step
+     )
+     >(
+      go.right.1step
+     )
+     <<(
+      go.left
+      when.found.radio
+       stop
+     )
+     >>(
+      go.right
+      when.found.radio
+       stop
+     )
+   )
+  )
+  Disk Player(
+  When.found.CD,DVD
+   Play.Disc
+  )

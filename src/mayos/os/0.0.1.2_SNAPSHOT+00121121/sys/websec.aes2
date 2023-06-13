@@ -1,0 +1,3 @@
+when.web.have(virus.worm32,virus32.trojan32)
+Show.ErrorVBS.(msg_Virus Was Founded In your website. <IP> <Website.com> <Founded.virusname>)
+Disconnect.website_user

@@ -1,0 +1,51 @@
+|)>=------------=<(CONFIGUETION)>=------------=<(|
+[サーバー設定]
+サーバーIP=127.0.0.1
+IP {
+  if(IP = net.IP) {
+    app.serverIP = IP;
+  }
+}
+ポート=8080
+サーバーネーム=デフォルト - メインサーバー
+タイムアウト=230
+アイコン=svricon.png
+mpssvr=mps://main.org/, svr/content/secure/mainorg/
+http = main/http/
+https = main/http/secure/
+ftp = main/ftp/
+ftps = main/ftp/secure/
+mms = main/mms/
+res = main/res/
+public = main/pub/
+js = main/script/program/js/
+script = main/script/
+httpevent = main/http/event/
+errorhtml = main/error/
+mainBroker = bsvr://br0k.0rg/svr/123.424.553.553/
+broklist = {
+br0k.0rg/svr/123.424.53.553/
+br0k.0rg/svr/124.425.533.221/
+br0k.0rg/svr/125.786.332.51/
+br0k.0rg/svr/126.113.154.2/
+br0k.0rg/svr/127.35.634.5/
+br0k.0rg/svr/128.22.543.95/
+br0k.0rg/svr/129.9.345.533/
+}
+
+[SMTP]
+defaultCredentials = 0
+host = smtp.summary.org
+password = *******
+port = 25
+userName = User
+[Proxy]
+Enabled = 1
+
+[DataChag]
+chag = data.chag://data/chug/
+myserver = chag/server/14826%aechag/
+entity = myserver/entity/
+img = myserver/img/
+httpRequest = chag/hr/s-14/http/
+

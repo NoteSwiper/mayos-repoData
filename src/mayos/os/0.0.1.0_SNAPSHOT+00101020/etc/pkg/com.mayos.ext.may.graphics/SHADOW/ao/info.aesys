@@ -1,0 +1,27 @@
+may_info = {
+  name = "Anbient Occulusion";
+  script = "ao.gl"
+  devloc = "ao.decl"
+    locbool = "AO‚ğƒIƒ“‚É‚·‚é", true;
+    loclist = "AO Quality", list{
+      Å’á‰æ¿ = respixel(16), 16;
+      ’á‰æ¿ = respixel(360), 64;
+      ’†‰æ¿ = respixel(480), 96;
+      ‚‰æ¿ = respixel(720), 512;
+      ’´‚‰æ¿ = respixel(1080), 1024;
+      UHD = repixel(2080), 2096;
+    }
+    locfloat = "–¾‚é‚³"(0.01, 5), 1.3;
+  
+}
+
+cloud.may.gl.*;
+
+ao {
+  int resolution = loclist.aores
+  int angle = gl.settings_sunAngle;
+  calculate(sunAngleAO, resolution);
+  if(calculated) {
+    show(calcshadow.result setColor(calc.red, calc.green, calc.blue));
+  }
+}

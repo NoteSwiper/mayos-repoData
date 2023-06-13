@@ -1,0 +1,7 @@
+class senderror() {
+  onActivate {
+    if(errorcode = 404) {
+      html.404
+    }
+  }
+}

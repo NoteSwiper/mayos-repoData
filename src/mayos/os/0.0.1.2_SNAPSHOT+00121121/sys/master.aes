@@ -1,0 +1,68 @@
+system:packager("mayos", {
+  lib mayos? = {
+    map variable = {
+      map type = {
+        sub small = {vrt byte, vrt short, vrt complex}
+        sub medium = {vrt int, vrt number, vrt float}
+        sub big = undefined
+        vrt bool,
+        vrt string,
+        vrt file,
+        vrt info,
+        vrt object,
+        vrt list,
+        vrt map,
+        vrt structure,
+        vrt vector,
+        vrt vector2,
+        vrt vector3,
+        vrt code,
+        vrt array,
+        vrt null,
+        vrt state,
+        vrt status,
+        vrt util,
+        vrt execute,
+        vrt img,
+        vrt cache,
+        vrt dict,
+        vrt set
+     }
+  }
+  code return(values) {
+    if(!values) {
+      this.currentExecute:stopExecutingThis();
+    }
+    if(getType(values).result == !enum.Type:getValueByIndexName("string","number","object","array","bunker")) {
+      compiler:killWithReason("ERR_");
+    }
+    this.output = push(values);
+  }
+  code if(cond) {
+    return {
+      cond,
+      result = cond => <boolean>;
+    };
+  }
+  code print(msg,level) {
+    if(!level | level == 0) {
+      return system.console.mList.length + 1, (system.console.mList.length + 1).msg = msg, grey;
+    }
+    if(level == 1) {
+      return system.console.mList.length + 1, (system.console.mList.length + 1).msg = "Executing Warning: " + msg, yellow;
+    }
+    if(level == 2) {
+      return system.console.mList.length + 1, (system.console.mList.length + 1).msg = "Compile Error at: " + + " Reason of the this error Why happens: " + msg, red;
+    }
+  }
+  code function(param*) {
+    if(!function.param | !function.returnValue) {
+      print(text.decodeStyleForPrint("<style bgColor=""5f5f0075" bdRad="0.25rw" font="code, monospace, sans-serif">function</style> Method requires <style bgColor=""5f000075" bdRad="0.25rw" font="code, monospace, sans-serif">return</style>"));
+    }
+    
+  }
+  env Env = new Variable("Environments", "map", "string");
+  Env.push(code=*);
+  output = push(Env);
+  path:install(this.classes);
+});

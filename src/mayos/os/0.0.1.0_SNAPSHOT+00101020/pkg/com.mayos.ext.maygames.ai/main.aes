@@ -1,0 +1,63 @@
+import cloud.ai.*;
+import cloud.nn.*;
+
+class ai {
+　　//人工知能の情報
+  local AIState {
+    //知能のスクリプト
+    local ais = script.ai.*;
+　　　　//ターゲットからの距離
+    local dist = script.ai.target.dist;
+    //レーダー本体
+    local ray = instance.new(ai.ray);
+    //ターゲット本体
+    local tg = script.ai.target.*;
+    //揺れ表現
+    local shke = script.ins.shake.*;
+    //保存用サーバー
+    local server = Server:Host(aeos://mayos.com/server/ai/savehost:102883.com/);
+    //データ保存用ストレージ
+    local data = ai.user.data1:saveState(vect, direction, target, ray, ais, dist);
+  };
+  //ターゲットの距離
+  function(target.dist == "00" <~> "80") {
+    //アングラー速度を距離が80とターゲットが本体の後ろになるまで前に進む
+    loop(notif target.dist == "80" <~> "inf", target == ai.getDir(ai.block.back)) {
+      set this.direction == front;
+      set this.vect == 10;
+      saveState(server, data);
+    };
+    //ではないならのコード
+    else {
+      set this.vect == 0;
+      saveState(server, data);
+
+    
+    };
+    //アングラー速度を距離が80とターゲットが本体の前になるまで後ろに進む
+    loop(notif target.dist == "80" ' "inf", target == get(ai.block.front)) {
+      set this.direction == back;
+      set this.vect == 10;
+      saveState(server, data);
+    };
+    
+    else {
+      set this.vect == 0;
+      saveState(server, data);
+    };
+    //レーダーの一本以上がターゲットにぶつかったとき
+    loop(if ai.ray.hit == col.target) {
+      //増速機能
+      wait(1)
+      isolation(time, speed);
+      set this.vect == vect * 1.1;
+      saveState(server, data);
+    };
+  };
+  function saveState(servertarget, data) {
+    if(server.Get) {
+      Serverload(servertarget);
+      ServerSave(servertarget, data);
+    };
+  };
+};

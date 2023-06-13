@@ -1,0 +1,13 @@
+compile
+res=
+Local\sys\Compile\bootconpiler\
+compiler
+ bootsystem
+  lib
+   Boot
+    Boot;
+    Local;
+    Grobal;
+    Loader;
+    current;
+    text;

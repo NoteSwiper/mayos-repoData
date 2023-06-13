@@ -1,0 +1,5 @@
+imported html to text from data.chag://data/chug/index.html
+Hi guys,
+this is data.chag.
+data.chag is file library.
+if you want to make website, check out the Data.chag Tutorial #1.

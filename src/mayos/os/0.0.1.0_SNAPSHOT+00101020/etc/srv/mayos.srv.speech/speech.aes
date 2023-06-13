@@ -1,0 +1,26 @@
+using lib
+ using lib.speech
+  using lib.speech.ai;
+  using lib.speech.engine;
+  using lib.speech.system;
+ using lib.sound
+  using lib.sound.ai;
+  using lib.sound.engine;
+  using lib.sound.system;
+  using lib.sound.event;
+ using lib.ai;
+
+conf speeche {
+  use.AI = "yes"
+  gender = "male"
+  sound.engine = "<engine=09F8AC3C5A755C1CB41651717BA5AA7B48E86890BA7550583598165D0960F91FF980E6DB007BDDAE908D5B135159CA40D93C34AE60B97F6437AA03DB6C708514>"
+ }
+
+public function "com.speech" {
+  if msgbox = {resceived text} {
+    say {gvar.resceived text} cmd[conf.speeche];
+    engine state change com.speech.sound;
+    
+   }
+  
+ }

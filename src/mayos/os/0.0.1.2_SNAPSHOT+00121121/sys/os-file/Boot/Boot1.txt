@@ -1,0 +1,21 @@
+Boot {
+  boot.1(
+    load system.OS
+    Create Imagefile(C\Nistra\OS-File\image-res\NistraOS.png)
+    load UI(ui.nisui\slider {event.load}
+    end sys.load
+    clear()
+  )
+  boot.2(
+    load system.os
+    if error {
+      open.Errormessages.msg(code = "0x00136412x1aabae")
+      restart
+      wait(2)
+    }
+  )
+  boot.3{
+    open.os
+    open.cmd
+  }
+}

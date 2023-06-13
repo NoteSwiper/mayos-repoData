@@ -1,0 +1,11 @@
+@setType(localScript);
+
+using general;
+
+local ID = script.scriptId;
+
+
+
+local script function {
+  
+}
