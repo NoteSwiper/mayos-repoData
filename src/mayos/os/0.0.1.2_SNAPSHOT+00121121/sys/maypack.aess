@@ -2,7 +2,12 @@ class maypack {
   cmdInfo info {
     "name": "May Package Manager",
     "id": "mayos.maypack",
-    "identifier": ["maypack","mpack","mpk"]
+    "identifier": ["maypack","mpack","mpk"],
+    "urls": {
+      "packages": "mayos://mayos.com/maypack/packs/**/info",
+      "status": "mayos://mayos.com/maypack/packs/**/stat",
+      "download": "mayos://mayos.com/maypack/packs/**/seed?id=**"
+    }
   }
   subcmd info {
     return cmdInfo.info;

@@ -27,5 +27,13 @@ class pcBh {
       }
       return brain(info), info;
     }
+    function spawnBrain(aiEntity: ai, trainer: object) {
+      return new object(prop{aiInfos});
+    }
+    subclass behaviour {
+      class Timer {
+        return {time};
+      }
+    }
   }
 }
