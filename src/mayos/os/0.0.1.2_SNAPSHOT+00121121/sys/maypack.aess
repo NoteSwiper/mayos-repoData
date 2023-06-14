@@ -1,3 +1,33 @@
+/*
+mayos://
+mayos://mayos.com
+mayos://mayos.com/svrs/1093c-nameofsvrs/
+mayos://mayos.com/svrs/<ServerID>-<ServerName>
+mayos://mayos.com/trashBinService/
+mayos://mayos.com/trashBinService?id=994nva/
+mayos://mayos.com/trashBinService?id=<tbID>/
+mayos://mayos.com/packages/
+mayos://mayos.com/packages/com.mayos.package.divide
+mayos://mayos.com/packages/<packageId | packageName>
+mayos://mayos.com/pkgs/
+mayos://mayos.com/pkgs/mOs.pkg_divide
+mayos://mayos.com/pkgs/<spkgId | spkgName>
+mayos://mayos.com/services/
+mayos://mayos.com/services/99401145/
+mayos://mayos.com/cmd
+mayos://mayos.com/cmd?commandline=getaccess
+mayos://mayos.com/cmd?commandline=<command>
+mayos://mayos.com/cmd/getaccess
+mayos://mayos.com/cmd/<command>
+
+package://
+package://extension.domain.division.product/
+package://extension.domain.division.product/<file | folder>
+package://extension/domain/division/product/
+
+
+*/
+
 class maypack {
   cmdInfo info {
     "name": "May Package Manager",
